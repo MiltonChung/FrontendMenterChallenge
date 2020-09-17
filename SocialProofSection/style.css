@@ -6,9 +6,9 @@
 body {
 	background: url("./images/bg-pattern-top-desktop.svg"),
 		url("./images/bg-pattern-bottom-desktop.svg");
-	background-position: top left bottom, bottom right;
+	background-position: top left, bottom right;
 	background-repeat: no-repeat, no-repeat;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-family: "Spartan", sans-serif;
 }
 
 .container {
@@ -67,18 +67,25 @@ body {
 }
 
 .bar__three {
-	margin-left: 6rem;
+	margin-left: 4.6rem;
 }
 
 .review {
 	color: hsl(300, 43%, 22%);
 	margin-left: 1.8rem;
 	margin-bottom: 0.5rem;
-	font-size: 17px;
+	font-size: 15px;
 	font-weight: 700;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 600px) {
+	body {
+		background: url("./images/bg-pattern-top-mobile.svg"),
+			url("./images/bg-pattern-bottom-mobile.svg");
+		background-position: top left, bottom right;
+		background-repeat: no-repeat, no-repeat;
+	}
+
 	.container {
 		width: 90%;
 	}
@@ -178,63 +185,24 @@ body {
 	height: 150px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 600px) {
 	.bottom {
-		margin-top: 5rem;
+		margin-top: 1.5rem;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: 1fr;
 		grid-gap: 1rem;
 	}
 
-	.card {
-		background: hsl(300, 43%, 22%);
-		border-radius: 10px;
-		padding: 2rem;
-	}
-
-	.card > p {
-		font-size: 14px;
-	}
-
-	.cardTop {
-		display: grid;
-		grid-template-columns: 0.4fr 1fr;
-		margin-bottom: 1rem;
-	}
-
-	.cardTop > img {
-		width: 45px;
-	}
-
-	.cardTopRight > h4,
-	.card > p {
-		color: white;
-	}
-
-	.cardTopRight > h4 {
-		font-weight: 500;
-		margin-bottom: 0.2rem;
-	}
-
-	.cardTopRight > small {
-		color: hsl(333, 80%, 67%);
-	}
-
-	.card .cardTop > img {
-		border-radius: 50%;
-	}
-
 	.card__one {
-		height: 160px;
+		height: 150px;
 	}
 
 	.card__two {
-		margin-top: 2rem;
-		height: 150px;
+		margin-top: 0rem;
 	}
 
 	.card__three {
-		margin-top: 4rem;
-		height: 150px;
+		margin-top: 0rem;
+		margin-bottom: 3rem;
 	}
 }
