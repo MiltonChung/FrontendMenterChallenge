@@ -1,0 +1,52 @@
+:root {
+	--VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+	--DesaturatedDarkBlue: hsl(214, 17%, 51%);
+	--GrayishBlue: hsl(212, 23%, 69%);
+	--LightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 13px;
+	font-family: "Manrope", sans-serif;
+	background-color: var(--LightGrayishBlue);
+}
+
+.content {
+	width: 740px;
+	height: 380px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px 0px #cacaca;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+
+	display: grid;
+	grid-template-columns: 1.5fr 2fr;
+}
+
+.leftSide {
+	background: url("./images/drawers.jpg");
+	background-position: top left;
+	background-size: cover;
+	height: 100%;
+	border-radius: 10px 0px 0px 10px;
+}
+
+.rightSide {
+	padding: 2rem;
+}
+
+.authorContainer > img {
+	border-radius: 50%;
+	width: 50px;
+}
