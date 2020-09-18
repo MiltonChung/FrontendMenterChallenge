@@ -16,6 +16,11 @@ body {
 	background-color: var(--LightGrayishBlue);
 }
 
+.container {
+	width: 80%;
+}
+
+/* Card */
 .content {
 	width: 740px;
 	height: 280px;
@@ -95,12 +100,6 @@ body {
 
 .shareButton {
 	transform: translate(20%, 20%);
-	fill: white;
-}
-
-.shareButton:hover {
-	transform: translate(20%, 20%);
-	fill: white;
 }
 
 .authorContainer .shareActive {
@@ -111,30 +110,92 @@ body {
 	fill: white;
 }
 
+/* ================================================================ */
+/* Card responsive */
+
+@media only screen and (max-width: 800px) {
+	.container {
+		width: 90%;
+		overflow: hidden;
+	}
+
+	.content {
+		width: 330px;
+		height: 520px;
+
+		display: grid;
+		grid-template-rows: 1fr 1.5fr;
+		grid-template-columns: 1fr;
+	}
+
+	.rightSide {
+		height: 100%;
+		padding: 2rem 2rem 0.5rem 2rem;
+	}
+
+	.leftSide {
+		border-radius: 10px 10px 0px 0px;
+	}
+
+	.authorContainer {
+		grid-template-columns: 1fr 2.9fr 0.5fr;
+	}
+
+	.authorContainer > img {
+		width: 37px;
+	}
+
+	.authorContainer .share {
+		margin-top: 0.3rem;
+		width: 15px;
+		height: 15px;
+		padding: 0.5rem;
+	}
+
+	.shareButton {
+		transform: translate(0%, 0%);
+	}
+
+	.authorContainer .shareActive {
+		background: var(--GrayishBlue);
+	}
+
+	.shareButtonActive {
+		background: var(--GrayishBlue);
+		padding: 0.5rem;
+		border-radius: 50%;
+		margin-top: -0.46rem;
+		margin-left: -0.5rem;
+	}
+
+	.shareButtonActive > path {
+		fill: white;
+	}
+}
+
+/* ========================================================================= */
 /* Popup */
 .popup {
 	position: relative;
-	/* display: inline-block;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none; */
 }
 
 /* The actual popup */
 .popup .popuptext {
 	visibility: hidden;
-	width: 160px;
-	background-color: #555;
-	color: #fff;
+	width: 220px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--VeryDarkGrayishBlue);
+	color: var(--GrayishBlue);
 	text-align: center;
 	border-radius: 6px;
-	padding: 8px 0;
+	padding: 0.8rem 0.5rem;
 	position: absolute;
 	z-index: 1;
-	bottom: 125%;
+	bottom: 160%;
 	left: 50%;
-	margin-left: -80px;
+	margin-left: -122px;
 }
 
 /* Popup arrow */
@@ -144,16 +205,25 @@ body {
 	top: 100%;
 	left: 50%;
 	margin-left: -5px;
-	border-width: 5px;
+	border-width: 10px;
 	border-style: solid;
-	border-color: #555 transparent transparent transparent;
+	border-color: var(--VeryDarkGrayishBlue) transparent transparent transparent;
+}
+
+.popuptext > span {
+	margin-right: 1rem;
+}
+
+.popuptext > a {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 /* Toggle this class - hide and show the popup */
 .popup .show {
 	visibility: visible;
-	-webkit-animation: fadeIn 1s;
-	animation: fadeIn 1s;
+	-webkit-animation: fadeIn 0.5s;
+	animation: fadeIn 0.5s;
 }
 
 /* Add animation (fade in the popup) */
@@ -172,5 +242,68 @@ body {
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+.popup .away {
+	visibility: visible;
+	opacity: 0;
+	-webkit-animation: fadeOut 0.5s;
+	animation: fadeOut 0.5s;
+}
+
+@-webkit-keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+/* ========================================================================== */
+/* RESPONSIVE SHARE BUTTON */
+
+@media only screen and (max-width: 800px) {
+	.popup {
+		position: relative;
+	}
+
+	/* The actual popup */
+	.popup .popuptext {
+		display: none;
+		width: 298px;
+		height: 45px;
+		display: grid;
+		grid-template-columns: 1.5fr 1fr 1fr 1fr 2fr;
+		border-radius: 0px 0px 6px 6px;
+		padding: 1rem;
+		z-index: 0;
+		bottom: -90%;
+		left: -400%;
+		margin-left: -142px;
+	}
+
+	.popup .popuptext > span {
+		margin-right: 0px;
+		margin-top: -0.2rem;
+	}
+
+	/* Popup arrow */
+	.popup .popuptext::after {
+		border-color: transparent;
+	}
+
+	.popuptext > img {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
 	}
 }

@@ -20,7 +20,7 @@
 		<title>Frontend Mentor | Article preview component</title>
 	</head>
 	<body>
-		<div class="content">
+		<div class="content container">
 			<div class="leftSide">
 				<!-- <img src="./images/drawers.jpg" /> -->
 			</div>
@@ -50,7 +50,19 @@
 
 					<!-- Share button -->
 					<span class="share popup" onclick="activatePopUp()">
-						<span class="popuptext" id="myPopup">A Simple Popup!</span>
+						<span class="popuptext" id="myPopup">
+							<span>S H A R E</span>
+							<a href="https://www.facebook.com/">
+								<img src="./images/icon-facebook.svg" />
+							</a>
+							<a href="https://twitter.com/">
+								<img src="./images/icon-twitter.svg" />
+							</a>
+							<a href="https://www.pinterest.com/">
+								<img src="./images/icon-pinterest.svg" />
+							</a>
+						</span>
+
 						<svg
 							class="shareButton"
 							xmlns="http://www.w3.org/2000/svg"
@@ -71,10 +83,23 @@
 			let shareBack = document.getElementsByClassName("share")[0];
 			let shareButton = document.getElementsByClassName("shareButton")[0];
 			let popup = document.getElementById("myPopup");
+			let shareButtonState = false;
 			function activatePopUp() {
-				popup.classList.toggle("show");
-				shareBack.classList.toggle("shareActive");
-				shareButton.classList.toggle("shareButtonActive");
+				if (!shareButtonState) {
+					popup.classList.add("show");
+					popup.classList.remove("away");
+					shareBack.classList.toggle("shareActive");
+					shareButton.classList.toggle("shareButtonActive");
+					shareButtonState = true;
+					console.log("in show");
+				} else {
+					popup.classList.add("away");
+					popup.classList.remove("show");
+					shareBack.classList.toggle("shareActive");
+					shareButton.classList.toggle("shareButtonActive");
+					shareButtonState = false;
+					console.log("in away");
+				}
 			}
 		</script>
 	</body>
