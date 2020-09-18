@@ -18,7 +18,7 @@ body {
 
 .content {
 	width: 740px;
-	height: 380px;
+	height: 280px;
 	background-color: white;
 	border-radius: 10px;
 	box-shadow: 10px 10px 10px 0px #cacaca;
@@ -43,10 +43,134 @@ body {
 }
 
 .rightSide {
-	padding: 2rem;
+	padding: 2rem 2rem 0rem 2rem;
+}
+
+.rightSide .text > h2 {
+	font-weight: 700;
+	color: var(--VeryDarkGrayishBlue);
+}
+
+.rightSide .text > p {
+	color: var(--DesaturatedDarkBlue);
+	margin-top: 1rem;
+	font-weight: 400;
+}
+
+.authorContainer {
+	margin-top: 1.7rem;
+	display: grid;
+	grid-template-columns: 0.8fr 3.5fr 0.5fr;
 }
 
 .authorContainer > img {
 	border-radius: 50%;
-	width: 50px;
+	width: 45px;
+}
+
+.author {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+}
+
+.author .name {
+	font-weight: 700;
+	color: var(--VeryDarkGrayishBlue);
+}
+
+.author .date {
+	font-weight: 400;
+	color: var(--GrayishBlue);
+}
+
+.authorContainer .share {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: var(--LightGrayishBlue);
+	padding: 0.5rem;
+	cursor: pointer;
+	color: white;
+}
+
+.shareButton {
+	transform: translate(20%, 20%);
+	fill: white;
+}
+
+.shareButton:hover {
+	transform: translate(20%, 20%);
+	fill: white;
+}
+
+.authorContainer .shareActive {
+	background: var(--DesaturatedDarkBlue);
+}
+
+.shareButtonActive > path {
+	fill: white;
+}
+
+/* Popup */
+.popup {
+	position: relative;
+	/* display: inline-block;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; */
+}
+
+/* The actual popup */
+.popup .popuptext {
+	visibility: hidden;
+	width: 160px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+	visibility: visible;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
