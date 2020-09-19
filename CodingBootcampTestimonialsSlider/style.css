@@ -1,0 +1,14 @@
+:root {
+	--DarkBlue: hsl(240, 38%, 20%);
+	--GrayishBlue: hsl(240, 18%, 77%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	font-size: 32px;
+}
