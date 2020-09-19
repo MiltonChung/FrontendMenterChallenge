@@ -15,11 +15,11 @@
 body {
 	font-family: "Raleway", sans-serif;
 	font-size: 14px;
-	background-image: url("./images/bg-desktop.png");
+	background: var(--VeryDarkBlue) url("./images/bg-desktop.png");
 	background-position: bottom;
-	background-size: cover;
 	background-repeat: no-repeat;
-	height: 100vh;
+	background-attachment: fixed;
+	background-size: 100% 50%;
 }
 
 .container {
@@ -106,7 +106,7 @@ body {
 	background-color: var(--PaleBlue);
 	color: var(--GrayishBlue);
 	text-align: center;
-	border-radius: 12px;
+	border-radius: 12px 12px 0 12px;
 	padding: 0.8rem 0.5rem;
 	position: absolute;
 	z-index: 1;
@@ -119,17 +119,25 @@ body {
 	content: "";
 	position: absolute;
 	top: 100%;
-	left: 50%;
+	left: 91%;
 	margin-left: -5px;
 	border-width: 10px;
 	border-style: solid;
-	border-color: var(--VeryDarkGrayishBlue) transparent transparent transparent;
+	border-color: var(--PaleBlue) var(--PaleBlue) transparent transparent;
+}
+
+.popUpText {
+	font-weight: 700;
+	font-size: 12px;
+	margin-top: 0.3rem;
 }
 
 .popUpText > span {
 	font-size: 2.4rem;
-	font-weight: 700;
+	margin-top: -0.3rem;
+
 	margin-right: 0.5rem;
+	color: var(--VeryDarkBlue);
 }
 
 .progressBarBorder {
@@ -175,4 +183,71 @@ body {
 	justify-content: space-between;
 	color: var(--PaleBlue);
 	font-weight: 700;
+}
+
+@media only screen and (max-width: 880px) {
+	body {
+		background: var(--VeryDarkBlue) url("./images/bg-mobile.png");
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+
+	.container {
+		width: 70%;
+		height: 350px;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1.5fr;
+	}
+
+	/* Right Side */
+	.right {
+		margin-top: 0rem;
+		padding: 1.8rem;
+	}
+
+	.popup .popUpText {
+		bottom: 36%;
+		right: 8%;
+		padding: 0.4rem 0.3rem;
+	}
+
+	.rightTop {
+		justify-content: center;
+	}
+}
+
+@media only screen and (max-width: 426px) {
+	body {
+		background: var(--VeryDarkBlue) url("./images/bg-mobile.png");
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+
+	.container {
+		width: 85%;
+		height: 350px;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1.5fr;
+	}
+
+	/* Right Side */
+	.right {
+		margin-top: 0rem;
+		padding: 1.8rem;
+	}
+
+	.popup .popUpText {
+		border-radius: 12px;
+		bottom: -10%;
+		right: 25%;
+	}
+
+	/* Popup arrow */
+	.popup .popUpText::after {
+		border-color: transparent;
+	}
+
+	.rightTop {
+		justify-content: center;
+	}
 }
