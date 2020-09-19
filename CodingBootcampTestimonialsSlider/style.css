@@ -12,3 +12,249 @@ body {
 	font-family: "Inter", sans-serif;
 	font-size: 32px;
 }
+
+.container {
+	width: 95%;
+	overflow: auto;
+	margin: auto;
+}
+
+.content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+
+	width: 1180px;
+	height: 570px;
+
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+.left {
+	text-align: left;
+	position: relative;
+	top: 30%;
+	left: 11%;
+	height: 90px;
+
+	color: var(--DarkBlue);
+	font-weight: 300;
+}
+
+.left > img {
+	position: absolute;
+	left: 15%;
+	bottom: 63%;
+}
+
+.author {
+	margin-top: 2rem;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.author > span {
+	font-weight: 500;
+	font-size: 20px;
+	margin-left: 0.3rem;
+	color: var(--GrayishBlue);
+}
+
+.right > img {
+	position: absolute;
+	z-index: -1;
+	bottom: -2%;
+	right: -8%;
+}
+
+.tanya > img,
+.john > img {
+	box-shadow: 12px 12px 30px -10px var(--DarkBlue);
+}
+
+.arrows {
+	position: absolute;
+	right: 32%;
+	bottom: 1%;
+	background: white;
+	padding: 0.2rem 0.7rem;
+	border-radius: 40px;
+}
+
+.arrows > img {
+	margin-left: 0.6rem;
+	margin-right: 0.6rem;
+	margin-top: 0.7rem;
+	cursor: pointer;
+	height: 25px;
+}
+
+.hide {
+	display: none;
+}
+
+@media only screen and (max-width: 1240px) {
+	.content {
+		left: -17%;
+	}
+
+	.left {
+		top: 25%;
+		left: 28%;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.content {
+		width: 1000px;
+		grid-template-columns: 0.8fr 1fr;
+		grid-gap: 4.2rem;
+	}
+
+	.left {
+		left: 45%;
+	}
+
+	.left .tanya > p,
+	.left .john > p {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.content {
+		width: 85%;
+		height: 500px;
+		position: absolute;
+		top: 0;
+		bottom: 40%;
+		left: 0;
+		right: 0;
+		margin: auto;
+
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.left {
+		text-align: center;
+		top: 15%;
+		left: -5%;
+	}
+
+	.left > img {
+		left: 45%;
+		bottom: 75%;
+		height: 50px;
+	}
+
+	.left .tanya > p,
+	.left .john > p {
+		font-size: 18px;
+	}
+
+	.author {
+		margin-top: 1.5rem;
+		font-size: 17px;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 4rem;
+	}
+
+	.author > span {
+		font-size: 16px;
+	}
+
+	.right .tanya > img,
+	.right .john > img {
+		width: 60%;
+		margin-left: 0rem;
+		position: absolute;
+		bottom: 20%;
+		right: 24%;
+	}
+
+	.right > img {
+		position: absolute;
+		z-index: -1;
+		bottom: 15%;
+		right: 18%;
+		width: 75%;
+		height: auto;
+	}
+
+	.arrows {
+		right: 47%;
+		bottom: 17%;
+		padding: 0rem 0.2rem;
+	}
+
+	.arrows > img {
+		margin-bottom: 0.2rem;
+		height: 15px;
+	}
+}
+
+@media only screen and (max-width: 380px) {
+	.content {
+		width: 85%;
+		height: 500px;
+		position: absolute;
+		top: 0;
+		bottom: 40%;
+		left: 0;
+		right: 0;
+		margin: auto;
+
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.left {
+		text-align: center;
+		top: 10%;
+		left: -4%;
+	}
+
+	.left > img {
+		left: 40%;
+		bottom: 75%;
+		height: 50px;
+	}
+
+	.author {
+		margin-top: 1.5rem;
+		font-size: 17px;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 4rem;
+	}
+
+	.right .tanya > img,
+	.right .john > img {
+		width: 300px;
+		margin-left: 0.4rem;
+		position: absolute;
+		top: 15%;
+		right: 6%;
+	}
+
+	.right > img {
+		position: absolute;
+		z-index: -1;
+		bottom: 20%;
+		right: -0%;
+		width: 340px;
+		height: 350px;
+	}
+
+	.arrows {
+		right: 40%;
+		bottom: 20%;
+		padding: 0rem 0.2rem;
+	}
+}

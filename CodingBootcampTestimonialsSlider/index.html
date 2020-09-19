@@ -20,12 +20,57 @@
 		<title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 	</head>
 	<body>
-		“ I’ve been interested in coding for a while but never taken the jump, until
-		now. I couldn’t recommend this course enough. I’m now in the job of my
-		dreams and so excited about the future. ” Tanya Sinclair UX Engineer “ If
-		you want to lay the best foundation possible I’d recommend taking this
-		course. The depth the instructors go into is incredible. I now feel so
-		confident about starting up as a professional developer. ” John Tarkpor
-		Junior Front-end Developer
+		<div class="container">
+			<div class="content">
+				<!-- Quote + author -->
+				<div class="left">
+					<img src="images/pattern-quotes.svg" />
+					<div class="tanya">
+						<p>
+							“ I’ve been interested in coding for a while but never taken the
+							jump, until now. I couldn’t recommend this course enough. I’m now
+							in the job of my dreams and so excited about the future. ”
+						</p>
+						<div class="author">Tanya Sinclair <span>UX Engineer</span></div>
+					</div>
+					<div class="john hide">
+						<p>
+							“ If you want to lay the best foundation possible I’d recommend
+							taking this course. The depth the instructors go into is
+							incredible. I now feel so confident about starting up as a
+							professional developer. ”
+						</p>
+						<div class="author">
+							John Tarkpor <span>Junior Front-end Developer</span>
+						</div>
+					</div>
+
+					<!-- Images + arrows -->
+				</div>
+				<div class="right">
+					<img src="./images/pattern-bg.svg" />
+					<div class="tanya">
+						<img src="./images/image-tanya.jpg" />
+					</div>
+					<div class="john hide">
+						<img src="./images/image-john.jpg" />
+					</div>
+					<div class="arrows">
+						<img
+							src="./images/icon-prev.svg"
+							id="prev"
+							onclick="switchSlide()"
+						/>
+						<img
+							src="./images/icon-next.svg"
+							id="next"
+							onclick="switchSlide()"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./script.js"></script>
 	</body>
 </html>
