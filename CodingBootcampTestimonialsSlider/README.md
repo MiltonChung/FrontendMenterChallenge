@@ -2,6 +2,8 @@
 
 ![Design preview for the Coding Bootcamp Testimonials Slider coding challenge](./design/desktop-preview.jpg)
 
+Check out my solution: https://miltonchung.github.io/FrontendMenterChallenge/CodingBootcampTestimonialsSlider/index.html
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
