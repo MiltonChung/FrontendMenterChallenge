@@ -2,6 +2,8 @@
 
 ![Design preview for the Fylo data storage component coding challenge](./design/desktop-preview.jpg)
 
+Check out my solution: https://miltonchung.github.io/FrontendMenterChallenge/FyloDataStorageComponent/index.html
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
