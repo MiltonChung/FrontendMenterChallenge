@@ -8,6 +8,7 @@
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
 			rel="stylesheet"
 		/>
+		<link href="./style.css" rel="stylesheet" />
 
 		<link
 			rel="icon"
@@ -18,12 +19,63 @@
 		<title>Frontend Mentor | Four card feature section</title>
 	</head>
 	<body>
-		Reliable, efficient delivery Powered by Technology Our Artificial
-		Intelligence powered tools use millions of project data points to ensure
-		that your project is successful Supervisor Monitors activity to identify
-		project roadblocks Team Builder Scans our talent network to create the
-		optimal team for your project Karma Regularly evaluates our talent to ensure
-		quality Calculator Uses data from past projects to provide better delivery
-		estimates
+		<header>
+			<div class="header__title">
+				Reliable, efficient delivery
+				<div class="bold">Powered by Technology</div>
+			</div>
+			<p>
+				Our Artificial Intelligence powered tools use millions of project data
+				points to ensure that your project is successful
+			</p>
+		</header>
+
+		<main>
+			<div class="col_1">
+				<div class="card card_1">
+					<div class="card__title">Supervisor</div>
+					<div class="card__caption">
+						Monitors activity to identify project roadblocks
+					</div>
+					<div class="card__picture">
+						<img src="./images/icon-supervisor.svg" />
+					</div>
+				</div>
+			</div>
+
+			<div class="col_2">
+				<div class="card card_2">
+					<div class="card__title">Team Builder</div>
+					<div class="card__caption">
+						Scans our talent network to create the optimal team for your project
+					</div>
+					<div class="card__picture">
+						<img src="./images/icon-team-builder.svg" />
+					</div>
+				</div>
+
+				<div class="card card_3">
+					<div class="card__title">Karma</div>
+					<div class="card__caption">
+						Regularly evaluates our talent to ensure quality
+					</div>
+					<div class="card__picture">
+						<img src="./images/icon-karma.svg" />
+					</div>
+				</div>
+			</div>
+
+			<div class="col_3">
+				<div class="card card_4">
+					<div class="card__title">Calculator</div>
+					<div class="card__caption">
+						Uses data from past projects to provide better delivery estimates
+					</div>
+					<div class="card__picture">
+						<img src="./images/icon-calculator.svg" />
+					</div>
+				</div>
+			</div>
+		</main>
 	</body>
 </html>
