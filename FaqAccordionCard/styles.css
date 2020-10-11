@@ -1,0 +1,51 @@
+:root {
+	/* Text */
+	--Lightgrayishblue: hsl(240, 5%, 91%);
+
+	/* Text */
+	--Verydarkgrayishblue: hsl(237, 12%, 33%);
+	--Darkgrayishblue: hsl(240, 6%, 50%);
+	--Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+	--Softred: hsl(14, 88%, 65%);
+
+	/* Gradient */
+	--Softviolet: hsl(273, 75%, 66%);
+	--Softblue: hsl(240, 73%, 65%);
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 12px;
+}
+body {
+	font-family: "Kumbh Sans", sans-serif;
+	background: linear-gradient(to bottom, var(--Softviolet), var(--Softblue));
+	background-repeat: repeat;
+	background-size: cover;
+	height: 100vh;
+}
+.hidden {
+	display: none;
+}
+
+.card {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: white;
+
+	width: 50%;
+	border-radius: 20px;
+	box-shadow: 0.5rem 0.5rem 2rem rgba(66, 66, 66, 0.534);
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+}
+
+.card .personImage {
+}
