@@ -39,6 +39,9 @@ hr {
 .bold {
 	font-size: 1.3rem;
 }
+.rotate {
+	transform: rotate(180deg);
+}
 
 /* === CARD COMPONENT === */
 .card {
@@ -115,13 +118,13 @@ hr {
 	align-content: center;
 	padding: 0.7rem 0;
 	cursor: pointer;
-	transition: ease-in 0.5s;
 }
 
 .card .text .card-question .question p {
 	align-self: center;
 	color: var(--Verydarkgrayishblue);
 	font-weight: 400;
+	transition: ease-out 0.2s;
 }
 
 .card .text .card-question .answer {
@@ -129,7 +132,7 @@ hr {
 	color: var(--Darkgrayishblue);
 	font-weight: 400;
 	margin-bottom: 1rem;
-	transition: ease-in 0.5s;
+	transition: ease 1s;
 }
 
 .card .text .card-question .question button {
