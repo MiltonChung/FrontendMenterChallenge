@@ -29,41 +29,82 @@
 			<div class="personImage">
 				<img class="box" src="./images/illustration-box-desktop.svg" alt="" />
 				<img class="woman" src="./images/illustration-woman-online-desktop.svg" alt="" />
-				<!-- <img class="imgBg" src="./images/bg-pattern-desktop.svg" alt="" /> -->
+				<img class="imgBg" src="./images/bg-pattern-desktop.svg" alt="" />
 			</div>
 			<div class="text">
 				<h1>FAQ</h1>
 
-				<div class="questionOne"><p>How many team members can I invite?</p></div>
-				<div id="questionOne hidden">
-					You can invite up to 2 additional users on the Free plan. There is no limit on team members for
-					the Premium plan.
+				<div class="card-question">
+					<div class="question questionOneQ" onclick="expand(1)">
+						<p>How many team members can I invite?</p>
+						<button id="questionOneButton" class="question-btn">
+							<img src="./images/icon-arrow-down.svg" alt="" />
+						</button>
+					</div>
+					<div id="questionOne" class="answer hidden">
+						You can invite up to 2 additional users on the Free plan. There is no limit on team members
+						for the Premium plan.
+					</div>
 				</div>
 
-				<div class="questionTwo">
-					<p>What is the maximum file upload size?</p>
-				</div>
-				<div id="questionTwo" class="hidden">
-					No more than 2GB. All files in your account must fit your allotted storage space.
+				<hr />
+
+				<div class="card-question">
+					<div class="question questionTwoQ" onclick="expand(2)">
+						<p>What is the maximum file upload size?</p>
+						<button id="questionTwoButton" class="question-btn">
+							<img src="./images/icon-arrow-down.svg" alt="" />
+						</button>
+					</div>
+
+					<div id="questionTwo" class="answer hidden">
+						No more than 2GB. All files in your account must fit your allotted storage space.
+					</div>
 				</div>
 
-				<div class="questionThree"><p>How do I reset my password?</p></div>
-				<div id="questionThree" class="hidden">
-					Click “Forgot password” from the login page or “Change password” from your profile page. A reset
-					link will be emailed to you.
+				<hr />
+
+				<div class="card-question">
+					<div class="question questionThreeQ" onclick="expand(3)">
+						<p>How do I reset my password?</p>
+						<button id="questionThreeButton" class="question-btn">
+							<img src="./images/icon-arrow-down.svg" alt="" />
+						</button>
+					</div>
+					<div id="questionThree" class="answer hidden">
+						Click “Forgot password” from the login page or “Change password” from your profile page. A
+						reset link will be emailed to you.
+					</div>
 				</div>
 
-				<div class="questionFour">
-					<p>Can I cancel my subscription?</p>
-				</div>
-				<div id="questionThree" class="hidden">
-					Yes! Send us a message and we’ll process your request no questions asked.
+				<hr />
+				<div class="card-question">
+					<div class="question questionFourQ" onclick="expand(4)">
+						<p>Can I cancel my subscription?</p>
+						<button id="questionFourButton" class="question-btn">
+							<img src="./images/icon-arrow-down.svg" alt="" />
+						</button>
+					</div>
+
+					<div id="questionFour" class="answer hidden">
+						Yes! Send us a message and we’ll process your request no questions asked.
+					</div>
 				</div>
 
-				<div class="questionFive"><p>Do you provide additional support?</p></div>
-				<div id="questionFour" class="hidden">
-					Chat and email support is available 24/7. Phone lines are open during normal business hours.
+				<hr />
+				<div class="card-question">
+					<div class="question questionFiveQ" onclick="expand(5)">
+						<p>Do you provide additional support?</p>
+						<button id="questionFiveButton" class="question-btn">
+							<img src="./images/icon-arrow-down.svg" alt="" />
+						</button>
+					</div>
+					<div id="questionFive" class="answer hidden">
+						Chat and email support is available 24/7. Phone lines are open during normal business hours.
+					</div>
 				</div>
+
+				<hr />
 			</div>
 		</div>
 

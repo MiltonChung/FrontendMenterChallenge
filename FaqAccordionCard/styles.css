@@ -1,5 +1,6 @@
+/* === SETTING UP DOCUMENT === */
 :root {
-	/* Text */
+	/* Divider */
 	--Lightgrayishblue: hsl(240, 5%, 91%);
 
 	/* Text */
@@ -26,10 +27,20 @@ body {
 	background-size: cover;
 	height: 100vh;
 }
+hr {
+	border: 1px solid var(--Lightgrayishblue);
+}
 .hidden {
 	display: none;
 }
+.show {
+	display: block;
+}
+.bold {
+	font-size: 1.3rem;
+}
 
+/* === CARD COMPONENT === */
 .card {
 	position: absolute;
 	top: 50%;
@@ -45,7 +56,99 @@ body {
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: center;
 	align-items: center;
+
+	padding: 8rem 6rem;
 }
 
-.card .personImage {
+/* - CARD LEFT */
+.card .personImage .woman {
+	filter: drop-shadow(-0.5rem -0.5rem 2rem rgba(122, 122, 122, 0.288));
+	position: absolute;
+	left: -8%;
+	top: 13%;
+	z-index: 2;
+	width: 50%;
+	height: auto;
+	max-width: 520px;
+	max-height: 365px;
+	min-width: 400px;
+	min-height: 300px;
+}
+
+.card .personImage .box {
+	filter: drop-shadow(-0.5rem -0.5rem 2rem rgba(39, 39, 39, 0.295));
+	position: absolute;
+	left: -11%;
+	top: 37%;
+	z-index: 3;
+	width: 20%;
+	height: auto;
+	max-width: 510px;
+	max-height: 330px;
+	min-width: 150px;
+	min-height: 140px;
+}
+
+.card .personImage .imgBg {
+	position: absolute;
+	left: -5.5%;
+	top: 20%;
+	z-index: 1;
+	height: auto;
+	max-width: 520px;
+	max-height: 365px;
+	min-width: 400px;
+	min-height: 300px;
+}
+
+/* - CARD RIGHT - */
+.card .text h1 {
+	margin-bottom: 1.5rem;
+	color: var(--Verydarkdesaturatedblue);
+	font-weight: 700;
+}
+
+.card .text .card-question .question {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	padding: 0.7rem 0;
+	cursor: pointer;
+	transition: ease-in 0.5s;
+}
+
+.card .text .card-question .question p {
+	align-self: center;
+	color: var(--Verydarkgrayishblue);
+	font-weight: 400;
+}
+
+.card .text .card-question .answer {
+	align-self: center;
+	color: var(--Darkgrayishblue);
+	font-weight: 400;
+	margin-bottom: 1rem;
+	transition: ease-in 0.5s;
+}
+
+.card .text .card-question .question button {
+	align-self: center;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	padding: 0.5rem;
+	transition: all 0.25s;
+}
+
+.card .text .card-question .question button:hover {
+	transform: scale(1.2);
+}
+
+.card .text .card-question .question button:focus {
+	outline: none;
+}
+
+.card .text .card-question .question button img {
+	width: 15px;
 }
