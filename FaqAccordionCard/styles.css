@@ -94,12 +94,12 @@ hr {
 
 .card .personImage .imgBg {
 	position: absolute;
-	left: -5.5%;
+	left: -5%;
 	top: 20%;
 	z-index: 1;
 	height: auto;
 	max-width: 520px;
-	max-height: 365px;
+	max-height: 400px;
 	min-width: 400px;
 	min-height: 300px;
 }
@@ -154,4 +154,118 @@ hr {
 
 .card .text .card-question .question button img {
 	width: 15px;
+}
+
+@media (max-width: 1170px) {
+	.card {
+		width: 70%;
+	}
+}
+
+@media (max-width: 999px) {
+	.card {
+		width: 80%;
+		min-width: 280px;
+		max-width: 400px;
+		top: 50%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 3.5fr;
+
+		padding: 3.8rem 2rem;
+	}
+
+	/* - CARD LEFT */
+	.card .personImage .woman {
+		filter: drop-shadow(-0.5rem -0.5rem 2rem rgba(122, 122, 122, 0.288));
+		position: absolute;
+		left: 10%;
+		top: -25%;
+		z-index: 2;
+		width: 80%;
+		height: auto;
+		max-width: 261px;
+		max-height: 200px;
+		min-width: 261px;
+		min-height: 200px;
+	}
+
+	.card .personImage .box {
+		filter: drop-shadow(-0.5rem -0.5rem 2rem rgba(39, 39, 39, 0.295));
+		position: absolute;
+		left: 5%;
+		top: -8%;
+		z-index: 3;
+		width: 30%;
+		height: auto;
+		max-width: 104px;
+		max-height: 100px;
+		min-width: 104px;
+		min-height: 100px;
+	}
+
+	.card .personImage .imgBg {
+		position: absolute;
+		left: 10%;
+		top: -29%;
+		z-index: 1;
+		height: auto;
+		width: 80%;
+		max-width: 266px;
+		max-height: 266pxx;
+		min-width: 266px;
+		min-height: 261px;
+	}
+
+	/* - CARD RIGHT - */
+	.card .text h1 {
+		margin-bottom: 1.5rem;
+		color: var(--Verydarkdesaturatedblue);
+		font-weight: 700;
+	}
+
+	.card .text .card-question .question {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-content: center;
+		padding: 0.7rem 0;
+		cursor: pointer;
+	}
+
+	.card .text .card-question .question p {
+		align-self: center;
+		color: var(--Verydarkgrayishblue);
+		font-weight: 400;
+		transition: ease-out 0.2s;
+	}
+
+	.card .text .card-question .answer {
+		align-self: center;
+		color: var(--Darkgrayishblue);
+		font-weight: 400;
+		margin-bottom: 1rem;
+		transition: ease 1s;
+	}
+
+	.card .text .card-question .question button {
+		align-self: center;
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		padding: 0.5rem;
+		transition: all 0.25s;
+	}
+
+	.card .text .card-question .question button:hover {
+		transform: scale(1.2);
+	}
+
+	.card .text .card-question .question button:focus {
+		outline: none;
+	}
+
+	.card .text .card-question .question button img {
+		width: 15px;
+	}
 }
