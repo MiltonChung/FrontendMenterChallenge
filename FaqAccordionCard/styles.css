@@ -1,271 +1,236 @@
-/* === SETTING UP DOCUMENT === */
-:root {
-	/* Divider */
-	--Lightgrayishblue: hsl(240, 5%, 91%);
+/* ===GOOGLE-FONTS=== */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* ===GOOGLE-FONTS=== */
 
-	/* Text */
-	--Verydarkgrayishblue: hsl(237, 12%, 33%);
-	--Darkgrayishblue: hsl(240, 6%, 50%);
-	--Verydarkdesaturatedblue: hsl(238, 29%, 16%);
-	--Softred: hsl(14, 88%, 65%);
-
-	/* Gradient */
-	--Softviolet: hsl(273, 75%, 66%);
-	--Softblue: hsl(240, 73%, 65%);
-}
-* {
+*,
+::before,
+::after {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
+
 html {
-	font-size: 12px;
+	font-size: 62.5%;
 }
+
 body {
 	font-family: "Kumbh Sans", sans-serif;
-	background: linear-gradient(to bottom, var(--Softviolet), var(--Softblue));
-	background-repeat: repeat;
-	background-size: cover;
+	line-height: 1.5;
+	background-color: hsl(273, 75%, 66%);
+	background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+h1 {
+	margin: 2.5rem 0;
+	text-align: center;
+	font-size: 3.5rem;
+	color: hsl(238, 29%, 16%);
+}
+
+h2 {
+	font-size: 1.5rem;
+	color: hsl(237, 12%, 33%);
+	font-weight: 400;
+	cursor: pointer;
+	transition: color 0.25s;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+p {
+	margin-top: 1rem;
+	font-size: 1.25rem;
+	color: hsl(240, 6%, 50%);
+}
+/* ===START STYLES=== */
+.main {
+	padding: 3rem 1rem;
 	height: 100vh;
+	width: 90%;
+	margin: 0 auto;
 }
-hr {
-	border: 1px solid var(--Lightgrayishblue);
-}
-.hidden {
+
+.box {
 	display: none;
 }
-.show {
-	display: block;
-}
-.bold {
-	font-size: 1.3rem;
-}
-.rotate {
-	transform: rotate(180deg);
-}
 
-/* === CARD COMPONENT === */
-.card {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background: white;
-
-	width: 50%;
+.card-wrapper {
+	background-color: #ffffff;
 	border-radius: 20px;
-	box-shadow: 0.5rem 0.5rem 2rem rgba(66, 66, 66, 0.534);
-
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	justify-content: center;
-	align-items: center;
-
-	padding: 8rem 6rem;
 }
 
-/* - CARD LEFT */
-.card .personImage .woman {
-	filter: drop-shadow(-0.5rem -0.5rem 2rem rgba(122, 122, 122, 0.288));
-	position: absolute;
-	left: -8%;
-	top: 13%;
-	z-index: 2;
-	width: 50%;
-	height: auto;
-	max-width: 520px;
-	max-height: 365px;
-	min-width: 400px;
-	min-height: 300px;
+.card {
+	margin-top: 10rem;
+	padding: 2rem 2.5rem;
 }
 
-.card .personImage .box {
-	filter: drop-shadow(-0.5rem -0.5rem 2rem rgba(39, 39, 39, 0.295));
-	position: absolute;
-	left: -11%;
-	top: 37%;
-	z-index: 3;
-	width: 20%;
-	height: auto;
-	max-width: 510px;
-	max-height: 330px;
-	min-width: 150px;
-	min-height: 140px;
+.card-img {
+	margin: -17rem auto 0 auto;
+	height: 280px;
+	max-width: 500px;
+	transform: scale(1.2);
+	transform: translate(-5%);
+	width: 100%;
+	background: url("./images/illustration-woman-online-mobile.svg") no-repeat center center/contain;
 }
 
-.card .personImage .imgBg {
-	position: absolute;
-	left: -5%;
-	top: 20%;
-	z-index: 1;
-	height: auto;
-	max-width: 520px;
-	max-height: 400px;
-	min-width: 400px;
-	min-height: 300px;
-}
-
-/* - CARD RIGHT - */
-.card .text h1 {
-	margin-bottom: 1.5rem;
-	color: var(--Verydarkdesaturatedblue);
-	font-weight: 700;
-}
-
-.card .text .card-question .question {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-content: center;
-	padding: 0.7rem 0;
-	cursor: pointer;
-}
-
-.card .text .card-question .question p {
-	align-self: center;
-	color: var(--Verydarkgrayishblue);
-	font-weight: 400;
-	transition: ease-out 0.2s;
-}
-
-.card .text .card-question .answer {
-	align-self: center;
-	color: var(--Darkgrayishblue);
-	font-weight: 400;
-	margin-bottom: 1rem;
-	transition: ease 1s;
-}
-
-.card .text .card-question .question button {
-	align-self: center;
-	border: none;
-	background: transparent;
-	cursor: pointer;
-	padding: 0.5rem;
+.card-question {
+	padding: 1.8rem 0;
+	border-top: 2px solid hsl(240, 5%, 91%);
 	transition: all 0.25s;
 }
 
-.card .text .card-question .question button:hover {
-	transform: scale(1.2);
+.card-question:first-of-type {
+	border-top: transparent;
 }
 
-.card .text .card-question .question button:focus {
+.card-question:last-of-type {
+	border-bottom: 2px solid hsl(240, 5%, 91%);
+}
+
+.question-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.question-answer {
+	line-height: 1.3;
+	margin-top: -1.5rem;
+	visibility: hidden;
+	height: 0;
+	opacity: 0;
+	transition: all 0.25s;
+}
+
+.card-question.show .question-answer {
+	margin-top: 0;
+	visibility: visible;
+	opacity: 1;
+	height: 5vh;
+}
+
+.question-btn {
+	cursor: pointer;
+	background-color: transparent;
+	padding: 0.5rem;
+	border: none;
 	outline: none;
+	transition: all 0.3s;
 }
 
-.card .text .card-question .question button img {
+.question-btn img {
 	width: 15px;
+	user-select: none;
 }
 
-@media (max-width: 1170px) {
-	.card {
-		width: 70%;
-	}
+.card-question.show {
+	padding: 1rem 0;
 }
 
-@media (max-width: 999px) {
-	.card {
-		width: 80%;
-		min-width: 280px;
-		max-width: 400px;
-		top: 50%;
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 3.5fr;
+.card-question.show .question-btn.rotate {
+	transform: rotate(180deg);
+}
 
-		padding: 3.8rem 2rem;
-	}
+.card-question.show .title {
+	color: hsl(238, 29%, 16%);
+	font-weight: 700;
+}
 
-	/* - CARD LEFT */
-	.card .personImage .woman {
-		filter: drop-shadow(-0.5rem -0.5rem 2rem rgba(122, 122, 122, 0.288));
-		position: absolute;
-		left: 10%;
-		top: -25%;
-		z-index: 2;
-		width: 80%;
-		height: auto;
-		max-width: 261px;
-		max-height: 200px;
-		min-width: 261px;
-		min-height: 200px;
-	}
+.card-img-desktop {
+	display: none;
+}
 
-	.card .personImage .box {
-		filter: drop-shadow(-0.5rem -0.5rem 2rem rgba(39, 39, 39, 0.295));
-		position: absolute;
-		left: 5%;
-		top: -8%;
-		z-index: 3;
-		width: 30%;
-		height: auto;
-		max-width: 104px;
-		max-height: 100px;
-		min-width: 104px;
-		min-height: 100px;
-	}
-
-	.card .personImage .imgBg {
-		position: absolute;
-		left: 10%;
-		top: -29%;
-		z-index: 1;
-		height: auto;
-		width: 80%;
-		max-width: 266px;
-		max-height: 266pxx;
-		min-width: 266px;
-		min-height: 261px;
-	}
-
-	/* - CARD RIGHT - */
-	.card .text h1 {
-		margin-bottom: 1.5rem;
-		color: var(--Verydarkdesaturatedblue);
-		font-weight: 700;
-	}
-
-	.card .text .card-question .question {
+/* ===MEDIA-QUERIES=== */
+@media (min-width: 868px) {
+	.main {
+		padding: 0;
+		min-height: 100vh;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.container {
+		position: relative;
+	}
+
+	.box {
+		display: block;
+		position: absolute;
+		left: -10%;
+		top: 45%;
+		z-index: 100;
+	}
+
+	h1 {
+		text-align: left;
+	}
+
+	h2:hover {
+		color: hsl(14, 88%, 65%);
+	}
+
+	.card-wrapper {
+		max-width: 1000px;
+		height: 80vh;
+		width: 100%;
+	}
+
+	.card {
+		height: 100%;
+		padding: 2rem 2.5rem;
+		margin-top: 0;
+		display: flex;
+		align-items: center;
 		justify-content: space-between;
-		align-content: center;
-		padding: 0.7rem 0;
-		cursor: pointer;
+		overflow: hidden;
 	}
 
-	.card .text .card-question .question p {
-		align-self: center;
-		color: var(--Verydarkgrayishblue);
-		font-weight: 400;
-		transition: ease-out 0.2s;
+	.card-img {
+		display: none;
 	}
 
-	.card .text .card-question .answer {
-		align-self: center;
-		color: var(--Darkgrayishblue);
-		font-weight: 400;
-		margin-bottom: 1rem;
-		transition: ease 1s;
+	.card-img-desktop {
+		position: relative;
+		display: block;
+		left: -5rem;
 	}
 
-	.card .text .card-question .question button {
-		align-self: center;
-		border: none;
-		background: transparent;
-		cursor: pointer;
-		padding: 0.5rem;
-		transition: all 0.25s;
-	}
-
-	.card .text .card-question .question button:hover {
+	.illu-desktop {
+		position: relative;
 		transform: scale(1.2);
+		z-index: 10;
 	}
 
-	.card .text .card-question .question button:focus {
-		outline: none;
+	.bg-pattern {
+		position: absolute;
+		top: -30%;
+		left: -42.5%;
+		transform: scale(2);
 	}
 
-	.card .text .card-question .question button img {
-		width: 15px;
+	.question-wrapper {
+		width: 70%;
+		max-width: 600px;
+		padding: 2rem;
 	}
 }
