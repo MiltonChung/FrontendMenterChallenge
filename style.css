@@ -4,8 +4,9 @@
 }
 
 body {
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	background-color: rgb(58, 78, 196);
+	font-family: "Lato", sans-serif;
+	background-image: linear-gradient(to right, rgb(84, 84, 192), rgb(167, 89, 167));
+	height: 100vh;
 }
 
 .container {
@@ -19,7 +20,7 @@ body {
 	height: 80%;
 	background-color: rgb(238, 238, 238);
 	border-radius: 10px;
-	box-shadow: 10px 10px 10px 0px #1c0080;
+	box-shadow: 10px 10px 10px 0px #000b6e41;
 
 	position: absolute;
 	top: 0;
@@ -38,29 +39,52 @@ body {
 }
 
 .list li {
-	margin: 0.5rem;
 	border-radius: 10px;
 	cursor: pointer;
-	text-align: left;
+	text-align: center;
+	background-color: #9f48b1;
+	border-top: 2px solid #ff89f9;
+	border-right: 2px solid #490768;
+	border-bottom: 2px solid #490768;
+	border-left: 2px solid #ff89f9;
+	border-radius: 5px;
+	margin: 0.2rem 0;
+}
+
+.list li:first-of-type {
+	border: none;
+	background: transparent;
 }
 
 .list li > h1 {
 	font-size: 40px;
-	border-bottom: 7px solid blue;
-	border-radius: 20%;
 	text-align: center;
+	color: rgb(21, 1, 94);
+	cursor: default;
+	font-weight: 700;
+}
+
+.list li > .underline {
+	border-top: 2px rgb(21, 1, 94) solid;
+	width: 50%;
+	display: flex;
+	margin: 0 auto;
+	margin-bottom: 1rem;
 }
 
 .list li > a {
 	text-decoration: none;
-	background-color: #9f48b1;
+	font-size: 1.2rem;
 	color: white;
 	padding: 1rem 1.5rem;
-	border-top: 1px solid #f564ee;
-	border-right: 1px solid #650094;
-	border-bottom: 1px solid #650094;
-	border-left: 1px solid #f564ee;
-	border-radius: 10px;
+	width: fit-content;
+	text-align: center;
+	font-weight: 400;
+}
+
+.list li > a:hover {
+	transition: ease 0.5s;
+	opacity: 0.85;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -110,8 +134,8 @@ body {
 	left: 51%;
 	right: 51%;
 	bottom: 0;
-	background: rgb(58, 78, 196);
-	height: 6px;
+	background: rgba(255, 255, 255, 0.589);
+	height: 3px;
 	-webkit-transition-property: left, right;
 	transition-property: left, right;
 	-webkit-transition-duration: 0.3s;
