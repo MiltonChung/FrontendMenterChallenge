@@ -59,7 +59,7 @@ p {
 }
 /* ===START STYLES=== */
 .main {
-	padding: 3rem 1rem;
+	padding: 6rem 1rem;
 	height: 100vh;
 	width: 90%;
 	margin: 0 auto;
@@ -91,16 +91,8 @@ p {
 
 .card-question {
 	padding: 1.8rem 0;
-	border-top: 2px solid hsl(240, 5%, 91%);
-	transition: all 0.25s;
-}
-
-.card-question:first-of-type {
-	border-top: transparent;
-}
-
-.card-question:last-of-type {
 	border-bottom: 2px solid hsl(240, 5%, 91%);
+	transition: all 0.25s;
 }
 
 .question-title {
@@ -125,6 +117,15 @@ p {
 	height: 5vh;
 }
 
+.card-question.show .question-btn.rotate {
+	transform: rotate(180deg);
+}
+
+.card-question.show .title {
+	color: hsl(238, 29%, 16%);
+	font-weight: 700;
+}
+
 .question-btn {
 	cursor: pointer;
 	background-color: transparent;
@@ -141,15 +142,6 @@ p {
 
 .card-question.show {
 	padding: 1rem 0;
-}
-
-.card-question.show .question-btn.rotate {
-	transform: rotate(180deg);
-}
-
-.card-question.show .title {
-	color: hsl(238, 29%, 16%);
-	font-weight: 700;
 }
 
 .card-img-desktop {
@@ -176,7 +168,7 @@ p {
 	.box {
 		display: block;
 		position: absolute;
-		left: -10%;
+		left: -12%;
 		top: 45%;
 		z-index: 100;
 	}
