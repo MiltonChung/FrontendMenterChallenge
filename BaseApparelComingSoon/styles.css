@@ -1,0 +1,57 @@
+:root {
+	/* Primary */
+	--DesaturatedRed: hsl(0, 36%, 70%);
+	--SoftRed: hsl(0, 93%, 68%);
+
+	/* Neutral */
+	--DarkGrayishRed: hsl(0, 6%, 24%);
+
+	/* Gradients */
+	/* Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%) */
+	/* Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 16px;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+
+/* === START MAIN STYLES === */
+main {
+	height: 100vh;
+}
+.container {
+	display: grid;
+	grid-template-columns: 1.3fr 1fr;
+	height: 100vh;
+}
+.leftText {
+	padding: 4rem 3rem 3rem 6rem;
+	display: flex;
+	flex-direction: column;
+	background: url("./images/bg-pattern-desktop.svg"),
+		linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.desktop-logo {
+	width: 30%;
+}
+.hero-desktop-img {
+	background-image: url("./images/hero-desktop.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+}
+.hero-mobile-section {
+	display: none;
+}
