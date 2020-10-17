@@ -21,17 +21,23 @@
 						<img src="./images/logo.svg" alt="" />
 					</div>
 					<div class="landing-text">
-						<h1><span>WE'RE</span> COMING SOON</h1>
-						<p>
+						<h1 class="landing-title">
+							<p>WE'RE</p>
+							<div>COMING <br />SOON</div>
+						</h1>
+						<p class="landing-description">
 							Hello fellow shoppers! We're currently building our new fashion store. Add your email below
 							to stay up-to-date with announcements and our launch deals.
 						</p>
 					</div>
-					<form class="email-form">
-						<input type="text" />
-						<button>
+					<form class="email-form" id="email-form">
+						<input type="text" placeholder="Email Address" id="user-input" />
+						<img src="./images/icon-error.svg" alt="" class="error-icon" />
+						<button type="submit" class="email-form-button" id="email-button">
 							<img src="./images/icon-arrow.svg" alt="" />
 						</button>
+						<p class="success-msg" id="success-msg">Thank you!</p>
+						<p class="error-msg">Please provide a valid email!</p>
 					</form>
 				</div>
 

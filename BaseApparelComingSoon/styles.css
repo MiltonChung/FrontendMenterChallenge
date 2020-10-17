@@ -13,6 +13,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 body {
 	font-family: "Josefin Sans", sans-serif;
@@ -29,29 +30,214 @@ main {
 }
 .container {
 	display: grid;
-	grid-template-columns: 1.3fr 1fr;
+	grid-template-columns: 1.1fr 1fr;
 	height: 100vh;
 }
 .leftText {
-	padding: 4rem 3rem 3rem 6rem;
+	padding: 4rem 10rem 3rem 7rem;
 	display: flex;
 	flex-direction: column;
 	background: url("./images/bg-pattern-desktop.svg"),
 		linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	background-repeat: no-repeat, no-repeat;
+	background-size: cover, cover;
+	background-position: center, center;
 }
 .desktop-logo {
-	width: 30%;
+	width: 34%;
+	margin-bottom: 5rem;
+}
+.landing-text h1 {
+	font-size: 4rem;
+	letter-spacing: 1.1rem;
+	font-weight: 400;
+}
+.landing-text .landing-title p {
+	color: var(--DesaturatedRed);
+	font-weight: 300;
+}
+.landing-text .landing-description {
+	color: var(--DesaturatedRed);
+	margin-top: 1.4rem;
+	width: 100%;
+	min-width: 400px;
+	max-width: 500px;
+	line-height: 1.8rem;
+}
+form.email-form {
+	margin-top: 1.4rem;
+	position: relative;
+	width: 100%;
+	min-width: 380px;
+	max-width: 500px;
+}
+form.email-form input[type="text"] {
+	height: 50px;
+	width: 100%;
+	border-radius: 30px;
+	background: transparent;
+	border: 1px solid var(--DesaturatedRed);
+	color: var(--DesaturatedRed);
+	padding-left: 2rem;
+	outline: none;
+}
+form.email-form input[type="text"]::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: var(--DesaturatedRed);
+	margin-left: 1rem;
+	opacity: 1; /* Firefox */
+}
+form.email-form .email-form-button {
+	background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	border-radius: 30px;
+	padding: 1rem 2.5rem;
+	height: 50px;
+	position: absolute;
+	right: -2px;
+	top: 0;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	transition: all 0.3s;
+}
+form.email-form .email-form-button:hover {
+	background: linear-gradient(135deg, hsl(0, 59%, 89%), hsl(0, 73%, 78%));
+	box-shadow: 5px 5px 10px rgba(85, 0, 0, 0.308);
+	height: 53px;
+	width: 94px;
+}
+
+form.email-form .error-icon {
+	width: 20px;
+	height: auto;
+	position: absolute;
+	right: 23%;
+	top: 20%;
+	z-index: 2;
+	display: none;
+}
+form.email-form .error-msg,
+form.email-form .success-msg {
+	color: var(--DesaturatedRed);
+	margin: 0.7rem 0 0 2rem;
+	font-size: 13px;
+	display: none;
+}
+.email-form.error input[type="text"] {
+	border: 1px solid var(--SoftRed);
+}
+.email-form.error .error-icon,
+.email-form.error .error-msg,
+.email-form.success .success-msg {
+	display: block;
 }
 .hero-desktop-img {
 	background-image: url("./images/hero-desktop.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: top;
 	height: 100%;
 }
 .hero-mobile-section {
 	display: none;
+}
+
+@media (max-width: 1024px) {
+	.leftText {
+		padding: 4rem 3rem 3rem 3rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero-desktop-img {
+		display: block;
+	}
+	.container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.leftText {
+		padding: 1.2rem;
+	}
+	.landing-text h1 {
+		letter-spacing: 0.5rem;
+	}
+}
+
+@media (max-width: 675px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+	main {
+		overflow: hidden;
+		/* display: none; */
+	}
+	.rightImg {
+		order: 1;
+	}
+	.leftText {
+		order: 2;
+	}
+	.desktop-logo {
+		display: none;
+	}
+	.mobile-logo {
+		width: 30%;
+		margin: 1.5rem;
+	}
+	.hero-desktop-img {
+		display: none;
+	}
+	.hero-mobile-img {
+		background: url("./images/hero-mobile.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top;
+		height: 100%;
+		min-height: 250px;
+		max-height: 400px;
+		width: 100vw;
+	}
+	.hero-mobile-section {
+		display: block;
+	}
+	.leftText {
+		padding: 3.5rem 2rem 1rem;
+		height: 100%;
+		width: 100%;
+	}
+	.landing-text {
+		text-align: center;
+	}
+	.landing-text h1 {
+		font-size: 2.4rem;
+		letter-spacing: 0.65rem;
+	}
+	.landing-text .landing-description {
+		width: 100%;
+		min-width: 150px;
+		max-width: 1000px;
+		line-height: 1.5rem;
+		font-size: 14px;
+	}
+	form.email-form {
+		margin-top: 1.8rem;
+		width: 100%;
+		min-width: 100px;
+		max-width: 3000px;
+	}
+	form.email-form input[type="text"] {
+		height: 50px;
+		width: 100%;
+		width: 100%;
+	}
+	form.email-form .email-form-button {
+		padding: 1rem 1.5rem;
+		right: 0;
+		top: 0;
+	}
+	form.email-form .email-form-button:hover {
+		height: 50px;
+		width: 60px;
+	}
 }
