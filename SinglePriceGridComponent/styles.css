@@ -1,0 +1,17 @@
+:root {
+	/* Primary */
+	--Cyan: hsl(179, 62%, 43%);
+	--BrightYellow: hsl(71, 73%, 54%);
+
+	/* Neutral */
+	--LightGray: hsl(204, 43%, 93%);
+	--GrayishBlue: hsl(218, 22%, 67%);
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Karla", sans-serif;
+	font-size: 16px;
+}
