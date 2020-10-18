@@ -45,6 +45,7 @@ main {
 	max-width: 800px;
 	min-width: 547px;
 	height: 60%;
+	min-height: 495px;
 }
 .card {
 	background: white;
@@ -53,7 +54,7 @@ main {
 	width: 100%;
 	border-radius: 7px;
 	display: grid;
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-rows: 1fr 1.3fr;
 }
 .top-padding {
 	padding: 3rem 3rem 3rem 2rem;
@@ -79,6 +80,7 @@ main {
 .bottom .bottom-left {
 	background: var(--Cyan);
 	color: white;
+	border-radius: 0px 0px 0px 7px;
 }
 .bottom-left h2 {
 	margin-bottom: 0.8rem;
@@ -106,10 +108,16 @@ main {
 	padding: 0.8rem;
 	border-radius: 5px;
 	box-shadow: 0px 0px 15px rgba(88, 88, 88, 0.418);
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.bottom-left button:hover {
+	background-color: hsl(71, 46%, 48%);
 }
 .bottom-right {
 	background: hsl(179, 45%, 52%);
 	color: white;
+	border-radius: 0px 0px 7px 0px;
 }
 .bottom-right h2 {
 	margin-bottom: 0.8rem;
