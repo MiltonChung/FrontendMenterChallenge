@@ -15,3 +15,110 @@ body {
 	font-family: "Karla", sans-serif;
 	font-size: 16px;
 }
+h1,
+h2 {
+	font-weight: 700;
+}
+h2 {
+	font-size: 1.3rem;
+}
+p,
+span {
+	font-weight: 400;
+}
+
+/* === START MAIN STYLE === */
+main {
+	position: relative;
+	height: 100vh;
+	background-color: var(--LightGray);
+}
+.wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto auto;
+
+	width: 50%;
+	max-width: 800px;
+	min-width: 547px;
+	height: 60%;
+}
+.card {
+	background: white;
+	box-shadow: 0px 0px 10px rgba(58, 58, 58, 0.411);
+	height: 100%;
+	width: 100%;
+	border-radius: 7px;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+}
+.top-padding {
+	padding: 3rem 3rem 3rem 2rem;
+}
+.top h1 {
+	color: var(--Cyan);
+	margin-bottom: 1rem;
+}
+.top h2 {
+	color: var(--BrightYellow);
+	margin-bottom: 1rem;
+}
+.top p {
+	color: var(--GrayishBlue);
+}
+.bottom {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.bottom-padding {
+	padding: 2.5rem 2rem 2rem 2rem;
+}
+.bottom .bottom-left {
+	background: var(--Cyan);
+	color: white;
+}
+.bottom-left h2 {
+	margin-bottom: 0.8rem;
+}
+.bottom-left .price {
+	color: rgba(223, 223, 223, 0.747);
+	display: flex;
+	align-items: center;
+}
+.bottom-left .money {
+	font-size: 2rem;
+	margin-right: 1rem;
+	color: white;
+}
+.bottom-left p {
+	margin-top: 0.5rem;
+	margin-bottom: 1.8rem;
+}
+.bottom-left button {
+	text-decoration: none;
+	color: white;
+	background: var(--BrightYellow);
+	width: 100%;
+	border: none;
+	padding: 0.8rem;
+	border-radius: 5px;
+	box-shadow: 0px 0px 15px rgba(88, 88, 88, 0.418);
+}
+.bottom-right {
+	background: hsl(179, 45%, 52%);
+	color: white;
+}
+.bottom-right h2 {
+	margin-bottom: 0.8rem;
+}
+.bottom-right p {
+	display: flex;
+	flex-direction: column;
+	color: rgb(235, 235, 235);
+}
+.bottom-right p > span {
+	margin-bottom: 0.2rem;
+}
