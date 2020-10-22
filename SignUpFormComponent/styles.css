@@ -31,6 +31,7 @@ body .container {
   margin: 0 auto;
   width: 75%;
   min-height: 500px;
+  max-width: 1000px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -63,7 +64,7 @@ body .container .formArea {
           flex: 1;
 }
 
-body .container .formArea .tab {
+body .container .formArea button.tab {
   background-color: #6055a5;
   padding: 1.1rem;
   border-radius: 10px;
@@ -76,19 +77,159 @@ body .container .formArea .tab {
   border: none;
   margin-bottom: 1rem;
   font-weight: 400;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-body .container .formArea .tab a {
+body .container .formArea button.tab a {
   color: white;
   text-decoration: none;
 }
 
-body .container .formArea .tab a span.try {
+body .container .formArea button.tab a span.try {
   font-weight: 700;
   font-size: 1.2rem;
 }
 
+body .container .formArea button.tab:hover {
+  background: #463b78;
+}
+
 body .container .formArea form {
+  border-radius: 10px;
   background: white;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container .formArea form input {
+  margin-bottom: 1rem;
+  height: 55px;
+  padding: 0 1rem;
+  border-radius: 5px;
+  border: 1px solid #b9b6d3;
+  outline: none;
+}
+
+body .container .formArea form input:focus {
+  border: 1px solid #3e3c49;
+}
+
+body .container .formArea form input::-webkit-input-placeholder {
+  font-weight: 500;
+  color: #3e3c49;
+}
+
+body .container .formArea form input:-ms-input-placeholder {
+  font-weight: 500;
+  color: #3e3c49;
+}
+
+body .container .formArea form input::-ms-input-placeholder {
+  font-weight: 500;
+  color: #3e3c49;
+}
+
+body .container .formArea form input::placeholder {
+  font-weight: 500;
+  color: #3e3c49;
+}
+
+body .container .formArea form button {
+  background: #38cc8c;
+  border: none;
+  border-radius: 5px;
+  padding: 1.4rem;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-box-shadow: 2px 5px 15px rgba(105, 105, 105, 0.603);
+          box-shadow: 2px 5px 15px rgba(105, 105, 105, 0.603);
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body .container .formArea form button:hover {
+  opacity: 0.75;
+}
+
+body .container .formArea form p {
+  font-size: 12px;
+  text-align: center;
+  color: #b9b6d3;
+}
+
+body .container .formArea form p a {
+  color: #ff7a7a;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  body .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 675px) {
+  body {
+    background-image: url("./images/bg-intro-mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #ff7a7a;
+  }
+  body .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 85%;
+    margin-top: 4.5rem;
+    margin-bottom: 4rem;
+  }
+  body .container .description {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    color: white;
+    text-align: center;
+  }
+  body .container .description .header {
+    font-size: 27px;
+    line-height: 34px;
+    font-weight: 500;
+    margin-bottom: 1.4rem;
+  }
+  body .container .description p {
+    padding: 0;
+    font-size: 14px;
+    margin-bottom: 4rem;
+  }
+  body .container .formArea {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body .container .formArea button.tab {
+    padding: 1.2rem 2rem;
+  }
+  body .container .formArea button.tab a span.try {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  body .container .formArea form {
+    padding: 1.6rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

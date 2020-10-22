@@ -27,6 +27,7 @@ body {
 		margin: 0 auto;
 		width: 75%;
 		min-height: 500px;
+		max-width: 1000px;
 		justify-content: center;
 		align-items: center;
 
@@ -47,7 +48,7 @@ body {
 		.formArea {
 			flex: 1;
 
-			.tab {
+			button.tab {
 				background-color: $color-blue;
 				padding: 1.1rem;
 				border-radius: 10px;
@@ -59,6 +60,7 @@ body {
 				border: none;
 				margin-bottom: 1rem;
 				font-weight: 400;
+				transition: all 0.5s;
 
 				a {
 					color: white;
@@ -70,9 +72,121 @@ body {
 					}
 				}
 			}
+			button.tab:hover {
+				background: hsl(251, 34%, 35%);
+			}
 
 			form {
+				border-radius: 10px;
 				background: white;
+				padding: 2rem;
+				display: flex;
+				flex-direction: column;
+
+				input {
+					margin-bottom: 1rem;
+					height: 55px;
+					padding: 0 1rem;
+					border-radius: 5px;
+					border: 1px solid $color-grayishBlue;
+					outline: none;
+				}
+				input:focus {
+					border: 1px solid $color-darkBlue;
+				}
+				input::placeholder {
+					font-weight: 500;
+					color: $color-darkBlue;
+				}
+
+				button {
+					background: $color-green;
+					border: none;
+					border-radius: 5px;
+					padding: 1.4rem;
+					color: white;
+					font-weight: 700;
+					text-transform: uppercase;
+					box-shadow: 2px 5px 15px rgba(105, 105, 105, 0.603);
+					margin-bottom: 1.2rem;
+					cursor: pointer;
+					transition: all 0.5s;
+				}
+				button:hover {
+					opacity: 0.75;
+				}
+
+				p {
+					font-size: 12px;
+					text-align: center;
+					color: $color-grayishBlue;
+
+					a {
+						color: $color-red;
+						font-weight: 800;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	body {
+		.container {
+			width: 95%;
+		}
+	}
+}
+
+@media (max-width: 675px) {
+	body {
+		background-image: url("./images/bg-intro-mobile.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: $color-red;
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			width: 85%;
+			margin-top: 4.5rem;
+			margin-bottom: 4rem;
+
+			.description {
+				flex: 1;
+				color: white;
+				text-align: center;
+				.header {
+					font-size: 27px;
+					line-height: 34px;
+					font-weight: 500;
+					margin-bottom: 1.4rem;
+				}
+				p {
+					padding: 0;
+					font-size: 14px;
+					margin-bottom: 4rem;
+				}
+			}
+			.formArea {
+				flex: 1;
+
+				button.tab {
+					padding: 1.2rem 2rem;
+
+					a {
+						span.try {
+							font-weight: 700;
+							font-size: 1rem;
+						}
+					}
+				}
+
+				form {
+					padding: 1.6rem;
+				}
 			}
 		}
 	}
