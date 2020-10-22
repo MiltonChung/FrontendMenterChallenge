@@ -1,0 +1,24 @@
+{
+	"name": "frontend-mentor",
+	"version": "1.0.0",
+	"description": "Thanks for checking out my solutions to the front-end coding challenges.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"scss": "node-sass -o / /"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MiltonChung/FrontendMenterChallenge.git"
+	},
+	"author": "Milton Chung",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/MiltonChung/FrontendMenterChallenge/issues"
+	},
+	"homepage": "https://github.com/MiltonChung/FrontendMenterChallenge#readme",
+	"dependencies": {
+		"node-sass": "^4.14.1",
+		"sass": "^1.27.0"
+	}
+}

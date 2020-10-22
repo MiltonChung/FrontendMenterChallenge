@@ -1,21 +1,94 @@
-:root {
-	/* Primary */
-	--Red: hsl(0, 100%, 74%);
-	--Green: hsl(154, 59%, 51%);
-
-	/* Accent */
-	--Blue: hsl(248, 32%, 49%);
-
-	/* Neutral */
-	--DarkBlue: hsl(249, 10%, 26%);
-	--GrayishBlue: hsl(246, 25%, 77%);
-}
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 body {
-	font-family: "Poppins", sans-serif;
-	font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("./images/bg-intro-desktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #ff7a7a;
 }
+
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 75%;
+  min-height: 500px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: white;
+}
+
+body .container .description .header {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 60px;
+  margin-bottom: 2rem;
+}
+
+body .container .description p {
+  padding-right: 3rem;
+}
+
+body .container .formArea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body .container .formArea .tab {
+  background-color: #6055a5;
+  padding: 1.1rem;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 10px rgba(114, 114, 114, 0.322);
+          box-shadow: 2px 2px 10px rgba(114, 114, 114, 0.322);
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  border: none;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+body .container .formArea .tab a {
+  color: white;
+  text-decoration: none;
+}
+
+body .container .formArea .tab a span.try {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+body .container .formArea form {
+  background: white;
+}
+/*# sourceMappingURL=styles.css.map */
