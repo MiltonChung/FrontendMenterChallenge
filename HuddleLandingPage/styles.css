@@ -1,5 +1,124 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: url("./images/bg-desktop.svg"), #674baf;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container .logo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+body .container .body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .container .body .left {
+  padding: 0 1rem 0 0;
+  -webkit-box-flex: 1.25;
+      -ms-flex: 1.25;
+          flex: 1.25;
+}
+
+body .container .body .left img {
+  width: 100%;
+  height: auto;
+}
+
+body .container .body .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 1rem 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .container .body .right .title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 45px;
+  margin-top: 2.3rem;
+}
+
+body .container .body .right p {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 2rem;
+}
+
+body .container .body .right button {
+  background: white;
+  padding: 0.8rem 3.4rem;
+  border: none;
+  color: #674baf;
+  margin-top: 2rem;
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  -webkit-box-shadow: 0px 0px 15px rgba(72, 0, 94, 0.575);
+          box-shadow: 0px 0px 15px rgba(72, 0, 94, 0.575);
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .container .body .right button:hover {
+  background-color: #674baf;
+  color: white;
+}
+
+body .container .social-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=styles.css.map */
