@@ -7,34 +7,39 @@ body {
 	font-family: "Lato", sans-serif;
 	background-image: linear-gradient(to right, rgb(84, 84, 192), rgb(167, 89, 167));
 	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .container {
-	width: 50%;
 	margin: auto;
 	overflow: hidden;
-}
-
-.content {
-	width: 30%;
-	height: 80%;
 	background-color: rgb(238, 238, 238);
 	border-radius: 10px;
 	box-shadow: 10px 10px 10px 0px #000b6e41;
+}
 
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
+.title {
+	text-align: center;
+	font-size: 25px;
+	color: rgb(21, 1, 94);
+	cursor: default;
+	font-weight: 700;
+}
+
+.title .underline {
+	border-top: 2px rgb(21, 1, 94) solid;
+	width: 50%;
+	display: flex;
+	margin: 0 auto;
+	margin-bottom: 1rem;
 }
 
 .list {
-	display: grid;
-	grid-template-rows: repeat(10, 1fr);
-	margin: 1rem;
-	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	margin: 1rem 1.5rem;
 	height: 100%;
 }
 

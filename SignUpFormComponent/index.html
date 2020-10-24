@@ -26,11 +26,31 @@
 				<button class="tab">
 					<a href="#"><span class="try">Try it free 7 days</span> then $20/mo. thereafter</a>
 				</button>
-				<form>
-					<input type="text" placeholder="First Name" id="firstName" />
-					<input type="text" placeholder="Last Name" id="lastName" />
-					<input type="text" placeholder="Email Adress" id="email" />
-					<input type="password" placeholder="Password" id="password" />
+				<form id="form" class="">
+					<div class="row" id="rowFn">
+						<input type="text" placeholder="First Name" id="firstName" />
+						<img src="./images/icon-error.svg" alt="" />
+						<small>First name cannot be empty</small>
+					</div>
+					<div class="row" id="rowLn">
+						<input type="text" placeholder="Last Name" id="lastName" />
+						<img src="./images/icon-error.svg" alt="" />
+						<small>Last name cannot be empty</small>
+					</div>
+					<div class="row" id="rowEmail">
+						<input type="text" placeholder="Email Adress" id="email" />
+						<img src="./images/icon-error.svg" alt="" />
+						<small>Looks like this is not an email</small>
+					</div>
+					<div class="row" id="rowPw">
+						<input type="password" placeholder="Password" id="password" />
+						<img src="./images/icon-error.svg" alt="" />
+						<small>Password cannot be empty</small>
+					</div>
+					<div class="successMsg">
+						<p>Thank you for trying us!</p>
+					</div>
+
 					<button id="submit" type="submit">Claim your free trial</button>
 					<p>By clicking the button, you are agreeing to our <a class="terms">Terms and Services</a></p>
 				</form>

@@ -108,8 +108,19 @@ body .container .formArea form {
           flex-direction: column;
 }
 
-body .container .formArea form input {
-  margin-bottom: 1rem;
+body .container .formArea form .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+body .container .formArea form .row input {
+  margin-bottom: 0.5rem;
   height: 55px;
   padding: 0 1rem;
   border-radius: 5px;
@@ -117,28 +128,43 @@ body .container .formArea form input {
   outline: none;
 }
 
-body .container .formArea form input:focus {
+body .container .formArea form .row input:focus {
   border: 1px solid #3e3c49;
 }
 
-body .container .formArea form input::-webkit-input-placeholder {
+body .container .formArea form .row input::-webkit-input-placeholder {
   font-weight: 500;
   color: #3e3c49;
 }
 
-body .container .formArea form input:-ms-input-placeholder {
+body .container .formArea form .row input:-ms-input-placeholder {
   font-weight: 500;
   color: #3e3c49;
 }
 
-body .container .formArea form input::-ms-input-placeholder {
+body .container .formArea form .row input::-ms-input-placeholder {
   font-weight: 500;
   color: #3e3c49;
 }
 
-body .container .formArea form input::placeholder {
+body .container .formArea form .row input::placeholder {
   font-weight: 500;
   color: #3e3c49;
+}
+
+body .container .formArea form .row img {
+  display: none;
+}
+
+body .container .formArea form .row small {
+  text-align: right;
+  margin-bottom: 1rem;
+  color: #ff7a7a;
+  display: none;
+}
+
+body .container .formArea form .successMsg {
+  display: none;
 }
 
 body .container .formArea form button {
@@ -171,6 +197,37 @@ body .container .formArea form p a {
   color: #ff7a7a;
   font-weight: 800;
   cursor: pointer;
+}
+
+body .container .formArea form.error .row.showError {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+body .container .formArea form.error .row.showError input {
+  border: 1px solid #ff7a7a;
+}
+
+body .container .formArea form.error .row.showError img {
+  position: absolute;
+  right: 2.5%;
+  top: 15px;
+  display: block;
+}
+
+body .container .formArea form.error .row.showError small {
+  display: block;
+}
+
+body .container .formArea form.success .successMsg {
+  display: block;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+body .container .formArea form.success .successMsg p {
+  color: #38cc8c;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 900px) {

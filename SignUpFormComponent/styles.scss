@@ -83,20 +83,41 @@ body {
 				display: flex;
 				flex-direction: column;
 
-				input {
-					margin-bottom: 1rem;
-					height: 55px;
-					padding: 0 1rem;
-					border-radius: 5px;
-					border: 1px solid $color-grayishBlue;
-					outline: none;
+				.row {
+					display: flex;
+					flex-direction: column;
+					margin-bottom: 1.5rem;
+
+					input {
+						margin-bottom: 0.5rem;
+						height: 55px;
+						padding: 0 1rem;
+						border-radius: 5px;
+						border: 1px solid $color-grayishBlue;
+						outline: none;
+					}
+					input:focus {
+						border: 1px solid $color-darkBlue;
+					}
+					input::placeholder {
+						font-weight: 500;
+						color: $color-darkBlue;
+					}
+
+					img {
+						display: none;
+					}
+
+					small {
+						text-align: right;
+						margin-bottom: 1rem;
+						color: $color-red;
+						display: none;
+					}
 				}
-				input:focus {
-					border: 1px solid $color-darkBlue;
-				}
-				input::placeholder {
-					font-weight: 500;
-					color: $color-darkBlue;
+
+				.successMsg {
+					display: none;
 				}
 
 				button {
@@ -125,6 +146,37 @@ body {
 						color: $color-red;
 						font-weight: 800;
 						cursor: pointer;
+					}
+				}
+			}
+
+			form.error {
+				.row.showError {
+					position: relative;
+					margin-bottom: 0.5rem;
+
+					input {
+						border: 1px solid $color-red;
+					}
+					img {
+						position: absolute;
+						right: 2.5%;
+						top: 15px;
+						display: block;
+					}
+					small {
+						display: block;
+					}
+				}
+			}
+			form.success {
+				.successMsg {
+					display: block;
+					margin-top: -1rem;
+					margin-bottom: 1rem;
+					p {
+						color: $color-green;
+						font-size: 1.5rem;
 					}
 				}
 			}
