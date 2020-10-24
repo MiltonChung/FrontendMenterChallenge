@@ -8,16 +8,21 @@ body {
 	background-image: linear-gradient(to right, rgb(84, 84, 192), rgb(167, 89, 167));
 	height: 100vh;
 	display: flex;
+
 	justify-content: center;
 	align-items: center;
 }
 
 .container {
 	margin: auto;
+	width: 50%;
 	overflow: hidden;
 	background-color: rgb(238, 238, 238);
-	border-radius: 10px;
+	border-radius: 5px;
 	box-shadow: 10px 10px 10px 0px #000b6e41;
+	min-width: 400px;
+	max-width: 1000px;
+	padding: 1rem;
 }
 
 .title {
@@ -26,6 +31,8 @@ body {
 	color: rgb(21, 1, 94);
 	cursor: default;
 	font-weight: 700;
+	margin-top: 0.5rem;
+	text
 }
 
 .title .underline {
@@ -43,7 +50,12 @@ body {
 	height: 100%;
 }
 
-.list li {
+.list .row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.list .row a {
 	border-radius: 10px;
 	cursor: pointer;
 	text-align: center;
@@ -53,73 +65,46 @@ body {
 	border-bottom: 2px solid #490768;
 	border-left: 2px solid #ff89f9;
 	border-radius: 5px;
-	margin: 0.2rem 0;
-}
-
-.list li:first-of-type {
-	border: none;
-	background: transparent;
-}
-
-.list li > h1 {
-	font-size: 40px;
-	text-align: center;
-	color: rgb(21, 1, 94);
-	cursor: default;
-	font-weight: 700;
-}
-
-.list li > .underline {
-	border-top: 2px rgb(21, 1, 94) solid;
-	width: 50%;
-	display: flex;
-	margin: 0 auto;
-	margin-bottom: 1rem;
-}
-
-.list li > a {
-	text-decoration: none;
-	font-size: 1.2rem;
+	margin: 0.5rem 0.25rem;
+	padding: 1rem;
 	color: white;
-	padding: 1rem 1.5rem;
-	width: fit-content;
-	text-align: center;
-	font-weight: 400;
+	text-decoration: none;
+	flex: 1;
 }
 
-.list li > a:hover {
-	transition: ease 0.5s;
-	opacity: 0.85;
-}
-
-@media only screen and (max-width: 1440px) {
-	.content {
-		width: 60%;
-		height: 80%;
-	}
-}
-
-@media only screen and (max-width: 1025px) {
-	.content {
-		width: 50%;
-		height: 80%;
-	}
-}
-
-@media only screen and (max-width: 770px) {
-	.content {
-		width: 80%;
-		height: 80%;
-	}
-}
-
-@media (max-width: 425px) {
+@media only screen and (max-width: 1340px) {
 	.container {
-		width: 100%;
+		width: 60%;
 	}
-	.content {
+}
+
+@media only screen and (max-width: 1127px) {
+	.container {
+		width: 70%;
+	}
+}
+
+@media only screen and (max-width: 962px) {
+	.container {
 		width: 90%;
-		height: 90%;
+	}
+}
+
+@media only screen and (max-width: 675px) {
+	.container {
+		min-width: 100px;
+		width: 80%;
+		margin-top: 2rem;
+	}
+	.title h1 {
+		font-size: 2.3rem;
+	}
+	.list {
+		margin: 1rem 0rem;
+	}
+	.list .row {
+		display: flex;
+		flex-direction: column;
 	}
 }
 
