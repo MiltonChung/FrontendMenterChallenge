@@ -89,6 +89,31 @@ body {
 			display: flex;
 			align-items: flex-end;
 			justify-content: flex-end;
+			color: white;
+
+			.social-circle {
+				border: 1px solid white;
+				border-radius: 50%;
+				width: 35px;
+				height: 35px;
+				position: relative;
+				margin-left: 0.8rem;
+				margin-top: 1.5rem;
+				cursor: pointer;
+				transition: all 0.45s;
+
+				i {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+
+			.social-circle:hover {
+				background: white;
+				color: $violet;
+			}
 		}
 	}
 }

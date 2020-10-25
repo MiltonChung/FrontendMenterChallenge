@@ -120,5 +120,32 @@ body .container .social-footer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  color: white;
+}
+
+body .container .social-footer .social-circle {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  position: relative;
+  margin-left: 0.8rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: all 0.45s;
+  transition: all 0.45s;
+}
+
+body .container .social-footer .social-circle i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body .container .social-footer .social-circle:hover {
+  background: white;
+  color: #674baf;
 }
 /*# sourceMappingURL=styles.css.map */
