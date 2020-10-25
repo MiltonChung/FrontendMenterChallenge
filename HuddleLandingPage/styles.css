@@ -8,7 +8,7 @@
 body {
   background: url("./images/bg-desktop.svg"), #674baf;
   background-repeat: no-repeat, no-repeat;
-  background-position: center, center;
+  background-position: left, center;
   background-size: cover, cover;
   min-height: 100vh;
   display: -webkit-box;
@@ -31,6 +31,7 @@ body .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 1000px;
 }
 
 body .container .logo {
@@ -149,5 +150,56 @@ body .container .social-footer .social-circle i {
 body .container .social-footer .social-circle:hover {
   background: white;
   color: #674baf;
+}
+
+@media (max-width: 770px) {
+  body {
+    background: url("./images/bg-mobile.svg"), #674baf;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, center;
+    background-size: contain, cover;
+  }
+  body .container {
+    width: 90%;
+  }
+  body .container .logo {
+    margin-top: 2rem;
+  }
+  body .container .body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container .body .left {
+    padding: 0;
+  }
+  body .container .body .right {
+    padding: 0;
+  }
+  body .container .body .right .title {
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+  }
+  body .container .body .right p {
+    text-align: center;
+  }
+  body .container .body .right button {
+    padding: 0.4rem 3.4rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  body .container .social-footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
