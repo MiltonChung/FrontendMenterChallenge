@@ -24,8 +24,12 @@
 				<p>Subscribe and get notified</p>
 			</div>
 
-			<form id="emailForm">
-				<input type="text" placeholder="Your email address..." />
+			<form id="emailForm" class="">
+				<div class="input">
+					<input type="text" placeholder="Your email address..." id="userEmail" />
+					<small class="error-msg">Please provide a valid email address!</small>
+					<small class="success-msg">Thank you!</small>
+				</div>
 				<button type="button">Notify Me</button>
 			</form>
 

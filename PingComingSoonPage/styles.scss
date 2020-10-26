@@ -24,6 +24,7 @@ body {
 	.container {
 		width: 35%;
 		text-align: center;
+		margin-top: 3rem;
 
 		.logo {
 			margin-bottom: 2rem;
@@ -51,18 +52,43 @@ body {
 		form#emailForm {
 			margin-bottom: 4rem;
 			display: flex;
-			align-items: center;
+			flex-direction: row;
+			align-items: flex-start;
 			justify-content: center;
+			margin-top: 2rem;
 
-			input {
+			.input {
+				display: flex;
+				flex-direction: column;
 				flex: 1;
-				margin-right: 1.5rem;
-				border: 1px $PaleBlue solid;
-				padding: 0.9rem 1.2rem;
-				border-radius: 30px;
-			}
-			input::placeholder {
-				color: $PaleBlue;
+				justify-content: start;
+				text-align: left;
+				width: 100%;
+
+				input {
+					margin-right: 1.5rem;
+					border: 1px $PaleBlue solid;
+					padding: 0.9rem 1.2rem;
+					border-radius: 30px;
+				}
+				input::placeholder {
+					color: $PaleBlue;
+				}
+				small {
+					color: $LightRed;
+					margin-left: 1.2rem;
+					margin-top: 0.5rem;
+					font-size: 0.8rem;
+					font-style: italic;
+					display: none;
+				}
+				small.success-msg {
+					color: rgb(9, 209, 9);
+					margin-left: 1.2rem;
+					margin-top: 0.5rem;
+					font-size: 1rem;
+					font-style: italic;
+				}
 			}
 			button {
 				flex: 0.4;
@@ -78,6 +104,26 @@ body {
 			button:hover {
 				color: $Blue;
 				background: white;
+			}
+		}
+
+		form#emailForm.error {
+			.input {
+				input#userEmail {
+					border: 1px $LightRed solid;
+				}
+				small.error-msg {
+					display: block;
+				}
+			}
+		}
+
+		form#emailForm.success {
+			.input {
+				small.success-msg {
+					display: block;
+					transition: all 0.5s;
+				}
 			}
 		}
 
@@ -107,6 +153,91 @@ body {
 			.social-circle:hover {
 				background: $Blue;
 				color: white;
+			}
+		}
+	}
+
+	footer {
+		margin-top: 1.5rem;
+		margin-bottom: 3rem;
+		font-size: 0.8rem;
+		color: $Gray;
+	}
+}
+
+@media (max-width: 1024px) {
+	body {
+		.container {
+			width: 70%;
+		}
+	}
+}
+
+@media (max-width: 630px) {
+	body {
+		.container {
+			width: 80%;
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	body {
+		.container {
+			width: 90%;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	body {
+		.container {
+			width: 70%;
+
+			.header {
+				h1 {
+					font-size: 1.4rem;
+				}
+
+				p {
+					font-size: 0.8rem;
+				}
+			}
+
+			form#emailForm {
+				margin-bottom: 4rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				.input {
+					input {
+						flex: 1;
+						width: 100%;
+						margin-right: 0;
+						padding: 0.7rem 1.5rem;
+					}
+					small {
+						margin-left: 0;
+						margin-bottom: 1rem;
+						font-size: 0.7rem;
+						text-align: center;
+					}
+				}
+
+				button {
+					margin-top: 1rem;
+					flex: 1;
+					width: 100%;
+					border: 2px $Blue solid;
+					padding: 0.7rem 1.2rem;
+					box-shadow: 0 0 20px 2px $PaleBlue;
+				}
+			}
+
+			.social-footer {
+				margin-top: 3rem;
 			}
 		}
 	}

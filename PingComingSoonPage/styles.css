@@ -27,6 +27,7 @@ body {
 body .container {
   width: 35%;
   text-align: center;
+  margin-top: 3rem;
 }
 
 body .container .logo {
@@ -59,38 +60,75 @@ body .container form#emailForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 2rem;
 }
 
-body .container form#emailForm input {
+body .container form#emailForm .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  text-align: left;
+  width: 100%;
+}
+
+body .container form#emailForm .input input {
   margin-right: 1.5rem;
   border: 1px #c2d3ff solid;
   padding: 0.9rem 1.2rem;
   border-radius: 30px;
 }
 
-body .container form#emailForm input::-webkit-input-placeholder {
+body .container form#emailForm .input input::-webkit-input-placeholder {
   color: #c2d3ff;
 }
 
-body .container form#emailForm input:-ms-input-placeholder {
+body .container form#emailForm .input input:-ms-input-placeholder {
   color: #c2d3ff;
 }
 
-body .container form#emailForm input::-ms-input-placeholder {
+body .container form#emailForm .input input::-ms-input-placeholder {
   color: #c2d3ff;
 }
 
-body .container form#emailForm input::placeholder {
+body .container form#emailForm .input input::placeholder {
   color: #c2d3ff;
+}
+
+body .container form#emailForm .input small {
+  color: #ff5263;
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  display: none;
+}
+
+body .container form#emailForm .input small.success-msg {
+  color: #09d109;
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-style: italic;
 }
 
 body .container form#emailForm button {
@@ -112,6 +150,20 @@ body .container form#emailForm button {
 body .container form#emailForm button:hover {
   color: #4f7df3;
   background: white;
+}
+
+body .container form#emailForm.error .input input#userEmail {
+  border: 1px #ff5263 solid;
+}
+
+body .container form#emailForm.error .input small.error-msg {
+  display: block;
+}
+
+body .container form#emailForm.success .input small.success-msg {
+  display: block;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 body .container .img img {
@@ -155,5 +207,86 @@ body .container .social-footer .social-circle {
 body .container .social-footer .social-circle:hover {
   background: #4f7df3;
   color: white;
+}
+
+body footer {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  font-size: 0.8rem;
+  color: #969696;
+}
+
+@media (max-width: 1024px) {
+  body .container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 630px) {
+  body .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  body .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  body .container {
+    width: 70%;
+  }
+  body .container .header h1 {
+    font-size: 1.4rem;
+  }
+  body .container .header p {
+    font-size: 0.8rem;
+  }
+  body .container form#emailForm {
+    margin-bottom: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .container form#emailForm .input input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 100%;
+    margin-right: 0;
+    padding: 0.7rem 1.5rem;
+  }
+  body .container form#emailForm .input small {
+    margin-left: 0;
+    margin-bottom: 1rem;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  body .container form#emailForm button {
+    margin-top: 1rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 100%;
+    border: 2px #4f7df3 solid;
+    padding: 0.7rem 1.2rem;
+    -webkit-box-shadow: 0 0 20px 2px #c2d3ff;
+            box-shadow: 0 0 20px 2px #c2d3ff;
+  }
+  body .container .social-footer {
+    margin-top: 3rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
