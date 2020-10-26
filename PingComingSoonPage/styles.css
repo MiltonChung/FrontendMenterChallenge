@@ -1,1 +1,159 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container {
+  width: 35%;
+  text-align: center;
+}
+
+body .container .logo {
+  margin-bottom: 2rem;
+}
+
+body .container .header {
+  margin-bottom: 1.5rem;
+}
+
+body .container .header h1 {
+  color: #969696;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+body .container .header h1 span {
+  font-weight: 700;
+  color: black;
+}
+
+body .container .header p {
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+body .container form#emailForm {
+  margin-bottom: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container form#emailForm input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 1.5rem;
+  border: 1px #c2d3ff solid;
+  padding: 0.9rem 1.2rem;
+  border-radius: 30px;
+}
+
+body .container form#emailForm input::-webkit-input-placeholder {
+  color: #c2d3ff;
+}
+
+body .container form#emailForm input:-ms-input-placeholder {
+  color: #c2d3ff;
+}
+
+body .container form#emailForm input::-ms-input-placeholder {
+  color: #c2d3ff;
+}
+
+body .container form#emailForm input::placeholder {
+  color: #c2d3ff;
+}
+
+body .container form#emailForm button {
+  -webkit-box-flex: 0.4;
+      -ms-flex: 0.4;
+          flex: 0.4;
+  border: 2px #4f7df3 solid;
+  padding: 0.9rem 1.2rem;
+  border-radius: 30px;
+  background: #4f7df3;
+  color: white;
+  -webkit-box-shadow: 0 0 30px 5px #c2d3ff;
+          box-shadow: 0 0 30px 5px #c2d3ff;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body .container form#emailForm button:hover {
+  color: #4f7df3;
+  background: white;
+}
+
+body .container .img img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+body .container .social-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .social-footer .social-circle {
+  border: 1px solid #c2d3ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  margin-right: 1rem;
+  color: #4f7df3;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body .container .social-footer .social-circle:hover {
+  background: #4f7df3;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */

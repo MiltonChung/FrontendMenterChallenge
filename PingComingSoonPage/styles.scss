@@ -1,0 +1,113 @@
+$Blue: hsl(223, 87%, 63%);
+$PaleBlue: hsl(223, 100%, 88%);
+$LightRed: hsl(354, 100%, 66%);
+$Gray: hsl(0, 0%, 59%);
+$VeryDarkBlue: hsl(209, 33%, 12%);
+
+$font: "Libre Franklin", sans-serif;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font;
+	font-size: 20px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.container {
+		width: 35%;
+		text-align: center;
+
+		.logo {
+			margin-bottom: 2rem;
+		}
+
+		.header {
+			margin-bottom: 1.5rem;
+			h1 {
+				color: $Gray;
+				font-weight: 300;
+				margin-bottom: 1rem;
+				span {
+					font-weight: 700;
+					color: black;
+				}
+			}
+
+			p {
+				color: black;
+				font-weight: 500;
+				font-size: 1rem;
+			}
+		}
+
+		form#emailForm {
+			margin-bottom: 4rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			input {
+				flex: 1;
+				margin-right: 1.5rem;
+				border: 1px $PaleBlue solid;
+				padding: 0.9rem 1.2rem;
+				border-radius: 30px;
+			}
+			input::placeholder {
+				color: $PaleBlue;
+			}
+			button {
+				flex: 0.4;
+				border: 2px $Blue solid;
+				padding: 0.9rem 1.2rem;
+				border-radius: 30px;
+				background: $Blue;
+				color: white;
+				box-shadow: 0 0 30px 5px $PaleBlue;
+				cursor: pointer;
+				transition: all 0.5s;
+			}
+			button:hover {
+				color: $Blue;
+				background: white;
+			}
+		}
+
+		.img img {
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+
+		.social-footer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.social-circle {
+				border: 1px solid $PaleBlue;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				height: 35px;
+				width: 35px;
+				margin-right: 1rem;
+				color: $Blue;
+				cursor: pointer;
+				transition: all 0.5s;
+			}
+			.social-circle:hover {
+				background: $Blue;
+				color: white;
+			}
+		}
+	}
+}

@@ -3,13 +3,48 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
-
+		<link
+			href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+		<link rel="stylesheet" href="./styles.css" />
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
 		<title>Frontend Mentor | Ping coming soon page</title>
 	</head>
 	<body>
-		We are launching soon! Subscribe and get notified Notify Me &copy; Copyright Ping. All rights reserved.
+		<main class="container">
+			<div class="logo">
+				<img src="./images/logo.svg" alt="" />
+			</div>
+
+			<div class="header">
+				<h1>We are launching <span>soon!</span></h1>
+				<p>Subscribe and get notified</p>
+			</div>
+
+			<form id="emailForm">
+				<input type="text" placeholder="Your email address..." />
+				<button type="button">Notify Me</button>
+			</form>
+
+			<div class="img">
+				<img src="./images/illustration-dashboard.png" alt="" />
+			</div>
+
+			<div class="social-footer">
+				<div class="social-circle">
+					<span class="iconify" data-icon="bx:bxl-facebook" data-inline="false"></span>
+				</div>
+				<div class="social-circle">
+					<span class="iconify" data-icon="ant-design:twitter-outlined" data-inline="false"></span>
+				</div>
+				<div class="social-circle">
+					<span class="iconify" data-icon="ant-design:instagram-outlined" data-inline="false"></span>
+				</div>
+			</div>
+		</main>
+		<footer>&copy; Copyright Ping. All rights reserved.</footer>
 	</body>
 </html>
