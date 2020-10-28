@@ -92,6 +92,7 @@ body .container form#emailForm .input {
 }
 
 body .container form#emailForm .input input {
+  outline: none;
   margin-right: 1.5rem;
   border: 1px #c2d3ff solid;
   padding: 0.9rem 1.2rem;
