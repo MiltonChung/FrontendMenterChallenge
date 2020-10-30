@@ -29,7 +29,7 @@ body .container {
       grid-template-columns: 3fr 1fr;
   -webkit-column-gap: 1.5rem;
           column-gap: 1.5rem;
-  max-width: 1000px;
+  max-width: 1300px;
   min-width: 930px;
 }
 
@@ -59,11 +59,66 @@ body .container .leftSide .botSide {
           column-gap: 1.5rem;
 }
 
+.text-light {
+  color: #ecf2f8;
+}
+
+.text-light-50 {
+  color: rgba(236, 242, 248, 0.5);
+}
+
+.text-light-70 {
+  color: rgba(236, 242, 248, 0.7);
+}
+
+.text-dark {
+  color: #48556a;
+}
+
+.text-dark-50 {
+  color: rgba(72, 85, 106, 0.5);
+}
+
+.text-dark-70 {
+  color: rgba(72, 85, 106, 0.7);
+}
+
+.card.bg-purple {
+  background: #7541c8;
+}
+
+.card.bg-dark {
+  background: #48556a;
+}
+
+.card.bg-black {
+  background: #19212e;
+}
+
+.profile-border-light {
+  border: 3px #987dc5 solid;
+}
+
+.profile-border {
+  border: 3px #7541c8 solid;
+}
+
+.card img.quotes-img {
+  position: absolute;
+  right: 10%;
+  top: 0;
+  z-index: -1;
+}
+
 .card {
+  position: relative;
   background: white;
   padding: 1.7rem 2rem;
   border-radius: 10px;
   height: 100%;
+  -webkit-box-shadow: 0 0 10px rgba(141, 141, 141, 0.514);
+          box-shadow: 0 0 10px rgba(141, 141, 141, 0.514);
+  z-index: 2;
 }
 
 .card .user {
@@ -100,5 +155,45 @@ body .container .leftSide .botSide {
 
 .card .title h1 {
   font-size: 1.2rem;
+  z-index: 2;
+}
+
+@media (max-width: 950px) {
+  body .container {
+    width: 85%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 3fr 1fr;
+        grid-template-rows: 3fr 1fr;
+    row-gap: 1.5rem;
+    max-width: 1300px;
+    min-width: 200px;
+    margin: 3rem 0;
+  }
+  body .container .leftSide {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    row-gap: 1.5rem;
+  }
+  body .container .leftSide .topSide {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+    row-gap: 1.5rem;
+  }
+  body .container .leftSide .botSide {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 2fr;
+        grid-template-rows: 1fr 2fr;
+    row-gap: 1.5rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

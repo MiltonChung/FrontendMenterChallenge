@@ -28,7 +28,7 @@ body {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
 		column-gap: 1.5rem;
-		max-width: 1000px;
+		max-width: 1300px;
 		min-width: 930px;
 
 		.leftSide {
@@ -51,11 +51,59 @@ body {
 	}
 }
 
+.text-light {
+	color: $LightGrayishBlue;
+}
+.text-light-50 {
+	color: hsla(210, 46%, 95%, 0.5);
+}
+.text-light-70 {
+	color: hsla(210, 46%, 95%, 0.7);
+}
+
+.text-dark {
+	color: $VeryDarkGrayishBlue;
+}
+.text-dark-50 {
+	color: hsla(217, 19%, 35%, 0.5);
+}
+.text-dark-70 {
+	color: hsla(217, 19%, 35%, 0.7);
+}
+
+.card.bg-purple {
+	background: $ModerateViolet;
+}
+.card.bg-dark {
+	background: $VeryDarkGrayishBlue;
+}
+.card.bg-black {
+	background: $VeryDarkBlackishBlue;
+}
+
+.profile-border-light {
+	border: 3px hsl(263, 38%, 63%) solid;
+}
+
+.profile-border {
+	border: 3px $ModerateViolet solid;
+}
+
+.card img.quotes-img {
+	position: absolute;
+	right: 10%;
+	top: 0;
+	z-index: -1;
+}
+
 .card {
-	background: white;
+	position: relative;
+	background: $White;
 	padding: 1.7rem 2rem;
 	border-radius: 10px;
 	height: 100%;
+	box-shadow: 0 0 10px rgba(141, 141, 141, 0.514);
+	z-index: 2;
 
 	.user {
 		display: flex;
@@ -81,8 +129,44 @@ body {
 
 	.title {
 		margin-bottom: 1rem;
+
 		h1 {
 			font-size: 1.2rem;
+			z-index: 2;
+		}
+	}
+}
+
+@media (max-width: 950px) {
+	body {
+		.container {
+			width: 85%;
+			grid-template-columns: 1fr;
+			grid-template-rows: 3fr 1fr;
+			row-gap: 1.5rem;
+			max-width: 1300px;
+			min-width: 200px;
+			margin: 3rem 0;
+
+			.leftSide {
+				display: grid;
+				grid-template-rows: 1fr 1fr;
+				row-gap: 1.5rem;
+
+				.topSide {
+					display: grid;
+					grid-template-columns: 1fr;
+					grid-template-rows: 2fr 1fr;
+					row-gap: 1.5rem;
+				}
+
+				.botSide {
+					display: grid;
+					grid-template-columns: 1fr;
+					grid-template-rows: 1fr 2fr;
+					row-gap: 1.5rem;
+				}
+			}
 		}
 	}
 }
