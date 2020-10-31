@@ -1,0 +1,20 @@
+//Headings, Call-to-actions, Header Navigation
+$Raleway: "Raleway", sans-serif;
+//Body
+$OpenSans: "Open Sans", sans-serif;
+
+// Primary
+$VeryDarkBlue: hsl(243, 87%, 12%);
+$DesaturatedBlue: hsl(238, 22%, 44%);
+// Accent
+$BrightBlue: hsl(224, 93%, 58%);
+$ModerateCyan: hsl(170, 45%, 43%);
+// Neutral
+$LightGrayishBlue: hsl(240, 75%, 98%);
+$LightGray: hsl(0, 0%, 75%);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
