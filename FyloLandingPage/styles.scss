@@ -18,3 +18,127 @@ $LightGray: hsl(0, 0%, 75%);
 	padding: 0;
 	box-sizing: border-box;
 }
+
+body {
+	min-height: 100vh;
+	max-width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	.container {
+		width: 85%;
+		margin: auto;
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+		margin: 3rem 0;
+		font-family: $Raleway;
+		font-weight: 400;
+
+		ul {
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+
+			li {
+				font-size: 16px;
+				margin-left: 2rem;
+				cursor: pointer;
+				transition: all 0.5s;
+				color: $VeryDarkBlue;
+			}
+			li:hover {
+				color: black;
+				border-bottom: 1px black solid;
+			}
+		}
+	}
+
+	.main-Container {
+		display: grid;
+		grid-template-columns: 1fr 1.3fr;
+		color: $VeryDarkBlue;
+
+		.mainLeft {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+
+			h1 {
+				font-weight: bolder;
+				line-height: 2.67rem;
+				margin-bottom: 1rem;
+				font-family: $Raleway;
+				font-weight: 700;
+				font-size: 35px;
+			}
+
+			p {
+				font-family: $OpenSans;
+				font-weight: 400;
+				margin-bottom: 1rem;
+				font-size: 16px;
+			}
+
+			form {
+				width: 100%;
+				input {
+					border: 1px $DesaturatedBlue solid;
+					padding: 0.7rem 1rem;
+					border-radius: 3px;
+					width: 54%;
+					margin-right: 0.8rem;
+				}
+				input::placeholder {
+					color: $LightGray;
+				}
+				button {
+					border-radius: 3px;
+					background: $BrightBlue;
+					border: 1px $BrightBlue solid;
+					color: white;
+					padding: 0.7rem 3rem;
+					cursor: pointer;
+					box-shadow: 2px 2px 20px rgba(185, 185, 185, 0.37);
+					transition: all 0.5s;
+				}
+				button:hover {
+					color: $BrightBlue;
+					background: white;
+				}
+			}
+		}
+		.mainRight {
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.bg-curve {
+		width: 100%;
+		margin-top: 8rem;
+	}
+
+	.testimonial {
+		background: $LightGrayishBlue;
+		margin-top: -4px;
+
+		.testimonial-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			.left {
+			}
+			.right {
+				img {
+					width: 100%;
+					max-width: 600px;
+				}
+			}
+		}
+	}
+}

@@ -12,6 +12,7 @@
 			href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
+		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
 		<title>Frontend Mentor | Fylo landing page with two column layout</title>
 	</head>
@@ -50,43 +51,45 @@
 					<img src="./images/illustration-1.svg" alt="illustration-1" />
 				</div>
 			</div>
-			<img src="./images/bg-curve-desktop.svg" alt="background curve" />
+			<img src="./images/bg-curve-desktop.svg" alt="background curve" class="bg-curve" />
 		</main>
 		<!-- End landing section -->
 
 		<!-- Start second section -->
 		<div class="testimonial">
-			<div class="left">
-				<h1>Stay productive, wherever you are</h1>
-				<p>
-					Never let location be an issue when accessing your files. Fylo has you covered for all of your
-					file storage needs.
-				</p>
-				<p>
-					Securely share files and folders with friends, family and colleagues for live collaboration. No
-					email attachments required!
-				</p>
-				<div class="link">
-					<a href="#">See how Fylo works </a>
-					<img src="./images/icon-arrow.svg" alt="arrow icon" />
-				</div>
-				<div class="card">
-					<img src="./images/icon-quotes.svg" alt="quotation marks" />
+			<div class="container testimonial-container">
+				<div class="left">
+					<h1>Stay productive, wherever you are</h1>
 					<p>
-						Get Started Fylo has improved our team productivity by an order of magnitude. Since making the
-						switch our team has become a well-oiled collaboration machine.
+						Never let location be an issue when accessing your files. Fylo has you covered for all of your
+						file storage needs.
 					</p>
-					<div class="user">
-						<img src="./images/avatar-testimonial.jpg" alt="kyle" />
-						<div class="user-info">
-							<p>Kyle Burton</p>
-							<small>Founder & CEO, Huddle</small>
+					<p>
+						Securely share files and folders with friends, family and colleagues for live collaboration.
+						No email attachments required!
+					</p>
+					<div class="link">
+						<a href="#">See how Fylo works </a>
+						<img src="./images/icon-arrow.svg" alt="arrow icon" />
+					</div>
+					<div class="card">
+						<img src="./images/icon-quotes.svg" alt="quotation marks" />
+						<p>
+							Get Started Fylo has improved our team productivity by an order of magnitude. Since making
+							the switch our team has become a well-oiled collaboration machine.
+						</p>
+						<div class="user">
+							<img src="./images/avatar-testimonial.jpg" alt="kyle" />
+							<div class="user-info">
+								<p>Kyle Burton</p>
+								<small>Founder & CEO, Huddle</small>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="right">
-				<img src="./images/illustration-2.svg" alt="illustration-2" />
+				<div class="right">
+					<img src="./images/illustration-2.svg" alt="illustration-2" />
+				</div>
 			</div>
 		</div>
 		<!-- End second section -->
@@ -111,17 +114,44 @@
 
 		<!-- Start Footer -->
 		<footer>
-			<img src="./images/logo.svg" alt="fylo logo" />
-			<div class="footer-links">
-				<div class="col"></div>
-				<div class="col"></div>
-				<div class="col"></div>
-				<div class="social"></div>
+			<div class="container">
+				<img src="./images/logo.svg" alt="fylo logo" />
+				<div class="footer-links">
+					<div class="col">
+						<div class="row">
+							<img src="./images/icon-phone.svg" alt="phone icon" />
+							<p>Phone: +1-543-123-4567</p>
+						</div>
+						<div class="row">
+							<img src="./images/icon-email.svg" alt="email icon" />
+							<p>example@fylo.com</p>
+						</div>
+					</div>
+					<div class="col">
+						<p>About Us</p>
+						<p>Jobs</p>
+						<p>Press</p>
+						<p>Blog</p>
+					</div>
+					<div class="col">
+						<p>Contact Us</p>
+						<p>Terms</p>
+						<p>Privacy</p>
+					</div>
+					<div class="social">
+						<div class="social-icon">
+							<span class="iconify" data-icon="bx:bxl-facebook" data-inline="false"></span>
+						</div>
+						<div class="social-icon">
+							<span class="iconify" data-icon="ant-design:twitter-outlined" data-inline="false"></span>
+						</div>
+						<div class="social-icon">
+							<span class="iconify" data-icon="ant-design:instagram-outlined" data-inline="false"></span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
 		<!-- End Footer -->
-
-		Get early access today Get Started For Free Phone: +1-543-123-4567 example@fylo.com About Us Jobs Press
-		Blog Contact Us Terms Privacy
 	</body>
 </html>
