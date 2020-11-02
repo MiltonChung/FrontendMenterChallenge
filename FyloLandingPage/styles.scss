@@ -131,7 +131,7 @@ body {
 
 	.testimonial {
 		background: $LightGrayishBlue;
-		margin-top: -4px;
+		margin-top: -5px;
 
 		.testimonial-container {
 			display: grid;
@@ -203,6 +203,7 @@ body {
 				}
 				small {
 					font-size: 12px;
+					font-family: $OpenSans;
 				}
 			}
 		}

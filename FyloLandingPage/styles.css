@@ -163,7 +163,7 @@ body .bg-curve-m {
 
 body .testimonial {
   background: #f6f6fe;
-  margin-top: -4px;
+  margin-top: -5px;
 }
 
 body .testimonial .testimonial-container {
@@ -253,6 +253,7 @@ body .card .user .user-info p.user-name {
 
 body .card .user .user-info small {
   font-size: 12px;
+  font-family: "Open Sans", sans-serif;
 }
 
 body .signUp {
