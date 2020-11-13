@@ -3,4 +3,73 @@
 html {
   font-size: 18px;
 }
+
+body {
+  background: white;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 75%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+nav button#responsiveNavbar {
+  display: none;
+}
+
+nav ul.responsiveNavbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul.responsiveNavbar li {
+  list-style-type: none;
+  margin-left: 3rem;
+}
+
+nav ul.responsiveNavbar li a {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  color: #242942;
+  text-decoration: none;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-bottom: 2px solid transparent;
+}
+
+nav ul.responsiveNavbar li a:hover {
+  border-bottom: 2px solid #242942;
+}
+
+nav ul.responsiveNavbar li a.login {
+  color: #a0a1ac;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-bottom: 2px solid transparent;
+}
+
+nav ul.responsiveNavbar li a.login:hover {
+  border-bottom: 2px solid #a0a1ac;
+}
+
+nav ul.responsiveNavbar li span.divider {
+  height: 9px;
+  width: 9px;
+  background-color: #eef3f6;
+  border-radius: 50%;
+  display: inline-block;
+}
 /*# sourceMappingURL=styles.css.map */

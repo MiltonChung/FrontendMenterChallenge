@@ -10,9 +10,46 @@
 		<title>Frontend Mentor | Project tracking intro component</title>
 	</head>
 	<body>
-		<img src="./images/illustration-devices.svg" alt="" />
-		Product Features Pricing Login New Monograph Dashboard Powerful insights into your team Project planning
-		and time tracking for agile teams Schedule a demo to see a live preview
+		<div class="gray-box-bg"></div>
+
+		<!-- start navigation bar -->
+		<nav>
+			<a href="#" class="logo">
+				<img src="./images/logo.svg" alt="logo" />
+			</a>
+			<button id="responsiveNavbar">
+				<img src="./images/icon-hamburger.svg" alt="" id="hamburgerIcon" />
+				<img src="./images/icon-close.svg" alt="" id="closeIcon" />
+			</button>
+			<ul class="responsiveNavbar">
+				<li><a href="#">PRODUCT</a></li>
+				<li><a href="#">FEATURES</a></li>
+				<li><a href="#">PRICING</a></li>
+				<li><span class="divider"> </span></li>
+				<li><a href="#" class="login">LOGIN</a></li>
+			</ul>
+		</nav>
+		<!-- end navigation bar -->
+
+		<!-- start header -->
+		<header>
+			<div class="header-text">
+				<div class="pre-title">
+					<span class="pill">NEW</span>
+					<h3>MONOGRAPH DASHBOARD</h3>
+				</div>
+				<h1 class="title">POWERFUL INSIGHTS<br />INTO YOUR TEAM</h1>
+				<h2 class="subtitle">Project planning and time tracking<br />for agile teams</h2>
+				<div class="cta">
+					<button class="cta-button">SCHEDULE A DEMO</button>
+					<span class="cta-text">TO SEE A PREVIEW</span>
+				</div>
+			</div>
+			<div class="devices">
+				<img src="./images/illustration-devices.svg" alt="phone and laptop" />
+			</div>
+		</header>
+		<!-- end header -->
 
 		<script src="main.js"></script>
 	</body>

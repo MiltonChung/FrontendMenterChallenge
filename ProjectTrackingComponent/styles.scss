@@ -19,3 +19,61 @@ $VeryDarkBlue: hsl(230, 29%, 20%);
 $DarkGrayishBlue: hsl(230, 11%, 40%);
 $GrayishBlue: hsl(231, 7%, 65%);
 $LightGrayishBlue: hsl(207, 33%, 95%);
+
+// == MAIN STYLE ==
+body {
+	background: white;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 75%;
+	margin: auto;
+  margin-top: 2rem;
+  
+  .logo {
+    hover
+  }
+
+	button#responsiveNavbar {
+		display: none;
+	}
+
+	ul.responsiveNavbar {
+		display: flex;
+		li {
+			list-style-type: none;
+			margin-left: 3rem;
+
+			a {
+				font-family: $barlow-cond-font;
+				font-weight: 700;
+				color: $VeryDarkBlue;
+				text-decoration: none;
+				letter-spacing: 1px;
+				transition: all 0.5s;
+				border-bottom: 2px solid transparent;
+			}
+			a:hover {
+				border-bottom: 2px solid $VeryDarkBlue;
+			}
+			a.login {
+				color: $GrayishBlue;
+				transition: all 0.5s;
+				border-bottom: 2px solid transparent;
+			}
+			a.login:hover {
+				border-bottom: 2px solid $GrayishBlue;
+			}
+			span.divider {
+				height: 9px;
+				width: 9px;
+				background-color: $LightGrayishBlue;
+				border-radius: 50%;
+				display: inline-block;
+			}
+		}
+	}
+}
