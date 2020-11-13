@@ -1,0 +1,21 @@
+// == FONTS ==
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+
+$barlow-cond-font: "Barlow Condensed", sans-serif; // Headings, Call-to-actions, Navigation
+$barlow-font: "Barlow", sans-serif; // Body
+
+html {
+	// Body
+	font-size: 18px;
+}
+
+// == COLORS ==
+//Primary
+$Red: hsl(0, 100%, 68%);
+
+//Neutral
+$VeryDarkBlue: hsl(230, 29%, 20%);
+$DarkGrayishBlue: hsl(230, 11%, 40%);
+$GrayishBlue: hsl(231, 7%, 65%);
+$LightGrayishBlue: hsl(207, 33%, 95%);
