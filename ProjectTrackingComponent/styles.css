@@ -24,6 +24,18 @@ body {
   position: relative;
 }
 
+.gray-box-bg {
+  background: #eef3f6;
+  width: 900px;
+  height: 800px;
+  position: absolute;
+  top: -350px;
+  right: 0;
+  left: 50%;
+  z-index: -1;
+  border-radius: 70px;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,7 +53,7 @@ nav {
   margin-top: 3rem;
 }
 
-nav button#responsiveNavbar {
+nav button#responsiveNavbarIcons {
   display: none;
 }
 
@@ -94,6 +106,68 @@ nav ul.responsiveNavbar li span.divider {
 @media (max-width: 980px) {
   nav {
     width: 90%;
+  }
+}
+
+@media (max-width: 810px) {
+  nav button#responsiveNavbarIcons {
+    display: block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  nav button#responsiveNavbarIcons #hamburgerIcon.show,
+  nav button#responsiveNavbarIcons #closeIcon.show {
+    display: block;
+  }
+  nav button#responsiveNavbarIcons #hamburgerIcon.hide,
+  nav button#responsiveNavbarIcons #closeIcon.hide {
+    display: none;
+  }
+  nav button#responsiveNavbarIcons #closeIcon {
+    display: none;
+  }
+  nav #responsiveNavbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-top: 3rem;
+    z-index: 5;
+    background: white;
+    padding: 1.4rem 0;
+    width: 80%;
+    -webkit-box-shadow: 0px 0px 10px rgba(80, 80, 80, 0.596);
+            box-shadow: 0px 0px 10px rgba(80, 80, 80, 0.596);
+    display: none;
+  }
+  nav #responsiveNavbar li {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+  nav #responsiveNavbar li span.divider {
+    height: 1px;
+    width: 80%;
+    background-color: #a0a1ac;
+    border-radius: 0%;
+  }
+  nav #responsiveNavbar.responsiveNavbar.show {
+    display: block;
   }
 }
 
@@ -208,16 +282,32 @@ header .header-text .cta span.cta-text {
   }
 }
 
-.gray-box-bg {
-  background: #eef3f6;
-  width: 900px;
-  height: 800px;
-  position: absolute;
-  top: -350px;
-  right: 0;
-  left: 50%;
-  z-index: -1;
-  border-radius: 70px;
+@media (max-width: 400px) {
+  header .header-text .pre-title {
+    margin-bottom: 0.5rem;
+  }
+  header .header-text .pre-title .pill {
+    padding: 0.1rem 0.5rem;
+  }
+  header .header-text .pre-title h3 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  header .header-text .title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  header .header-text .subtitle {
+    margin-bottom: 1rem;
+  }
+  header .header-text .cta button.cta-button {
+    padding: 0.6rem 0.8rem;
+    margin-right: 0.4rem;
+  }
+  header .header-text .cta span.cta-text {
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+  }
 }
 
 .devices-img {

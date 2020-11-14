@@ -36,6 +36,18 @@ body {
 	position: relative;
 }
 
+.gray-box-bg {
+	background: $LightGrayishBlue;
+	width: 900px;
+	height: 800px;
+	position: absolute;
+	top: -350px;
+	right: 0;
+	left: 50%;
+	z-index: -1;
+	border-radius: 70px;
+}
+
 nav {
 	display: flex;
 	flex-direction: row;
@@ -45,7 +57,7 @@ nav {
 	margin: 0 auto;
 	margin-top: 3rem;
 
-	button#responsiveNavbar {
+	button#responsiveNavbarIcons {
 		display: none;
 	}
 
@@ -88,6 +100,61 @@ nav {
 
 	@media (max-width: 980px) {
 		width: 90%;
+	}
+
+	@media (max-width: 810px) {
+		button#responsiveNavbarIcons {
+			display: block;
+			border: none;
+			outline: none;
+			cursor: pointer;
+
+			#hamburgerIcon.show,
+			#closeIcon.show {
+				display: block;
+			}
+			#hamburgerIcon.hide,
+			#closeIcon.hide {
+				display: none;
+			}
+			#closeIcon {
+				display: none;
+			}
+		}
+
+		#responsiveNavbar {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-top: 3rem;
+			z-index: 5;
+			background: white;
+			padding: 1.4rem 0;
+			width: 80%;
+			box-shadow: 0px 0px 10px rgba(80, 80, 80, 0.596);
+			display: none;
+
+			li {
+				margin-left: 0;
+				margin-bottom: 0.5rem;
+				width: 100%;
+				text-align: center;
+
+				span.divider {
+					height: 1px;
+					width: 80%;
+					background-color: $GrayishBlue;
+					border-radius: 0%;
+				}
+			}
+		}
+		#responsiveNavbar.responsiveNavbar.show {
+			display: block;
+		}
 	}
 }
 
@@ -199,18 +266,41 @@ header {
 		margin-top: 400px;
 		margin-bottom: 2rem;
 	}
-}
 
-.gray-box-bg {
-	background: $LightGrayishBlue;
-	width: 900px;
-	height: 800px;
-	position: absolute;
-	top: -350px;
-	right: 0;
-	left: 50%;
-	z-index: -1;
-	border-radius: 70px;
+	@media (max-width: 400px) {
+		.header-text {
+			.pre-title {
+				margin-bottom: 0.5rem;
+				.pill {
+					padding: 0.1rem 0.5rem;
+				}
+				h3 {
+					font-size: 1rem;
+					font-weight: 400;
+				}
+			}
+
+			.title {
+				font-size: 2.2rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.subtitle {
+				margin-bottom: 1rem;
+			}
+
+			.cta {
+				button.cta-button {
+					padding: 0.6rem 0.8rem;
+					margin-right: 0.4rem;
+				}
+				span.cta-text {
+					letter-spacing: 1px;
+					font-size: 0.9rem;
+				}
+			}
+		}
+	}
 }
 
 .devices-img {
