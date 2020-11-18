@@ -14,3 +14,256 @@ $Pink: hsl(322, 100%, 66%);
 $VeryPaleCyan: hsl(193, 100%, 96%);
 $VeryDarkCyan: hsl(192, 100%, 9%);
 $GrayishBlue: hsl(208, 11%, 55%);
+
+// === Components ==============
+.container {
+	width: 85%;
+	margin: 0 auto;
+	max-width: 1300px;
+}
+.btn {
+	padding: 0.1rem 2rem;
+	border: none;
+	outline: none;
+	border-radius: 30px;
+	box-shadow: 0 0 15px rgba(122, 122, 122, 0.425);
+	cursor: pointer;
+	font-weight: 700;
+	font-family: $body-font;
+	transition: all 0.5s;
+}
+.btn-white {
+	background: white;
+	color: black;
+	border: 3px solid white;
+}
+.btn-pink {
+	background: $Pink;
+	color: white;
+	border: 2px solid $Pink;
+}
+h1,
+h2 {
+	color: $VeryDarkCyan;
+	font-family: $heading-font;
+}
+p {
+	font-family: $body-font;
+}
+.text-dark {
+	color: $VeryDarkCyan;
+}
+.text-gray {
+	color: $GrayishBlue;
+}
+.card {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 5rem;
+	box-shadow: 0 0 15px rgba(122, 122, 122, 0.233);
+	border-radius: 10px;
+	margin-bottom: 2.5rem;
+	padding: 2rem 2rem 2rem 7rem;
+}
+.col {
+	display: flex;
+	flex-direction: column;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+// === Main Style ==============
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: $font-size;
+}
+
+#landing {
+	background: url("./images/bg-hero-desktop.svg") top no-repeat, $VeryPaleCyan;
+	height: 100vh;
+
+	.wrapper {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		nav {
+			display: flex;
+			justify-content: space-between;
+			padding: 2.5rem 0;
+
+			button {
+				padding: 0.1rem 3rem;
+			}
+			button:hover {
+				color: white;
+				background: rgb(95, 95, 95);
+			}
+		}
+
+		.header {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: $heading-font;
+			height: 100%;
+
+			&-text {
+				flex: 1;
+				h1 {
+					font-size: 2.5rem;
+					font-weight: 700;
+					margin-bottom: 1.5rem;
+				}
+				p {
+					margin-bottom: 1.5rem;
+				}
+				button {
+					padding: 1rem 3.5rem;
+				}
+				button:hover {
+					background: white;
+					color: $Pink;
+				}
+			}
+
+			&-img {
+				flex: 1.14;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+#body {
+	margin: 4rem 0;
+
+	.card {
+		&-text {
+			flex: 1.5;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 490px;
+			h2 {
+				margin-bottom: 1rem;
+			}
+		}
+
+		&-img {
+			flex: 0.5;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+#footer {
+	background: black;
+	margin-top: 12rem;
+	color: $VeryPaleCyan;
+
+	.cta {
+		transform: translateY(-50%);
+		background: white;
+		color: black;
+		width: 60%;
+		margin: 0 auto;
+		flex-direction: column;
+		padding: 3rem 4rem;
+		justify-content: space-between;
+		align-items: center;
+		h2 {
+			margin-bottom: 1.3rem;
+		}
+		button {
+			padding: 1rem 2rem;
+			width: 50%;
+			font-size: 1rem;
+		}
+		button:hover {
+			background: white;
+			color: $Pink;
+		}
+	}
+
+	.footer-end {
+		margin-top: -3rem;
+		padding-bottom: 3rem;
+		display: flex;
+		flex-direction: column;
+		font-family: $body-font;
+
+		svg.footer-logo {
+			margin-bottom: 2rem;
+		}
+
+		&-links {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 1rem;
+			column-gap: 3rem;
+
+			.col {
+				flex: 1;
+				a {
+					text-decoration: none;
+					color: $VeryPaleCyan;
+					margin-bottom: 1.2rem;
+				}
+				a:hover {
+					opacity: 0.75;
+				}
+			}
+			.col-lg {
+				flex: 2;
+				.row {
+					display: grid;
+					grid-template-columns: 1fr 9fr;
+					margin-bottom: 1.2rem;
+					img {
+						margin-top: 5px;
+					}
+				}
+			}
+			.social {
+				flex-direction: row;
+
+				&-circle {
+					width: 30px;
+					height: 30px;
+					border-radius: 50%;
+					border: 1px white solid;
+					display: flex;
+					justify-content: center;
+					margin-right: 1rem;
+
+					.iconify {
+						cursor: pointer;
+						align-self: center;
+					}
+				}
+			}
+			.social-circle:hover {
+				background: $VeryPaleCyan;
+			}
+			.social-circle:hover .iconify {
+				color: black;
+			}
+		}
+
+		&-copyright {
+			text-align: right;
+		}
+	}
+}
