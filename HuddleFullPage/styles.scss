@@ -1,0 +1,16 @@
+// === Typography ==================
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+$heading-font: "Poppins", sans-serif; // Headings
+$body-font: "Open Sans", sans-serif; // Body and CTA
+$font-size: 18px;
+
+// === Colors ==================
+// Primary
+$Pink: hsl(322, 100%, 66%);
+
+// Neutral
+$VeryPaleCyan: hsl(193, 100%, 96%);
+$VeryDarkCyan: hsl(192, 100%, 9%);
+$GrayishBlue: hsl(208, 11%, 55%);
