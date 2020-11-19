@@ -12,9 +12,12 @@ Thanks for checking out this front-end coding challenge.
 
 ## Challenges:
 
--  
+-  Footer layout was kind of challenging to implement it because of all the different size columns and rows
+-  The body cards were hard to position with the images and textx
+
 ## What I learned:
 
-- 
+-  Better SASS file organization (all within 1 file)
+-  Better understanding of grid layout and flexbox
 
-## Time to Complete: ~  hours
+## Time to Complete: ~ 3 hours
