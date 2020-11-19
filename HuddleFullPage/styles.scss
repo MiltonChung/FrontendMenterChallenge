@@ -20,6 +20,10 @@ $GrayishBlue: hsl(208, 11%, 55%);
 	width: 85%;
 	margin: 0 auto;
 	max-width: 1300px;
+
+	@media (max-width: 665px) {
+		width: 90%;
+	}
 }
 .btn {
 	padding: 0.1rem 2rem;
@@ -49,6 +53,19 @@ h2 {
 }
 p {
 	font-family: $body-font;
+	font-size: 1rem;
+
+	@media (max-width: 768px) {
+		font-size: 0.85rem;
+	}
+}
+@media (max-width: 768px) {
+	h1 {
+		font-size: 1.6rem;
+	}
+	h2 {
+		font-size: 1.2rem;
+	}
 }
 .text-dark {
 	color: $VeryDarkCyan;
@@ -61,9 +78,24 @@ p {
 	justify-content: space-between;
 	column-gap: 5rem;
 	box-shadow: 0 0 15px rgba(122, 122, 122, 0.233);
-	border-radius: 10px;
+	border-radius: 15px;
 	margin-bottom: 2.5rem;
-	padding: 2rem 2rem 2rem 7rem;
+}
+@media (max-width: 665px) {
+	.card {
+		flex-direction: column;
+
+		.card-text {
+			text-align: center;
+			margin-top: 1.6rem;
+		}
+	}
+	.card:first-child,
+	.card:last-child {
+		.card-text {
+			order: 2;
+		}
+	}
 }
 .col {
 	display: flex;
@@ -87,6 +119,7 @@ html {
 #landing {
 	background: url("./images/bg-hero-desktop.svg") top no-repeat, $VeryPaleCyan;
 	height: 100vh;
+	min-height: 100vh;
 
 	.wrapper {
 		height: 100%;
@@ -97,7 +130,7 @@ html {
 		nav {
 			display: flex;
 			justify-content: space-between;
-			padding: 2.5rem 0;
+			margin: 2.5rem 0;
 
 			button {
 				padding: 0.1rem 3rem;
@@ -105,6 +138,28 @@ html {
 			button:hover {
 				color: white;
 				background: rgb(95, 95, 95);
+			}
+
+			@media (max-width: 485px) {
+				margin: 1.5rem 0 3rem 0;
+				img {
+					width: 170px;
+					height: 28px;
+				}
+				button {
+					padding: 0.1rem 1rem;
+					span {
+						height: 20px;
+					}
+				}
+			}
+
+			@media (max-width: 375px) {
+				margin: 1.5rem 0 5rem 0;
+				img {
+					width: 130px;
+					height: 22px;
+				}
 			}
 		}
 
@@ -117,6 +172,7 @@ html {
 
 			&-text {
 				flex: 1;
+				margin-right: 0.5rem;
 				h1 {
 					font-size: 2.5rem;
 					font-weight: 700;
@@ -132,12 +188,52 @@ html {
 					background: white;
 					color: $Pink;
 				}
+
+				@media (max-width: 768px) {
+					h1 {
+						font-size: 1.8rem;
+						line-height: 2.5rem;
+						margin-bottom: 0.5rem;
+					}
+					button {
+						padding: 0.8rem 2rem;
+					}
+				}
+
+				@media (max-width: 375px) {
+					h1 {
+						font-size: 1.4rem;
+						line-height: 2rem;
+						margin-bottom: 0.8rem;
+					}
+					button {
+						padding: 0.5rem 2.5rem;
+					}
+				}
 			}
 
 			&-img {
 				flex: 1.14;
 				img {
 					width: 100%;
+				}
+			}
+
+			@media (max-width: 665px) {
+				flex-direction: column;
+				width: 90%;
+				margin: 0 auto;
+
+				&-text {
+					text-align: center;
+					margin-bottom: 2rem;
+				}
+
+				&-img {
+					margin-bottom: 2rem;
+					img {
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -148,12 +244,15 @@ html {
 	margin: 4rem 0;
 
 	.card {
+		padding: 2rem 2rem 2rem 7rem;
+
 		&-text {
 			flex: 1.5;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			max-width: 490px;
+
 			h2 {
 				margin-bottom: 1rem;
 			}
@@ -163,6 +262,18 @@ html {
 			flex: 0.5;
 			img {
 				width: 100%;
+			}
+		}
+
+		@media (max-width: 768px) {
+			padding: 2rem;
+			&-text {
+				h2 {
+					margin-bottom: 0.5rem;
+				}
+			}
+			&-img {
+				flex: 0.8;
 			}
 		}
 	}
@@ -180,11 +291,12 @@ html {
 		width: 60%;
 		margin: 0 auto;
 		flex-direction: column;
-		padding: 3rem 4rem;
+		padding: 2rem;
 		justify-content: space-between;
 		align-items: center;
 		h2 {
 			margin-bottom: 1.3rem;
+			text-align: center;
 		}
 		button {
 			padding: 1rem 2rem;
@@ -194,6 +306,25 @@ html {
 		button:hover {
 			background: white;
 			color: $Pink;
+		}
+
+		@media (max-width: 768px) {
+			padding: 1rem 0.8rem;
+			width: 80%;
+			button {
+				padding: 0.6rem 0.7rem;
+				width: 80%;
+				font-size: 0.8rem;
+			}
+		}
+
+		@media (max-width: 375px) {
+			width: 100%;
+			padding: 2.3rem 0.5rem;
+			h2 {
+				font-size: 1rem;
+				font-weight: 700;
+			}
 		}
 	}
 
@@ -206,6 +337,10 @@ html {
 
 		svg.footer-logo {
 			margin-bottom: 2rem;
+
+			@media (max-width: 665px) {
+				margin-top: 4rem;
+			}
 		}
 
 		&-links {
@@ -260,10 +395,30 @@ html {
 			.social-circle:hover .iconify {
 				color: black;
 			}
+
+			@media (max-width: 665px) {
+				flex-direction: column;
+				.col-lg {
+					margin-bottom: 1.1rem;
+				}
+				.col {
+					a {
+						margin-bottom: 0.5rem;
+					}
+				}
+				.social {
+					margin-top: 2rem;
+					justify-content: center;
+				}
+			}
 		}
 
 		&-copyright {
 			text-align: right;
+			@media (max-width: 665px) {
+				text-align: center;
+				margin-top: 0.3rem;
+			}
 		}
 	}
 }
