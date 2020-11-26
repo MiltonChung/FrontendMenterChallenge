@@ -43,6 +43,8 @@ a {
 }
 p {
 	font-family: $open-sans-font;
+	font-weight: 400;
+	font-size: $font-size;
 }
 
 .container {
@@ -167,5 +169,52 @@ nav {
 
 // Works
 #works {
+	background-color: $DarkBlueMain;
+	padding: 5rem 0;
+
+	.works-style {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 1.5rem;
+		img.illustration {
+			width: 100%;
+			max-width: 615px;
+			height: auto;
+			flex: 1;
+		}
+
+		.works-text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			row-gap: 1.2rem;
+			flex: 1;
+			h2 {
+				width: 60%;
+				min-width: 320px;
+				font-size: 2.4rem;
+			}
+			p.works-btn {
+				color: $Cyan;
+				border-bottom: 1px solid $Cyan;
+				width: fit-content;
+				display: inline-flex;
+				align-items: center;
+				cursor: pointer;
+				transition: all 0.4s;
+				.icon {
+					margin-left: 0.3rem;
+				}
+			}
+			p.works-btn:hover {
+				color: $White;
+				border-bottom: 1px solid $White;
+			}
+		}
+	}
+}
+
+// Testimonials
+#testimonials {
 	background-color: $DarkBlueMain;
 }
