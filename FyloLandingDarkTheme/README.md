@@ -2,7 +2,7 @@
 
 ![Design preview for the Huddle landing page with alternating feature blocks coding challenge](./design/desktop-preview.jpg)
 
-Check out my solution: https://miltonchung.github.io/FrontendMenterChallenge/
+Check out my solution: https://miltonchung.github.io/FrontendMenterChallenge/FyloLandingDarkTheme/index.html
 
 ## Welcome! 👋
 
