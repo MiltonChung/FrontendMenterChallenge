@@ -145,6 +145,24 @@ nav {
 			border-bottom: 1px white solid;
 		}
 	}
+
+	@media (max-width: 523px) {
+		margin-top: 1.4rem;
+
+		.logo {
+			img {
+				width: 90px;
+				height: auto;
+			}
+		}
+
+		ul {
+			li {
+				font-size: 13px;
+				margin-left: 1rem;
+			}
+		}
+	}
 }
 
 // Landing
@@ -155,13 +173,28 @@ nav {
 	background-size: contain;
 	min-height: 120vh;
 	overflow: hidden;
+	@media (max-width: 680px) {
+		background: url("./images/bg-curvy-mobile.svg");
+		background-position: bottom;
+		background-repeat: no-repeat;
+		background-size: contain;
+		min-height: 100vh;
+	}
 
 	.landing-style {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		width: 756px;
+		max-width: 756px;
+		width: 60%;
 		text-align: center;
+		@media (max-width: 780px) {
+			width: 80%;
+		}
+
+		@media (max-width: 500px) {
+			width: 90%;
+		}
 
 		img {
 			width: 100%;
@@ -189,6 +222,9 @@ nav {
 #features {
 	background: $DarkBlueMain;
 	padding-bottom: 2rem;
+	@media (max-width: 785px) {
+		padding-top: 5rem;
+	}
 
 	.features-style {
 		display: grid;
@@ -200,6 +236,11 @@ nav {
 		text-align: center;
 		row-gap: 4rem;
 		column-gap: 3rem;
+
+		@media (max-width: 750px) {
+			grid-template-columns: repeat(1, minmax(300px, 420px));
+			grid-template-rows: repeat(4, 1fr);
+		}
 	}
 }
 
@@ -212,11 +253,18 @@ nav {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: 1.5rem;
+		@media (max-width: 825px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(2, 1fr);
+			justify-items: center;
+			align-items: center;
+			text-align: center;
+		}
+
 		img.illustration {
 			width: 100%;
 			max-width: 615px;
 			height: auto;
-			flex: 1;
 		}
 
 		.works-text {
@@ -224,11 +272,22 @@ nav {
 			flex-direction: column;
 			justify-content: center;
 			row-gap: 1.2rem;
-			flex: 1;
 			h2 {
 				width: 60%;
 				min-width: 320px;
 				font-size: 2.4rem;
+				@media (max-width: 825px) {
+					width: 100%;
+					font-size: 1.8rem;
+				}
+				@media (max-width: 568px) {
+					font-size: 1.4rem;
+				}
+			}
+			@media (max-width: 568px) {
+				p {
+					text-align: left;
+				}
 			}
 			p.works-btn {
 				color: $Cyan;
@@ -240,6 +299,12 @@ nav {
 				transition: all 0.4s;
 				.icon {
 					margin-left: 0.3rem;
+				}
+				@media (max-width: 825px) {
+					align-self: center;
+				}
+				@media (max-width: 568px) {
+					align-self: flex-start;
 				}
 			}
 			p.works-btn:hover {
@@ -254,16 +319,17 @@ nav {
 #testimonials {
 	background-color: $DarkBlueMain;
 	.testimonials-style {
-		padding: 3rem 0.5rem;
+		padding: 3rem 0rem;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
 		column-gap: 2rem;
+		row-gap: 2rem;
 		position: relative;
 
 		.bg-quote {
 			position: absolute;
 			top: 10px;
-			left: 0;
+			left: -5px;
 			z-index: 3;
 		}
 	}
@@ -286,9 +352,23 @@ nav {
 		padding: 2rem;
 		row-gap: 2rem;
 		border-radius: 15px;
+
+		@media (max-width: 1045px) {
+			width: 80%;
+		}
+		@media (max-width: 854px) {
+			width: 85%;
+		}
+		@media (max-width: 806px) {
+			row-gap: 1.5rem;
+		}
+
 		h1 {
 			text-align: center;
 			font-size: 2rem;
+			@media (max-width: 806px) {
+				font-size: 1.4rem;
+			}
 		}
 		p {
 			text-align: center;
@@ -296,10 +376,11 @@ nav {
 		}
 		form {
 			display: flex;
-			// grid-template-columns: 3fr 1.5fr;
-			// column-gap: 3rem;
-
 			width: 100%;
+			@media (max-width: 806px) {
+				flex-direction: column;
+				row-gap: 1rem;
+			}
 			input {
 				flex: 3;
 				padding: 1rem 1.6rem;
@@ -316,25 +397,9 @@ nav {
 				padding: 1rem;
 				max-height: 49px;
 				justify-self: flex-end;
-			}
-		}
-
-		@media (max-width: 768px) {
-			padding: 1rem 0.8rem;
-			width: 80%;
-			button {
-				padding: 0.6rem 0.7rem;
-				width: 80%;
-				font-size: 0.8rem;
-			}
-		}
-
-		@media (max-width: 375px) {
-			width: 100%;
-			padding: 2.3rem 0.5rem;
-			h2 {
-				font-size: 1rem;
-				font-weight: 700;
+				@media (max-width: 806px) {
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -343,33 +408,52 @@ nav {
 // Footer
 footer {
 	background: $DarkBlueFooter;
-	padding: 10rem 0 2rem 0;
+	padding: 15rem 0 2rem 0;
+	@media (max-width: 1085px) {
+		.container {
+			width: 97%;
+		}
+	}
+	@media (max-width: 940px) {
+		.container {
+			width: 85%;
+		}
+	}
 
 	.footer-links {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
 		margin-top: 1rem;
-		padding-right: 5rem;
+		column-gap: 0.5rem;
+
+		@media (max-width: 940px) {
+			flex-direction: column;
+		}
 
 		.col {
+			margin-bottom: 1rem;
 			.row {
 				display: flex;
 				align-items: flex-start;
 				max-width: 380px;
 				img {
 					margin-top: 0.2rem;
+					margin-right: 0.5rem;
 				}
 			}
 			p {
-				margin: 0;
 				margin-bottom: 1rem;
-				margin-left: 1rem;
+
 				cursor: pointer;
 			}
 		}
 		.social {
 			display: flex;
+			@media (max-width: 940px) {
+				justify-content: center;
+				width: 100%;
+			}
 
 			.social-icon {
 				border: 1px white solid;
