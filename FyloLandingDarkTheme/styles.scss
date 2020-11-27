@@ -102,6 +102,17 @@ p {
 		}
 	}
 }
+button {
+	background: linear-gradient(to right, $Cyan, $Blue);
+	border: none;
+	color: white;
+	padding: 0.8rem 0;
+	border-radius: 30px;
+	cursor: pointer;
+}
+button:hover {
+	background: linear-gradient(to right, $Cyan, $Cyan);
+}
 
 // === Main Styles ===
 body {
@@ -169,16 +180,7 @@ nav {
 			width: 220px;
 			align-self: center;
 			margin-top: 1.5rem;
-			background: linear-gradient(to right, $Cyan, $Blue);
-			border: none;
-			color: white;
-			padding: 0.8rem 0;
-			border-radius: 30px;
-			cursor: pointer;
 			font-weight: 700;
-		}
-		button:hover {
-			background: linear-gradient(to right, $Cyan, $Cyan);
 		}
 	}
 }
@@ -268,51 +270,72 @@ nav {
 }
 
 // Call to Action
-.cta {
-	transform: translateY(50%);
-	background: white;
-	color: black;
-	width: 60%;
-	margin: 0 auto;
-	flex-direction: column;
-	padding: 2rem;
-	justify-content: space-between;
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-	column-gap: 5rem;
-	box-shadow: 0 0 15px rgba(122, 122, 122, 0.233);
-	border-radius: 15px;
-	margin-bottom: 2.5rem;
-	h2 {
-		margin-bottom: 1.3rem;
-		text-align: center;
-	}
-	button {
-		padding: 1rem 2rem;
-		width: 50%;
-		font-size: 1rem;
-	}
-	button:hover {
-		background: white;
-	}
+#cta {
+	background: $DarkBlueMain;
+	.cta-style {
+		background: $DarkBlueTestimonial;
+		transform: translateY(50%);
+		color: $White;
+		width: 65%;
+		margin: 0 auto;
 
-	@media (max-width: 768px) {
-		padding: 1rem 0.8rem;
-		width: 80%;
-		button {
-			padding: 0.6rem 0.7rem;
-			width: 80%;
-			font-size: 0.8rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem;
+		row-gap: 2rem;
+		border-radius: 15px;
+		h1 {
+			text-align: center;
+			font-size: 2rem;
 		}
-	}
+		p {
+			text-align: center;
+			width: 91%;
+		}
+		form {
+			display: flex;
+			// grid-template-columns: 3fr 1.5fr;
+			// column-gap: 3rem;
 
-	@media (max-width: 375px) {
-		width: 100%;
-		padding: 2.3rem 0.5rem;
-		h2 {
-			font-size: 1rem;
-			font-weight: 700;
+			width: 100%;
+			input {
+				flex: 3;
+				padding: 1rem 1.6rem;
+				border-radius: 30px;
+				border: none;
+				outline: none;
+				width: 100%;
+				max-height: 49px;
+				margin-right: 1.5rem;
+			}
+			button {
+				flex: 1;
+				width: fit-content;
+				padding: 1rem;
+				max-height: 49px;
+				justify-self: flex-end;
+			}
+		}
+
+		@media (max-width: 768px) {
+			padding: 1rem 0.8rem;
+			width: 80%;
+			button {
+				padding: 0.6rem 0.7rem;
+				width: 80%;
+				font-size: 0.8rem;
+			}
+		}
+
+		@media (max-width: 375px) {
+			width: 100%;
+			padding: 2.3rem 0.5rem;
+			h2 {
+				font-size: 1rem;
+				font-weight: 700;
+			}
 		}
 	}
 }
@@ -320,7 +343,7 @@ nav {
 // Footer
 footer {
 	background: $DarkBlueFooter;
-	padding: 5rem 0;
+	padding: 10rem 0 2rem 0;
 
 	.footer-links {
 		display: flex;

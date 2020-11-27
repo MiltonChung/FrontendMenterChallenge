@@ -92,6 +92,21 @@ p {
   font-family: "Open Sans", sans-serif;
 }
 
+button {
+  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#339ecc));
+  background: linear-gradient(to right, #65e2d9, #339ecc);
+  border: none;
+  color: white;
+  padding: 0.8rem 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#65e2d9));
+  background: linear-gradient(to right, #65e2d9, #65e2d9);
+}
+
 body {
   background: #1c2431;
   min-height: 100vh;
@@ -181,19 +196,7 @@ nav ul li:hover {
       -ms-grid-row-align: center;
       align-self: center;
   margin-top: 1.5rem;
-  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#339ecc));
-  background: linear-gradient(to right, #65e2d9, #339ecc);
-  border: none;
-  color: white;
-  padding: 0.8rem 0;
-  border-radius: 30px;
-  cursor: pointer;
   font-weight: 700;
-}
-
-#landing .landing-style button:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#65e2d9));
-  background: linear-gradient(to right, #65e2d9, #65e2d9);
 }
 
 #features {
@@ -314,57 +317,83 @@ nav ul li:hover {
   z-index: 3;
 }
 
-.cta {
+#cta {
+  background: #181f2a;
+}
+
+#cta .cta-style {
+  background: #202a3c;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
-  background: white;
-  color: black;
-  width: 60%;
+  color: white;
+  width: 65%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 2rem;
+  row-gap: 2rem;
+  border-radius: 15px;
+}
+
+#cta .cta-style h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#cta .cta-style p {
+  text-align: center;
+  width: 91%;
+}
+
+#cta .cta-style form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  -webkit-column-gap: 5rem;
-          column-gap: 5rem;
-  -webkit-box-shadow: 0 0 15px rgba(122, 122, 122, 0.233);
-          box-shadow: 0 0 15px rgba(122, 122, 122, 0.233);
-  border-radius: 15px;
-  margin-bottom: 2.5rem;
+  width: 100%;
 }
 
-.cta h2 {
-  margin-bottom: 1.3rem;
-  text-align: center;
+#cta .cta-style form input {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  padding: 1rem 1.6rem;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  width: 100%;
+  max-height: 49px;
+  margin-right: 1.5rem;
 }
 
-.cta button {
-  padding: 1rem 2rem;
-  width: 50%;
-  font-size: 1rem;
-}
-
-.cta button:hover {
-  background: white;
+#cta .cta-style form button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  max-height: 49px;
+  justify-self: flex-end;
 }
 
 @media (max-width: 768px) {
-  .cta {
+  #cta .cta-style {
     padding: 1rem 0.8rem;
     width: 80%;
   }
-  .cta button {
+  #cta .cta-style button {
     padding: 0.6rem 0.7rem;
     width: 80%;
     font-size: 0.8rem;
@@ -372,11 +401,11 @@ nav ul li:hover {
 }
 
 @media (max-width: 375px) {
-  .cta {
+  #cta .cta-style {
     width: 100%;
     padding: 2.3rem 0.5rem;
   }
-  .cta h2 {
+  #cta .cta-style h2 {
     font-size: 1rem;
     font-weight: 700;
   }
@@ -384,7 +413,7 @@ nav ul li:hover {
 
 footer {
   background: #0b1523;
-  padding: 5rem 0;
+  padding: 10rem 0 2rem 0;
 }
 
 footer .footer-links {
