@@ -68,6 +68,40 @@ p {
 		font-size: $font-size;
 	}
 }
+.card {
+	background: $DarkBlueTestimonial;
+	width: 100%;
+	padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+	border-radius: 10px;
+	box-shadow: 0 0 12px black;
+
+	p.testimonial-text {
+		width: 100%;
+		line-height: 25px;
+		margin-bottom: 1.6rem;
+	}
+	.user {
+		display: flex;
+		align-items: center;
+		img {
+			border-radius: 50%;
+			width: 35px;
+			height: 35px;
+			margin-right: 1rem;
+		}
+		.user-info {
+			p.user-name {
+				font-weight: bold;
+				font-size: 15px;
+				margin-bottom: 0.1rem;
+			}
+			small {
+				font-size: 12px;
+				font-family: $open-sans-font;
+			}
+		}
+	}
+}
 
 // === Main Styles ===
 body {
@@ -94,10 +128,10 @@ nav {
 			margin-left: 2rem;
 			cursor: pointer;
 			transition: all 0.5s;
+			border-bottom: 1px transparent solid;
 		}
 		li:hover {
-			color: black;
-			border-bottom: 1px black solid;
+			border-bottom: 1px white solid;
 		}
 	}
 }
@@ -109,7 +143,7 @@ nav {
 	background-repeat: no-repeat;
 	background-size: contain;
 	min-height: 120vh;
-	width: 100vw;
+	overflow: hidden;
 
 	.landing-style {
 		display: flex;
@@ -217,4 +251,125 @@ nav {
 // Testimonials
 #testimonials {
 	background-color: $DarkBlueMain;
+	.testimonials-style {
+		padding: 3rem 0.5rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 2rem;
+		position: relative;
+
+		.bg-quote {
+			position: absolute;
+			top: 10px;
+			left: 0;
+			z-index: 3;
+		}
+	}
+}
+
+// Call to Action
+.cta {
+	transform: translateY(50%);
+	background: white;
+	color: black;
+	width: 60%;
+	margin: 0 auto;
+	flex-direction: column;
+	padding: 2rem;
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	column-gap: 5rem;
+	box-shadow: 0 0 15px rgba(122, 122, 122, 0.233);
+	border-radius: 15px;
+	margin-bottom: 2.5rem;
+	h2 {
+		margin-bottom: 1.3rem;
+		text-align: center;
+	}
+	button {
+		padding: 1rem 2rem;
+		width: 50%;
+		font-size: 1rem;
+	}
+	button:hover {
+		background: white;
+	}
+
+	@media (max-width: 768px) {
+		padding: 1rem 0.8rem;
+		width: 80%;
+		button {
+			padding: 0.6rem 0.7rem;
+			width: 80%;
+			font-size: 0.8rem;
+		}
+	}
+
+	@media (max-width: 375px) {
+		width: 100%;
+		padding: 2.3rem 0.5rem;
+		h2 {
+			font-size: 1rem;
+			font-weight: 700;
+		}
+	}
+}
+
+// Footer
+footer {
+	background: $DarkBlueFooter;
+	padding: 5rem 0;
+
+	.footer-links {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-top: 1rem;
+		padding-right: 5rem;
+
+		.col {
+			.row {
+				display: flex;
+				align-items: flex-start;
+				max-width: 380px;
+				img {
+					margin-top: 0.2rem;
+				}
+			}
+			p {
+				margin: 0;
+				margin-bottom: 1rem;
+				margin-left: 1rem;
+				cursor: pointer;
+			}
+		}
+		.social {
+			display: flex;
+
+			.social-icon {
+				border: 1px white solid;
+				border-radius: 50%;
+				width: 36px;
+				height: 36px;
+				display: flex;
+				margin-right: 0.6rem;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: all 0.5s;
+
+				.iconify {
+					width: 20px;
+					height: 20px;
+				}
+			}
+			.social-icon:hover {
+				background: white;
+				color: black;
+			}
+		}
+	}
 }
