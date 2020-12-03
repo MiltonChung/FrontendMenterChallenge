@@ -1,0 +1,293 @@
+// === Typography ===
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+
+$open-sans-font: "Open Sans", sans-serif; // Body
+$poppins-font: "Poppins", sans-serif; // Headings
+$default-font-size: 18px;
+
+html {
+	font-size: $default-font-size;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $poppins-font;
+}
+p,
+span,
+a,
+button {
+	font-family: $open-sans-font;
+}
+
+// === Colors ====
+// Primary
+$Pink: hsl(322, 100%, 66%);
+$LightPink: hsl(321, 100%, 78%);
+$LightRed: hsl(0, 100%, 63%);
+
+// Neutral
+$VeryDarkCyan: hsl(192, 100%, 9%);
+$VeryPaleBlue: hsl(207, 100%, 98%);
+
+// === Defaults/Resets ==========
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: $VeryDarkCyan;
+}
+
+// === Components =====
+.container {
+	width: 85%;
+	margin: 0 auto;
+	max-width: 1300px;
+
+	@media (max-width: 665px) {
+		width: 90%;
+	}
+}
+.btn {
+	padding: 0.1rem 2rem;
+	border: none;
+	outline: none;
+	border-radius: 30px;
+	box-shadow: 0 0 15px rgba(122, 122, 122, 0.425);
+	cursor: pointer;
+	font-weight: 700;
+	transition: all 0.5s;
+}
+.btn-white {
+	background: white;
+	color: $Pink;
+	border: 1px solid $Pink;
+}
+.btn-pink {
+	background: $Pink;
+	color: white;
+	border: 2px solid $Pink;
+}
+.text-gray {
+	color: gray;
+}
+.waves {
+	width: 100%;
+}
+
+// === Main Styles ======
+#landing {
+	min-height: 100vh;
+
+	.wrapper {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		nav {
+			display: flex;
+			justify-content: space-between;
+			margin: 2.5rem 0;
+
+			button {
+				padding: 0.1rem 1.5rem;
+			}
+			button:hover {
+				color: white;
+				background: rgb(95, 95, 95);
+			}
+
+			@media (max-width: 485px) {
+				margin: 2rem 0 2rem 0;
+				img {
+					width: 170px;
+					height: 28px;
+				}
+				button {
+					padding: 0.1rem 1rem;
+					span {
+						height: 20px;
+					}
+				}
+			}
+
+			@media (max-width: 375px) {
+				img {
+					width: 130px;
+					height: 22px;
+				}
+			}
+		}
+
+		.header {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin-top: 8rem;
+			height: 100%;
+
+			&-text {
+				flex: 1;
+				margin-bottom: 5rem;
+				h1 {
+					font-size: 2.3rem;
+					font-weight: 700;
+					margin-bottom: 1.5rem;
+				}
+				p {
+					width: 68%;
+					margin: 0 auto;
+					margin-bottom: 2rem;
+					max-width: 550px;
+				}
+				button {
+					padding: 1rem 3.5rem;
+					font-size: $default-font-size;
+					border-radius: 50px;
+				}
+				button:hover {
+					background: white;
+					color: $Pink;
+				}
+
+				@media (max-width: 768px) {
+					h1 {
+						font-size: 1.8rem;
+						line-height: 2.5rem;
+						margin-bottom: 0.5rem;
+					}
+					button {
+						padding: 0.8rem 2rem;
+					}
+				}
+
+				@media (max-width: 375px) {
+					h1 {
+						font-size: 1.4rem;
+						line-height: 2rem;
+						margin-bottom: 0.8rem;
+					}
+					button {
+						padding: 0.5rem 2.5rem;
+					}
+				}
+			}
+
+			&-img {
+				flex: 1.14;
+				width: 75%;
+				max-width: 766px;
+				img {
+					width: 100%;
+				}
+			}
+
+			@media (max-width: 665px) {
+				width: 90%;
+				margin: 0 auto;
+
+				&-text {
+					text-align: center;
+					margin-bottom: 2rem;
+				}
+
+				&-img {
+					margin-bottom: 2rem;
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+#stats {
+	margin-top: 4rem;
+	margin-bottom: 5rem;
+	.stats-styles {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		width: 70%;
+		justify-items: center;
+		row-gap: 4rem;
+		column-gap: 1.5rem;
+		.stat-card {
+			display: flex;
+			flex-direction: column;
+			justify-items: flex-start;
+			align-items: flex-start;
+			span {
+				font-size: 4.2rem;
+				font-weight: 700;
+			}
+			p {
+				align-self: center;
+			}
+		}
+	}
+}
+
+#main {
+	.main-styles-1 {
+		background: $VeryPaleBlue;
+		margin-top: -5px;
+		padding: 4rem 0;
+	}
+	.main-styles-2 {
+		padding: 4rem 0;
+	}
+
+	.main-layout {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-wrap: wrap;
+		&-inner {
+			flex: 1;
+			min-width: 400px;
+			h2 {
+				margin-bottom: 1.2rem;
+				font-size: 2rem;
+			}
+			p {
+				width: 90%;
+			}
+			img {
+				width: 100%;
+			}
+		}
+		.second-text {
+			margin-left: 3rem;
+		}
+	}
+}
+
+#cta {
+	margin: 4rem 0;
+	.cta-styles {
+		text-align: center;
+		h2 {
+			font-size: 2rem;
+		}
+		button {
+			padding: 1rem 3.5rem;
+			font-size: $default-font-size;
+			border-radius: 50px;
+			margin-top: 1.6rem;
+		}
+		button:hover {
+			background: white;
+			color: $Pink;
+		}
+	}
+}
+
+#footer {
+}
