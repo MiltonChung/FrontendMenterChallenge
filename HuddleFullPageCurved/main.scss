@@ -290,4 +290,104 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 }
 
 #footer {
+	.footer-bg {
+		background: $VeryDarkCyan;
+	}
+	.footer-styles {
+		margin-top: -0.5rem;
+		padding-top: 8rem;
+		display: flex;
+		justify-content: space-between;
+
+		.footer-contents {
+			order: 1;
+			max-width: 430px;
+
+			svg {
+				margin-bottom: 1.5rem;
+			}
+			.footer-p {
+				margin-bottom: 1.5rem;
+				color: $VeryPaleBlue;
+			}
+			.row {
+				display: flex;
+				align-items: center;
+				margin-bottom: 0.5rem;
+				img {
+					width: auto;
+					height: 100%;
+					margin-right: 0.5rem;
+				}
+				p {
+					color: $VeryPaleBlue;
+				}
+			}
+			.social-icons {
+				margin-top: 3rem;
+				svg {
+					width: 40px;
+					height: 40px;
+					margin-right: 0.4rem;
+					transition: all 0.5s;
+					cursor: pointer;
+					path {
+						fill: $VeryPaleBlue;
+					}
+				}
+				svg:hover {
+					path {
+						fill: rgb(70, 173, 207);
+					}
+				}
+			}
+		}
+
+		.newsletter {
+			max-width: 480px;
+			order: 2;
+			h3 {
+				color: $VeryPaleBlue;
+				margin-bottom: 1rem;
+			}
+			p {
+				color: $VeryPaleBlue;
+				font-size: 0.85rem;
+				margin-bottom: 1.8rem;
+				width: 75%;
+			}
+			form {
+				display: flex;
+				justify-content: space-between;
+				label {
+					width: 65%;
+					input {
+						width: 100%;
+						padding: 0.57rem 1rem;
+						border-radius: 5px;
+						outline: none;
+						border: none;
+					}
+				}
+				button {
+					border-radius: 5px;
+					padding: 0.39rem 1.8rem;
+					cursor: pointer;
+					transition: all 0.5s;
+				}
+				button:hover {
+					background: white;
+					color: $Pink;
+				}
+			}
+			.error-msg {
+				color: $LightRed;
+				padding-top: 0.3rem;
+				margin-left: 0.5rem;
+			}
+			.hide {
+				display: none;
+			}
+		}
+	}
 }
