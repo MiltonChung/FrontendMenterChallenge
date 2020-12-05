@@ -1,0 +1,42 @@
+// === TYPOGRAPHY =============
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+$inter-font: "Inter", sans-serif;
+$font-size: 14px; // (Overview Card Headings)
+
+// === COLORS ====================
+// Primary
+$LimeGreen: hsl(163, 72%, 41%);
+$BrightRed: hsl(356, 69%, 56%);
+$Facebook: hsl(208, 92%, 53%);
+$Twitter: hsl(203, 89%, 53%);
+$Instagram: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
+$YouTube: hsl(348, 97%, 39%);
+
+// Dark Theme Toggle
+$ToggleDark: linear-gradient(hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+// Light Theme Toggle
+$ToggleLight: hsl(230, 22%, 74%);
+
+// Dark Theme
+$VeryDarkBlue: hsl(230, 17%, 14%); // (BG)
+$VeryDarkBlue: hsl(232, 19%, 15%); // (Top BG Pattern)
+$DarkDesaturatedBlue: hsl(228, 28%, 20%); // (Card BG)
+$DesaturatedBlue: hsl(228, 34%, 66%); // (Text)
+$White: hsl(0, 0%, 100%); // (Text)
+
+// Light Theme
+$White: hsl(0, 0%, 100%); // (BG)
+$VeryPaleBlue: hsl(225, 100%, 98%); // (Top BG Pattern)
+$LightGrayishBlue: hsl(227, 47%, 96%); // (Card BG)
+$DarkGrayishBlue: hsl(228, 12%, 44%); // (Text)
+$VeryDarkBlue: hsl(230, 17%, 14%); // (Text)
+
+// === RESETS ===========================
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: $font-size;
+}
