@@ -77,6 +77,18 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 .waves {
 	width: 100%;
 }
+.mobile {
+	display: none;
+	@media (max-width: 700px) {
+		display: block;
+	}
+}
+.desktop {
+	display: block;
+	@media (max-width: 700px) {
+		display: none;
+	}
+}
 
 // === Main Styles ======
 #landing {
@@ -135,6 +147,7 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 			&-text {
 				flex: 1;
 				margin-bottom: 5rem;
+
 				h1 {
 					font-size: 2.3rem;
 					font-weight: 700;
@@ -155,23 +168,29 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 					background: white;
 					color: $Pink;
 				}
-
 				@media (max-width: 768px) {
 					h1 {
 						font-size: 1.8rem;
 						line-height: 2.5rem;
 						margin-bottom: 0.5rem;
 					}
+					p {
+						width: 90%;
+					}
 					button {
 						padding: 0.8rem 2rem;
 					}
 				}
 
-				@media (max-width: 375px) {
+				@media (max-width: 450px) {
 					h1 {
-						font-size: 1.4rem;
+						font-size: 1.5rem;
 						line-height: 2rem;
 						margin-bottom: 0.8rem;
+					}
+					p {
+						font-size: 0.93rem;
+						width: 100%;
 					}
 					button {
 						padding: 0.5rem 2.5rem;
@@ -188,14 +207,9 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 				}
 			}
 
-			@media (max-width: 665px) {
-				width: 90%;
-				margin: 0 auto;
-
-				&-text {
-					text-align: center;
-					margin-bottom: 2rem;
-				}
+			@media (max-width: 768px) {
+				width: 100%;
+				margin-top: 5rem;
 
 				&-img {
 					margin-bottom: 2rem;
@@ -231,6 +245,15 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 				align-self: center;
 			}
 		}
+
+		@media (max-width: 465px) {
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			.stat-card {
+				span {
+					font-size: 3.6rem;
+				}
+			}
+		}
 	}
 }
 
@@ -251,7 +274,7 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 		flex-wrap: wrap;
 		&-inner {
 			flex: 1;
-			min-width: 400px;
+			min-width: 330px;
 			h2 {
 				margin-bottom: 1.2rem;
 				font-size: 2rem;
@@ -262,9 +285,31 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 			img {
 				width: 100%;
 			}
+			@media (max-width: 780px) {
+				text-align: center;
+
+				p {
+					margin: 0 auto;
+					margin-bottom: 3rem;
+					font-size: 0.93rem;
+				}
+			}
+			@media (max-width: 430px) {
+				min-width: 200px;
+				h2 {
+					font-size: 1.3rem;
+				}
+				p {
+					width: 100%;
+				}
+			}
 		}
 		.second-text {
 			margin-left: 3rem;
+			@media (max-width: 780px) {
+				margin-left: 0;
+				margin-top: 2rem;
+			}
 		}
 	}
 }
@@ -286,6 +331,16 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 			background: white;
 			color: $Pink;
 		}
+		@media (max-width: 730px) {
+			h2 {
+				font-size: 1.5rem;
+			}
+			button {
+				padding: 0.5rem 2rem;
+				font-size: 0.92rem;
+				margin-top: 1.1rem;
+			}
+		}
 	}
 }
 
@@ -298,6 +353,9 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 		padding-top: 8rem;
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
 
 		.footer-contents {
 			order: 1;
@@ -341,6 +399,9 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 					}
 				}
 			}
+			@media (max-width: 768px) {
+				order: 2;
+			}
 		}
 
 		.newsletter {
@@ -359,6 +420,9 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 			form {
 				display: flex;
 				justify-content: space-between;
+				@media (max-width: 768px) {
+					flex-direction: column;
+				}
 				label {
 					width: 65%;
 					input {
@@ -370,14 +434,34 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 					}
 				}
 				button {
+					width: 30%;
 					border-radius: 5px;
-					padding: 0.39rem 1.8rem;
+					padding: 0.39rem 0rem;
 					cursor: pointer;
 					transition: all 0.5s;
+					@media (max-width: 768px) {
+						padding: 0.39rem 0.7rem;
+					}
 				}
 				button:hover {
 					background: white;
 					color: $Pink;
+				}
+
+				@media (max-width: 768px) {
+					justify-content: flex-end;
+					align-items: flex-end;
+					label {
+						width: 100%;
+						margin-bottom: 1rem;
+						input {
+							padding: 0.8rem 1rem;
+						}
+					}
+					button {
+						width: 50%;
+						padding: 0.8rem 1.5rem;
+					}
 				}
 			}
 			.error-msg {
@@ -387,6 +471,14 @@ $VeryPaleBlue: hsl(207, 100%, 98%);
 			}
 			.hide {
 				display: none;
+			}
+
+			@media (max-width: 768px) {
+				order: 1;
+				margin-bottom: 5rem;
+				p {
+					width: 100%;
+				}
 			}
 		}
 	}
