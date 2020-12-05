@@ -2,7 +2,7 @@
 
 ![Design preview for the Huddle landing page with alternating feature blocks coding challenge](./design/desktop-preview.jpg)
 
-Check out my solution: https://miltonchung.github.io/FrontendMenterChallenge/
+Check out my solution: https://miltonchung.github.io/FrontendMenterChallenge/HuddleFullPageCurved/index.html
 
 ## Welcome! 👋
 
@@ -12,10 +12,11 @@ Thanks for checking out this front-end coding challenge.
 
 ## Challenges:
 
--
+-  Adding curved background sections
 
 ## What I learned:
 
--
+-  Practiced more advanced usage of grid layout
+-  How to work with curved background sections
 
-## Time to Complete: ~ hours
+## Time to Complete: ~ 2.5 hours
