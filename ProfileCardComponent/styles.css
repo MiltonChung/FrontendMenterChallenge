@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,10 +7,6 @@
 }
 
 html {
-  font-size: 14px;
-}
-
-body {
-  min-height: 100vh;
+  font-size: 18px;
 }
 /*# sourceMappingURL=styles.css.map */

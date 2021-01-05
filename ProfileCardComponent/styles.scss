@@ -1,0 +1,25 @@
+// ========= COLORS ===========
+//Primary
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+
+//Neutral
+$dark-gray: hsl(0, 0%, 59%);
+
+// ========= TYPOGRAPHY ===========
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+$kumbhSans-font: "Kumbh Sans", sans-serif;
+$font-size: 18px; // Name and stats
+
+// ========= RESETS/DEFAULTS ===========
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: $font-size;
+}
+
+// ========= MAIN STYLE ===========
