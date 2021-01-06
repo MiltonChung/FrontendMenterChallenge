@@ -8,6 +8,7 @@
 
 html {
   font-size: 18px;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 body {
@@ -22,24 +23,11 @@ body {
           align-items: center;
   min-height: 100vh;
   position: relative;
-  background: #19a2ae;
+  background-color: #19a2ae;
+  background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
   overflow: hidden;
-}
-
-.background-img-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translate(-30%, -50%);
-          transform: translate(-30%, -50%);
-}
-
-.background-img-bot {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  -webkit-transform: translate(30%, 50%);
-          transform: translate(30%, 50%);
 }
 
 .card {
@@ -52,20 +40,84 @@ body {
 
 .card .profile-top {
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 3.8rem;
 }
 
-.card .profile-top .background img {
+.card .profile-top img.background-pic {
   border-radius: 20px 20px 0 0;
+  width: 100%;
 }
 
-.card .profile-top .profile-pic img {
+.card .profile-top img.profile-pic {
   border-radius: 50%;
   position: absolute;
   left: 50%;
-  top: bottom;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  bottom: -35%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   border: white solid 6px;
+}
+
+@media (max-width: 400px) {
+  .card .profile-top img.profile-pic {
+    width: 100px;
+    bottom: -40%;
+  }
+}
+
+.card .profile-info .name {
+  text-align: center;
+  font-weight: bold;
+  color: #2d3248;
+}
+
+.card .profile-info .name span {
+  color: #6a6f81;
+  font-weight: lighter;
+  margin-left: 0.3rem;
+}
+
+.card .profile-info .city {
+  margin-top: 0.7rem;
+  text-align: center;
+  color: #6a6f81;
+  font-weight: lighter;
+  font-size: 0.8rem;
+}
+
+.card .profile-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 1.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px #dfdfdf solid;
+}
+
+.card .profile-stats-section {
+  text-align: center;
+}
+
+.card .profile-stats-section .number {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
+  color: #2d3248;
+}
+
+.card .profile-stats-section small {
+  font-weight: lighter;
+  font-size: 0.58rem;
+  letter-spacing: 1.7px;
+  color: #6a6f81;
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 85%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

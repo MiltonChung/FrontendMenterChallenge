@@ -20,6 +20,7 @@ $font-size: 18px; // Name and stats
 }
 html {
 	font-size: $font-size;
+	font-family: $kumbhSans-font;
 }
 
 // ========= MAIN STYLE ===========
@@ -29,22 +30,11 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	position: relative;
-	background: $dark-cyan;
+	background-color: $dark-cyan;
+	background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+	background-repeat: no-repeat, no-repeat;
+	background-position: right 50vw bottom 50vh, left 50vw top 50vh;
 	overflow: hidden;
-}
-
-.background-img-top {
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: translate(-30%, -50%);
-}
-
-.background-img-bot {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	transform: translate(30%, 50%);
 }
 
 .card {
@@ -55,21 +45,71 @@ body {
 
 	.profile-top {
 		position: relative;
-		margin-bottom: 5rem;
-		.background {
-			img {
-				border-radius: 20px 20px 0 0;
+		margin-bottom: 3.8rem;
+		img.background-pic {
+			border-radius: 20px 20px 0 0;
+			width: 100%;
+		}
+		img.profile-pic {
+			border-radius: 50%;
+			position: absolute;
+			left: 50%;
+			bottom: -35%;
+			transform: translateX(-50%);
+			border: white solid 6px;
+
+			@media (max-width: 400px) {
+				width: 100px;
+				bottom: -40%;
 			}
 		}
-		.profile-pic {
-			img {
-				border-radius: 50%;
-				position: absolute;
-				left: 50%;
-				top: bottom;
-				transform: translate(-50%, -50%);
-				border: white solid 6px;
+	}
+
+	.profile-info {
+		.name {
+			text-align: center;
+			font-weight: bold;
+			color: $very-dark-desaturated-blue;
+			span {
+				color: $dark-grayish-blue;
+				font-weight: lighter;
+				margin-left: 0.3rem;
 			}
 		}
+		.city {
+			margin-top: 0.7rem;
+			text-align: center;
+			color: $dark-grayish-blue;
+			font-weight: lighter;
+			font-size: 0.8rem;
+		}
+	}
+
+	.profile-stats {
+		display: flex;
+		justify-content: space-evenly;
+		margin-top: 1.5rem;
+		padding: 1.5rem 0;
+		border-top: 1px rgb(223, 223, 223) solid;
+
+		&-section {
+			text-align: center;
+			.number {
+				font-weight: bold;
+				font-size: 1.1rem;
+				margin-bottom: 0.1rem;
+				color: $very-dark-desaturated-blue;
+			}
+			small {
+				font-weight: lighter;
+				font-size: 0.58rem;
+				letter-spacing: 1.7px;
+				color: $dark-grayish-blue;
+			}
+		}
+	}
+
+	@media (max-width: 400px) {
+		width: 85%;
 	}
 }
