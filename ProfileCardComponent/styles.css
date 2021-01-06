@@ -9,4 +9,63 @@
 html {
   font-size: 18px;
 }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  position: relative;
+  background: #19a2ae;
+  overflow: hidden;
+}
+
+.background-img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-30%, -50%);
+          transform: translate(-30%, -50%);
+}
+
+.background-img-bot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(30%, 50%);
+          transform: translate(30%, 50%);
+}
+
+.card {
+  z-index: 5;
+  background: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 15px rgba(99, 99, 99, 0.493);
+          box-shadow: 0 0 15px rgba(99, 99, 99, 0.493);
+}
+
+.card .profile-top {
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.card .profile-top .background img {
+  border-radius: 20px 20px 0 0;
+}
+
+.card .profile-top .profile-pic img {
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: bottom;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: white solid 6px;
+}
 /*# sourceMappingURL=styles.css.map */
