@@ -93,6 +93,13 @@ body {
 	margin-bottom: 1rem;
 }
 
+.description {
+	display: flex;
+	justify-content: center;
+	margin-top: -0.5rem;
+	color: rgb(21, 1, 94);
+}
+
 .list {
 	display: flex;
 	flex-direction: column;

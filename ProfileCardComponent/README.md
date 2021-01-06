@@ -12,10 +12,10 @@ Thanks for checking out this front-end coding challenge.
 
 ## Challenges:
 
--
+-  Making the 2 background circles where they are and be responsive
 
 ## What I learned:
 
--
+-  How the background-position element works
 
-## Time to Complete: ~ hours
+## Time to Complete: ~ 1 hour
