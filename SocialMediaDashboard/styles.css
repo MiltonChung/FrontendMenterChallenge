@@ -191,6 +191,8 @@ span {
 
 body {
   min-height: 100vh;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .container {
@@ -202,6 +204,8 @@ body {
   background: #f5f7ff;
   width: 100%;
   padding-bottom: 5rem;
+  -webkit-transition: all 0.34s;
+  transition: all 0.34s;
 }
 
 .social-background .social-dashboard {
@@ -287,6 +291,7 @@ body {
 
 .social-today-overview {
   margin-top: 3.5rem;
+  margin-bottom: 4rem;
 }
 
 .social-today-overview h3 {
@@ -304,5 +309,53 @@ body {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-gap: 1.5rem;
+}
+
+.dark-mode {
+  background: #1e202a;
+}
+
+.dark-mode .social-background {
+  background: #1f212e;
+}
+
+.dark-mode .social-background .social-dashboard-title h2 {
+  color: white;
+}
+
+.dark-mode .social-background .social-dashboard-title p {
+  color: #8b97c6;
+}
+
+.dark-mode .social-background .social-dashboard-toggle p {
+  color: #8b97c6;
+}
+
+.dark-mode .total-card {
+  background: #252a41;
+}
+
+.dark-mode .total-card-social-user p {
+  color: #8b97c6;
+}
+
+.dark-mode .total-card h1 {
+  color: white;
+}
+
+.dark-mode .total-card > p {
+  color: #8b97c6;
+}
+
+.dark-mode .overview-card {
+  background: #252a41;
+}
+
+.dark-mode .overview-card-header {
+  color: #8b97c6;
+}
+
+.dark-mode .overview-card h3 {
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
