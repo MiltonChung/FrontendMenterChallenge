@@ -207,6 +207,10 @@ body {
 .container {
 	width: 80%;
 	margin: 0 auto;
+
+	@media only screen and (max-width: 500px) {
+		width: 90%;
+	}
 }
 
 .social-background {
@@ -214,6 +218,7 @@ body {
 	width: 100%;
 	padding-bottom: 5rem;
 	transition: all 0.34s;
+
 	.social-dashboard {
 		display: flex;
 		justify-content: space-between;
@@ -240,6 +245,33 @@ body {
 			p {
 				margin-right: 1rem;
 				color: $DarkGrayishBlue;
+			}
+		}
+
+		@media only screen and (max-width: 530px) {
+			flex-direction: column;
+
+			&-title {
+				width: 100%;
+				text-align: left;
+				p {
+					margin-top: 3px;
+				}
+			}
+			.mobile-line {
+				display: block;
+				margin: 1.5rem 0;
+				background: $DesaturatedBlue;
+			}
+
+			&-toggle {
+				width: 100%;
+				justify-content: space-between;
+
+				p {
+					margin-right: 1rem;
+					color: $DarkGrayishBlue;
+				}
 			}
 		}
 	}
@@ -308,6 +340,13 @@ body {
 					color: $DesaturatedBlue;
 				}
 			}
+
+			@media only screen and (max-width: 530px) {
+				.mobile-line {
+					background-color: $DarkDesaturatedBlue;
+				}
+			}
+
 			&-toggle {
 				p {
 					color: $DesaturatedBlue;
@@ -331,6 +370,12 @@ body {
 
 		> p {
 			color: $DesaturatedBlue;
+		}
+	}
+
+	.social-today-overview {
+		h3 {
+			color: $White;
 		}
 	}
 
