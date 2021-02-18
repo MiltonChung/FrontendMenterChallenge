@@ -9,11 +9,11 @@ $LimeGreen: hsl(163, 72%, 41%);
 $BrightRed: hsl(356, 69%, 56%);
 $Facebook: hsl(208, 92%, 53%);
 $Twitter: hsl(203, 89%, 53%);
-$Instagram: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
+$Instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 $YouTube: hsl(348, 97%, 39%);
 
 // Dark Theme Toggle
-$ToggleDark: linear-gradient(hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+$ToggleDark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 // Light Theme Toggle
 $ToggleLight: hsl(230, 22%, 74%);
 
@@ -41,71 +41,258 @@ html {
 	font-size: $font-size;
 	font-family: $inter-font;
 }
+h1,
+h2,
+h3 {
+	font-weight: 700;
+	color: $VeryDarkBlue;
+}
+p,
+small,
+span {
+	font-weight: 600;
+	color: $DarkGrayishBlue;
+}
+.text-large {
+	font-size: 65px;
+	letter-spacing: -3px;
+	line-height: 68px;
+}
+.text-all-caps {
+	text-transform: uppercase;
+}
+.text-spaced {
+	letter-spacing: 4px;
+}
+.green {
+	color: $LimeGreen;
+}
+.red {
+	color: $BrightRed;
+}
+.justify-left {
+	justify-self: flex-start;
+}
 
 // === COMPONENTS ============================
 // START TOGGLE COMPONENT
-.switch {
+$toggle-background-color-on: $ToggleLight;
+$toggle-background-color-off: $ToggleDark;
+$toggle-control-color: $VeryPaleBlue;
+$toggle-width: 50px;
+$toggle-height: 27px;
+$toggle-gutter: 3.4px;
+$toggle-radius: 50%;
+$toggle-control-speed: 0.3s;
+$toggle-control-ease: ease-in;
+$toggle-radius: $toggle-height / 2;
+$toggle-control-size: $toggle-height - ($toggle-gutter * 2);
+.toggle-control {
+	display: block;
 	position: relative;
-	display: inline-block;
-	width: 60px;
-	height: 34px;
-}
-
-.switch input {
-	opacity: 0;
-	width: 0;
-	height: 0;
-}
-
-.slider {
-	position: absolute;
+	padding-left: $toggle-width;
 	cursor: pointer;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #ccc;
-	-webkit-transition: 0.4s;
-	transition: 0.4s;
-}
+	width: 50px;
+	height: 27px;
+	user-select: none;
 
-.slider:before {
-	position: absolute;
-	content: "";
-	height: 26px;
-	width: 26px;
-	left: 4px;
-	bottom: 4px;
-	background-color: white;
-	-webkit-transition: 0.4s;
-	transition: 0.4s;
-}
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
 
-input:checked + .slider {
-	background-color: #2196f3;
-}
+	input:checked ~ .control {
+		background: $toggle-background-color-on;
 
-input:focus + .slider {
-	box-shadow: 0 0 1px #2196f3;
-}
+		&:after {
+			left: $toggle-width - $toggle-control-size - $toggle-gutter;
+		}
+	}
 
-input:checked + .slider:before {
-	-webkit-transform: translateX(26px);
-	-ms-transform: translateX(26px);
-	transform: translateX(26px);
-}
+	.control {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: $toggle-height;
+		width: $toggle-width;
+		border-radius: $toggle-radius;
+		background: $toggle-background-color-off;
+		transition: background-color $toggle-control-speed $toggle-control-ease;
 
-/* Rounded sliders */
-.slider.round {
-	border-radius: 34px;
-}
-
-.slider.round:before {
-	border-radius: 50%;
+		&:after {
+			content: "";
+			position: absolute;
+			left: $toggle-gutter;
+			top: $toggle-gutter;
+			width: $toggle-control-size;
+			height: $toggle-control-size;
+			border-radius: $toggle-radius;
+			background: $toggle-control-color;
+			transition: left $toggle-control-speed $toggle-control-ease;
+		}
+	}
 }
 // END TOGGLE COMPONENT
+
+// START TOTAL CARD COMPONENT
+.total-card {
+	padding: 2rem 3rem;
+	background: $LightGrayishBlue;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	overflow: hidden;
+
+	&-social-user {
+		display: flex;
+		margin-bottom: 2rem;
+		img {
+			margin-right: 0.8rem;
+		}
+	}
+
+	> p {
+		color: $DesaturatedBlue;
+		font-weight: 500;
+	}
+	&-stats-update {
+		display: flex;
+		align-items: center;
+		margin-top: 2rem;
+		img {
+			height: 5px;
+			width: 9px;
+			margin-right: 0.3rem;
+		}
+	}
+}
+// END TOTAL CARD COMPONENT
+
+// START OVERVIEW CARD COMPONENT
+.overview-card {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 1rem 0.5rem;
+	justify-items: flex-end;
+	align-items: center;
+
+	background: $LightGrayishBlue;
+	padding: 1rem 1.5rem;
+	border-radius: 5px;
+	&-header {
+	}
+	img {
+	}
+	h3 {
+	}
+	&-stats-update {
+		display: flex;
+		align-items: center;
+		img {
+			height: 5px;
+			width: 9px;
+			margin-right: 0.3rem;
+		}
+	}
+}
+// END OVERVIEW CARD COMPONENT
 
 // === MAIN STYLES ==============================
 body {
 	min-height: 100vh;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.social-background {
+	background: $VeryPaleBlue;
+	width: 100%;
+	padding-bottom: 5rem;
+	.social-dashboard {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem 0 6rem 0;
+
+		&-title {
+			p {
+				margin-top: 3px;
+			}
+		}
+		.mobile-line {
+			height: 2px;
+			width: 100%;
+			background: $LightGrayishBlue;
+			display: none;
+		}
+		&-toggle {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			height: fit-content;
+
+			p {
+				margin-right: 1rem;
+				color: $DarkGrayishBlue;
+			}
+		}
+	}
+}
+
+.social-total-wrapper {
+	margin-top: -8rem;
+	display: grid;
+	grid-column-gap: 1.5rem;
+	grid-row-gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	.facebook {
+		border-top: 4px solid $Facebook;
+	}
+	.twitter {
+		border-top: 4px solid $Twitter;
+	}
+	.instagram {
+		// border-width: 4px;
+		// border-style: solid;
+		// border-image: $Instagram 1 0 0 0 / 4px 0 0 0 / 0;
+		position: relative;
+		&-top-border {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 4px;
+			background: $Instagram;
+			border-radius: 15px;
+		}
+	}
+	.youtube {
+		border-top: 4px solid $YouTube;
+	}
+}
+
+.social-today-overview {
+	margin-top: 3.5rem;
+
+	h3 {
+		margin-bottom: 0.8rem;
+		color: $DarkGrayishBlue;
+		font-size: 25px;
+	}
+
+	.overview-cards-container {
+		margin-top: 1rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-template-rows: auto;
+		grid-gap: 1.5rem;
+	}
 }

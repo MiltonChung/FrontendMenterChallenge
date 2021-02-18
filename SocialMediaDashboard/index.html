@@ -7,12 +7,12 @@
 
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 		<link rel="stylesheet" href="./styles.css" />
-		<title>Frontend Mentor | [Challenge Name Here]</title>
+		<title>Social Media Dashboard</title>
 	</head>
 	<body class="dark-mode">
-		<main class="container social">
-			<!-- Top Header -->
-			<header class="social-dashboard">
+		<!-- Top Header -->
+		<div class="social-background">
+			<header class="social-dashboard container">
 				<div class="social-dashboard-title">
 					<h2>Social Media Dashboard</h2>
 					<p>Total Followers: 23,004</p>
@@ -20,16 +20,18 @@
 				<div class="mobile-line"></div>
 				<div class="social-dashboard-toggle">
 					<p>Dark Mode</p>
-					<label class="switch">
-						<input type="checkbox" />
-						<span class="slider round"></span>
+					<label class="toggle-control">
+						<input type="checkbox" checked="checked" />
+						<span class="control"></span>
 					</label>
 				</div>
 			</header>
+		</div>
 
-			<article class="social-total">
+		<main class="container">
+			<article class="social-total-wrapper">
 				<!-- Facebook -->
-				<div class="total-card">
+				<div class="total-card facebook">
 					<div class="total-card-social-user">
 						<img src="./images/icon-facebook.svg" alt="facebook" />
 						<p>@nathanf</p>
@@ -43,7 +45,7 @@
 				</div>
 
 				<!-- Twitter -->
-				<div class="total-card">
+				<div class="total-card twitter">
 					<div class="total-card-social-user">
 						<img src="./images/icon-twitter.svg" alt="twitter" />
 						<p>@nathanf</p>
@@ -57,7 +59,8 @@
 				</div>
 
 				<!-- Instagram -->
-				<div class="total-card">
+				<div class="total-card instagram">
+					<div class="instagram-top-border"></div>
 					<div class="total-card-social-user">
 						<img src="./images/icon-instagram.svg" alt="instagram" />
 						<p>@realnathanf</p>
@@ -71,7 +74,7 @@
 				</div>
 
 				<!-- Youtube -->
-				<div class="total-card">
+				<div class="total-card youtube">
 					<div class="total-card-social-user">
 						<img src="./images/icon-youtube.svg" alt="youtube" />
 						<p>Nathan F.</p>
@@ -91,9 +94,9 @@
 				<div class="overview-cards-container">
 					<!-- Facebook Page Views -->
 					<div class="overview-card">
-						<p class="overview-card-header">Page Views</p>
+						<p class="overview-card-header justify-left">Page Views</p>
 						<img src="./images/icon-facebook.svg" alt="facebook" />
-						<h3 class="text-md">87</h3>
+						<h3 class="text-md justify-left">87</h3>
 						<div class="overview-card-stats-update">
 							<img class="green" src="./images/icon-up.svg" alt="up" />
 							<p class="green">3%</p>
@@ -102,9 +105,9 @@
 
 					<!-- Facebook Likes -->
 					<div class="overview-card">
-						<p class="overview-card-header">Likes</p>
+						<p class="overview-card-header justify-left">Likes</p>
 						<img src="./images/icon-facebook.svg" alt="facebook" />
-						<h3 class="text-md">52</h3>
+						<h3 class="text-md justify-left">52</h3>
 						<div class="overview-card-stats-update">
 							<img class="red" src="./images/icon-down.svg" alt="down" />
 							<p class="red">2%</p>
@@ -113,9 +116,9 @@
 
 					<!-- Instagram Likes -->
 					<div class="overview-card">
-						<p class="overview-card-header">Likes</p>
+						<p class="overview-card-header justify-left">Likes</p>
 						<img src="./images/icon-instagram.svg" alt="instagram" />
-						<h3 class="text-md">5462</h3>
+						<h3 class="text-md justify-left">5462</h3>
 						<div class="overview-card-stats-update">
 							<img class="green" src="./images/icon-up.svg" alt="up" />
 							<p class="green">2257%</p>
@@ -124,9 +127,9 @@
 
 					<!-- Instagram Profile Views -->
 					<div class="overview-card">
-						<p class="overview-card-header">Profile Views</p>
+						<p class="overview-card-header justify-left">Profile Views</p>
 						<img src="./images/icon-instagram.svg" alt="instagram" />
-						<h3 class="text-md">52k</h3>
+						<h3 class="text-md justify-left">52k</h3>
 						<div class="overview-card-stats-update">
 							<img class="green" src="./images/icon-up.svg" alt="up" />
 							<p class="green">1375%</p>
@@ -135,9 +138,9 @@
 
 					<!-- Twitter Retweets -->
 					<div class="overview-card">
-						<p class="overview-card-header">Retweets</p>
+						<p class="overview-card-header justify-left">Retweets</p>
 						<img src="./images/icon-twitter.svg" alt="twitter" />
-						<h3 class="text-md">117</h3>
+						<h3 class="text-md justify-left">117</h3>
 						<div class="overview-card-stats-update">
 							<img class="green" src="./images/icon-up.svg" alt="up" />
 							<p class="green">303%</p>
@@ -146,9 +149,9 @@
 
 					<!-- Twitter Likes -->
 					<div class="overview-card">
-						<p class="overview-card-header">Likes</p>
+						<p class="overview-card-header justify-left">Likes</p>
 						<img src="./images/icon-twitter.svg" alt="twitter" />
-						<h3 class="text-md">507</h3>
+						<h3 class="text-md justify-left">507</h3>
 						<div class="overview-card-stats-update">
 							<img class="green" src="./images/icon-up.svg" alt="up" />
 							<p class="green">553%</p>
@@ -157,9 +160,9 @@
 
 					<!-- Youtube Likes -->
 					<div class="overview-card">
-						<p class="overview-card-header">Likes</p>
+						<p class="overview-card-header justify-left">Likes</p>
 						<img src="./images/icon-youtube.svg" alt="youtube" />
-						<h3 class="text-md">107</h3>
+						<h3 class="text-md justify-left">107</h3>
 						<div class="overview-card-stats-update">
 							<img class="red" src="./images/icon-down.svg" alt="down" />
 							<p class="red">19%</p>
@@ -168,12 +171,12 @@
 
 					<!-- Youtube Total Views -->
 					<div class="overview-card">
-						<p class="overview-card-header">Total Views</p>
+						<p class="overview-card-header justify-left">Total Views</p>
 						<img src="./images/icon-youtube.svg" alt="youtube" />
-						<h3 class="text-md">1407</h3>
+						<h3 class="text-md justify-left">1407</h3>
 						<div class="overview-card-stats-update">
-							<img class="green" src="./images/icon-down.svg" alt="down" />
-							<p class="green">12%</p>
+							<img class="red" src="./images/icon-down.svg" alt="down" />
+							<p class="red">12%</p>
 						</div>
 					</div>
 				</div>
