@@ -5,8 +5,35 @@
           box-sizing: border-box;
 }
 
-#map {
-  height: 50vh;
+body {
+  min-height: 100vh;
   width: 100%;
+  position: relative;
+}
+
+.banner {
+  height: 30vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.text {
+  position: absolute;
+  z-index: 10;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#map {
+  position: relative;
+  z-index: 1;
+  min-height: 70vh;
+  width: 100%;
+  margin-top: -5px;
+  -webkit-box-shadow: 0 -3px 30px rgba(2, 4, 92, 0.377);
+          box-shadow: 0 -3px 30px rgba(2, 4, 92, 0.377);
 }
 /*# sourceMappingURL=styles.css.map */

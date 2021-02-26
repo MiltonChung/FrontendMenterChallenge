@@ -25,9 +25,35 @@
 		<title>Frontend Mentor | IP Address Tracker</title>
 	</head>
 	<body>
-		IP Address Tracker Search for any IP address or domain IP Address Location Timezone UTC
-		<!-- add offset value dynamically using the API -->
-		ISP
+		<img class="banner" src="./images/pattern-bg.png" alt="background" />
+		<main class="text">
+			<h1 class="title">IP Address Tracker</h1>
+			<form class="search-bar">
+				<label for="search">
+					<input type="text" id="search" name="search" />
+				</label>
+				<button type="submit"></button>
+			</form>
+			<div class="information-grid">
+				<div class="box">
+					<small class="box-title">IP Address</small>
+					<h2 class="box-content" id="ipAddress"></h2>
+				</div>
+				<div class="box">
+					<small class="box-title">Location</small>
+					<h2 class="box-content" id="location"></h2>
+				</div>
+				<div class="box">
+					<small class="box-title">Timezone</small>
+					<h2 class="box-content" id="timezone"></h2>
+				</div>
+				<div class="box">
+					<small class="box-title">ISP</small>
+					<h2 class="box-content" id="isp"></h2>
+				</div>
+			</div>
+		</main>
+
 		<div id="map"></div>
 
 		<script src="./script.js"></script>
