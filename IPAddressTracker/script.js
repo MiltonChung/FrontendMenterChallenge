@@ -1,5 +1,7 @@
 // IP Geolocation API by IPify ========================================
 // Docs: https://geo.ipify.org/docs
+// Example: https://geo.ipify.org/api/v1?apiKey=at_4qMCbIQ94gKTv5J6AcTsZX35Brtba&ipAddress=8.8.8.8
+
 const BASE_URL = "https://geo.ipify.org/api/v1?apiKey=";
 const IP_GEOLOCATION_API = "at_4qMCbIQ94gKTv5J6AcTsZX35Brtba";
 const IP_ADDRESS = "";
