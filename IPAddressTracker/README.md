@@ -12,10 +12,12 @@ Thanks for checking out this front-end coding challenge.
 
 ## Challenges:
 
--
+-  Using and reading Leaf.js documentations and making it behave the way I wanted
+-  Loading animations without using React
 
 ## What I learned:
 
--
+-  How to make simple loading animations while fetching data
+-  How to work with Leafjs and IP Geolocation API
 
-## Time to Complete: ~ hours
+## Time to Complete: ~ 2.5 hours

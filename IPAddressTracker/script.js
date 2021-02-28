@@ -3,6 +3,8 @@ const displayLocation = document.querySelector("#location");
 const displayTimezone = document.querySelector("#timezone");
 const displayISP = document.querySelector("#isp");
 const submitSearch = document.getElementById("search_form");
+const map = document.getElementById("map");
+const loadingDiv = document.querySelector(".loading");
 
 // IP Geolocation API by IPify ========================================
 // Docs: https://geo.ipify.org/docs
@@ -12,9 +14,14 @@ const IP_GEOLOCATION_API = "at_4qMCbIQ94gKTv5J6AcTsZX35Brtba";
 let LAT, LONG, MAP, MARKER;
 
 window.onload = () => {
+	map.classList.add("hide");
+	loadingDiv.classList.remove("hide");
+
 	fetch(`${BASE_URL}${IP_GEOLOCATION_API}`)
 		.then(res => res.json())
 		.then(data => {
+			map.classList.remove("hide");
+			loadingDiv.classList.add("hide");
 			setHtmlInfo(data.ip, data.location, data.location.timezone, data.isp);
 			setMap(data.location.lat, data.location.lng);
 		});
@@ -24,10 +31,16 @@ submitSearch.addEventListener("submit", e => {
 	e.preventDefault();
 	const userInput = e.target[0].value;
 
+	map.classList.add("hide");
+	loadingDiv.classList.remove("hide");
+	setHtmlInfoLoading();
+
 	if (ValidateIPaddress(userInput)) {
 		fetch(`${BASE_URL}${IP_GEOLOCATION_API}&ipAddress=${userInput}`)
 			.then(res => res.json())
 			.then(data => {
+				map.classList.remove("hide");
+				loadingDiv.classList.add("hide");
 				setHtmlInfo(data.ip, data.location, data.location.timezone, data.isp);
 				FlyToMap(data.location.lat, data.location.lng);
 			})
@@ -36,6 +49,8 @@ submitSearch.addEventListener("submit", e => {
 		fetch(`${BASE_URL}${IP_GEOLOCATION_API}&domain=${userInput}`)
 			.then(res => res.json())
 			.then(data => {
+				map.classList.remove("hide");
+				loadingDiv.classList.add("hide");
 				setHtmlInfo(data.ip, data.location, data.location.timezone, data.isp);
 				FlyToMap(data.location.lat, data.location.lng);
 			})
@@ -46,6 +61,13 @@ submitSearch.addEventListener("submit", e => {
 		alert("Please enter a valid IP address or domain");
 	}
 });
+
+function setHtmlInfoLoading() {
+	displayIpAddress.innerHTML = "Loading...";
+	displayLocation.innerHTML = "Loading...";
+	displayTimezone.innerHTML = "Loading...";
+	displayISP.innerHTML = "Loading...";
+}
 
 function setHtmlInfo(ip, location, timezone, isp) {
 	displayIpAddress.innerHTML = ip;
