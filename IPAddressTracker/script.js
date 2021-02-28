@@ -92,7 +92,13 @@ function setMap(lat, long) {
 			"pk.eyJ1IjoiY3Jvc3NmZmlyZXgiLCJhIjoiY2tsbHBpd2JkMDFreTJvcDRlbjNseGc1dSJ9.a26lI9C3F4W49wSaehHoMA",
 	}).addTo(MAP);
 
-	MARKER = L.marker([lat, long]).addTo(MAP);
+	const markerIcon = L.icon({
+		iconUrl: "./images/icon-location.svg",
+		iconSize: [28, 35],
+		iconAnchor: [40, 50],
+	});
+
+	MARKER = L.marker([lat, long], { icon: markerIcon }).addTo(MAP);
 }
 
 function FlyToMap(lat, long) {
