@@ -182,6 +182,10 @@ main.text {
 	}
 }
 
+.leaflet-control-zoom.leaflet-bar {
+	display: none;
+}
+
 .loading {
 	position: relative;
 	z-index: 1;

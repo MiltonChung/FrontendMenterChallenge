@@ -227,6 +227,10 @@ main.text .information-grid .box:nth-child(n + 2)::before {
   }
 }
 
+.leaflet-control-zoom.leaflet-bar {
+  display: none;
+}
+
 .loading {
   position: relative;
   z-index: 1;

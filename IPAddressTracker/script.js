@@ -79,7 +79,7 @@ function setHtmlInfo(ip, location, timezone, isp) {
 function setMap(lat, long) {
 	// Leaflet + Mapbox api calls =========================================
 	// Docs: https://leafletjs.com/examples/quick-start/
-	MAP = L.map("map").setView([lat, long], 13);
+	MAP = L.map("map").setView([lat, long], 13.4);
 
 	L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
 		attribution:
@@ -95,7 +95,6 @@ function setMap(lat, long) {
 	const markerIcon = L.icon({
 		iconUrl: "./images/icon-location.svg",
 		iconSize: [28, 35],
-		iconAnchor: [40, 50],
 	});
 
 	MARKER = L.marker([lat, long], { icon: markerIcon }).addTo(MAP);
