@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,13 @@ body {
   min-height: 100vh;
   width: 100%;
   position: relative;
+  font-family: "Rubik", sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    min-height: 120vh;
+  }
 }
 
 .banner {
@@ -18,13 +26,187 @@ body {
      object-fit: cover;
 }
 
-.text {
+@media (max-width: 768px) {
+  .banner {
+    height: 50vh;
+  }
+}
+
+main.text {
   position: absolute;
   z-index: 10;
-  top: 20%;
+  top: 3%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+main.text h1.title {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+main.text form.search-bar {
+  width: 37%;
+  position: relative;
+}
+
+main.text form.search-bar input {
+  width: 100%;
+  font-size: 18px;
+  padding: 0.9rem 1.2rem;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+}
+
+main.text form.search-bar ::-webkit-input-placeholder {
+  color: #969696;
+}
+
+main.text form.search-bar :-ms-input-placeholder {
+  color: #969696;
+}
+
+main.text form.search-bar ::-ms-input-placeholder {
+  color: #969696;
+}
+
+main.text form.search-bar ::placeholder {
+  color: #969696;
+}
+
+main.text form.search-bar button {
+  position: absolute;
+  right: -0px;
+  background: #2b2b2b;
+  border: none;
+  outline: none;
+  padding: 1.05rem 1.2rem;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+main.text form.search-bar button:hover {
+  background: #414141;
+}
+
+main.text form.search-bar button img {
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  main.text form.search-bar {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  main.text form.search-bar {
+    width: 60%;
+  }
+  main.text form.search-bar input {
+    font-size: 16px;
+  }
+  main.text form.search-bar button {
+    padding: 0.95rem 1.2rem;
+  }
+}
+
+@media (max-width: 570px) {
+  main.text form.search-bar {
+    width: 90%;
+  }
+}
+
+main.text .information-grid {
+  margin-top: 2rem;
+  width: 75%;
+  min-height: 150px;
+  background: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  border-radius: 12px;
+}
+
+main.text .information-grid .box {
+  padding: 1.4rem;
+  font-weight: 500;
+}
+
+main.text .information-grid .box-title {
+  color: #969696;
+}
+
+main.text .information-grid .box-content {
+  margin-top: 0.5rem;
+}
+
+main.text .information-grid .box:nth-child(n + 2) {
+  position: relative;
+}
+
+main.text .information-grid .box:nth-child(n + 2)::before {
+  content: "";
+  background: #cfcfcf;
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  height: 56%;
+  width: 1px;
+}
+
+@media (max-width: 768px) {
+  main.text .information-grid {
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+    -ms-grid-columns: unset;
+        grid-template-columns: unset;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 60%;
+    padding: 0.4rem 0;
+  }
+  main.text .information-grid .box {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  main.text .information-grid .box-content {
+    font-size: 18px;
+    margin-top: 0.3rem;
+  }
+  main.text .information-grid .box:nth-child(n + 2)::before {
+    background: none;
+  }
+}
+
+@media (max-width: 570px) {
+  main.text .information-grid {
+    width: 90%;
+    margin-top: 1.5rem;
+  }
 }
 
 #map {
@@ -35,5 +217,11 @@ body {
   margin-top: -5px;
   -webkit-box-shadow: 0 -3px 30px rgba(2, 4, 92, 0.377);
           box-shadow: 0 -3px 30px rgba(2, 4, 92, 0.377);
+}
+
+@media (max-width: 768px) {
+  #map {
+    height: 80vh;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

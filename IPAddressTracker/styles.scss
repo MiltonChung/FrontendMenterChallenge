@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+// COLORS
+$VeryDarkGray: hsl(0, 0%, 17%);
+$DarkGray: hsl(0, 0%, 59%);
+
+// FONTS
+$Rubik-font: "Rubik", sans-serif;
+$text-size: 18px;
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
 * {
 	margin: 0;
 	padding: 0;
@@ -8,20 +20,152 @@ body {
 	min-height: 100vh;
 	width: 100%;
 	position: relative;
+	font-family: $Rubik-font;
+
+	@media (max-width: 768px) {
+		min-height: 120vh;
+	}
 }
 
 .banner {
 	height: 30vh;
 	width: 100%;
 	object-fit: cover;
+
+	@media (max-width: 768px) {
+		height: 50vh;
+	}
 }
 
-.text {
+main.text {
 	position: absolute;
 	z-index: 10;
-	top: 20%;
+	top: 3%;
 	left: 50%;
 	transform: translateX(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	h1.title {
+		color: white;
+		font-weight: $medium;
+		margin-bottom: 1.5rem;
+	}
+
+	form.search-bar {
+		width: 37%;
+		position: relative;
+
+		input {
+			width: 100%;
+			font-size: $text-size;
+			padding: 0.9rem 1.2rem;
+			outline: none;
+			border: none;
+			border-radius: 12px;
+		}
+		::placeholder {
+			color: $DarkGray;
+		}
+
+		button {
+			position: absolute;
+			right: -0px;
+			background: $VeryDarkGray;
+			border: none;
+			outline: none;
+			padding: 1.05rem 1.2rem;
+			border-radius: 0 12px 12px 0;
+			cursor: pointer;
+			transition: background 0.3s;
+
+			&:hover {
+				background: rgb(65, 65, 65);
+			}
+			img {
+				color: white;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			width: 50%;
+		}
+
+		@media (max-width: 768px) {
+			width: 60%;
+			input {
+				font-size: 16px;
+			}
+			button {
+				padding: 0.95rem 1.2rem;
+			}
+		}
+
+		@media (max-width: 570px) {
+			width: 90%;
+		}
+	}
+
+	.information-grid {
+		margin-top: 2rem;
+		width: 75%;
+		min-height: 150px;
+		background: white;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		border-radius: 12px;
+
+		.box {
+			padding: 1.4rem;
+			font-weight: $medium;
+			&-title {
+				color: $DarkGray;
+			}
+			&-content {
+				margin-top: 0.5rem;
+			}
+		}
+		.box:nth-child(n + 2) {
+			position: relative;
+		}
+		.box:nth-child(n + 2)::before {
+			content: "";
+			background: rgb(207, 207, 207);
+			position: absolute;
+			bottom: 50%;
+			left: 0;
+			transform: translateY(50%);
+			height: 56%;
+			width: 1px;
+		}
+
+		@media (max-width: 768px) {
+			grid-template-rows: repeat(4, 1fr);
+			grid-template-columns: unset;
+			justify-content: center;
+			width: 60%;
+			padding: 0.4rem 0;
+
+			.box {
+				text-align: center;
+				padding: 0.5rem;
+				&-content {
+					font-size: 18px;
+					margin-top: 0.3rem;
+				}
+			}
+			.box:nth-child(n + 2)::before {
+				background: none;
+			}
+		}
+		@media (max-width: 570px) {
+			width: 90%;
+			margin-top: 1.5rem;
+		}
+	}
 }
 
 #map {
@@ -31,4 +175,8 @@ body {
 	width: 100%;
 	margin-top: -5px;
 	box-shadow: 0 -3px 30px rgba(2, 4, 92, 0.377);
+
+	@media (max-width: 768px) {
+		height: 80vh;
+	}
 }
