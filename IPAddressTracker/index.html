@@ -6,7 +6,7 @@
 		<!-- displays site properly based on user's device -->
 
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-
+		<link rel="stylesheet" href="./three-dots.min.css" />
 		<!-- Leaflet js -->
 		<link
 			rel="stylesheet"
@@ -28,30 +28,30 @@
 		<img class="banner" src="./images/pattern-bg.png" alt="background" />
 		<main class="text">
 			<h1 class="title">IP Address Tracker</h1>
-			<form class="search-bar">
+			<form class="search-bar" id="search_form">
 				<label for="search">
 					<input type="text" id="search" name="search" placeholder="Search for any IP address or domain" />
 				</label>
-				<button type="submit">
+				<button type="submit" id="submit_search">
 					<img src="./images/icon-arrow.svg" alt="icon arrow" />
 				</button>
 			</form>
 			<div class="information-grid">
 				<div class="box">
 					<small class="box-title">IP Address</small>
-					<h2 class="box-content" id="ipAddress">192.212.174.101</h2>
+					<h2 class="box-content" id="ipAddress">Loading...</h2>
 				</div>
 				<div class="box">
 					<small class="box-title">Location</small>
-					<h2 class="box-content" id="location">Brooklyn, NY 10001</h2>
+					<h2 class="box-content" id="location">Loading...</h2>
 				</div>
 				<div class="box">
 					<small class="box-title">Timezone</small>
-					<h2 class="box-content" id="timezone">UTC -05:00</h2>
+					<h2 class="box-content" id="timezone">Loading...</h2>
 				</div>
 				<div class="box">
 					<small class="box-title">ISP</small>
-					<h2 class="box-content" id="isp">SpaceX Starlink</h2>
+					<h2 class="box-content" id="isp">Loading...</h2>
 				</div>
 			</div>
 		</main>
