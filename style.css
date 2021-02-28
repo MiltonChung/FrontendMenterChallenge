@@ -135,7 +135,7 @@ body {
 	padding: 1rem;
 	flex: 1;
 	position: relative;
-	transition: all 0.5s;
+	transition: opacity 0.5s;
 }
 .list .row a:hover {
 	opacity: 0.92;
