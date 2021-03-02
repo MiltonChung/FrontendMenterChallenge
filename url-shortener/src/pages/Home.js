@@ -1,13 +1,13 @@
 import React from "react";
 import IllustrationWorking from "../images/illustration-working.svg";
 
-import IconFacebook from "../images/icon-facebook.svg";
-import IconInsta from "../images/icon-instagram.svg";
-import IconTwitter from "../images/icon-twitter.svg";
-import IconPinterest from "../images/icon-pinterest.svg";
-import IconBrand from "../images/icon-brand-recognition.svg";
-import IconRecords from "../images/icon-detailed-records.svg";
-import IconCustomizable from "../images/icon-fully-customizable.svg";
+// import IconFacebook from "../images/icon-facebook.svg";
+// import IconInsta from "../images/icon-instagram.svg";
+// import IconTwitter from "../images/icon-twitter.svg";
+// import IconPinterest from "../images/icon-pinterest.svg";
+// import IconBrand from "../images/icon-brand-recognition.svg";
+// import IconRecords from "../images/icon-detailed-records.svg";
+// import IconCustomizable from "../images/icon-fully-customizable.svg";
 
 const Home = () => {
 	return (
