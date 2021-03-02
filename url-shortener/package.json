@@ -19,7 +19,7 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build -e url-shortener"
+		"deploy": "gh-pages -d build -e url-shortener/public"
 	},
 	"eslintConfig": {
 		"extends": [
