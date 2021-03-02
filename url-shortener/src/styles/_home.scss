@@ -1,0 +1,44 @@
+.hero {
+	width: 85%;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 3rem;
+
+	&-left {
+		flex: 1;
+		max-width: 520px;
+		margin-right: 2rem;
+		h1.title {
+			font-size: 62px;
+			line-height: 70px;
+		}
+		.subtitle {
+			font-size: 19px;
+			color: $Gray;
+			margin-bottom: 2rem;
+		}
+		a {
+			text-decoration: none;
+			background: $Cyan;
+			color: white;
+			padding: 0.6rem 1.5rem;
+			border-radius: 25px;
+			font-weight: $font-medium;
+		}
+		a:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&-right {
+		flex: 1;
+		max-width: 800px;
+		margin-right: -12rem;
+		img {
+			width: 100%;
+		}
+	}
+}
