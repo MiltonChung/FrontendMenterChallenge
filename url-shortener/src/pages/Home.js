@@ -25,9 +25,8 @@ const Home = () => {
 			</section>
 
 			<section className="stats-container">
-				<section className="url-form-container">
-					<UrlForm />
-				</section>
+				<UrlForm />
+
 				<section className="statistics">
 					<h2 className="title">Advanced Statistics</h2>
 					<p className="subtitle">

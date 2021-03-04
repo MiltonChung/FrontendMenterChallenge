@@ -1,6 +1,7 @@
 .hero {
 	width: 85%;
-	margin: 3rem auto 6rem auto;
+	margin: 3rem auto 7rem auto;
+
 	position: relative;
 	display: flex;
 	justify-content: space-between;
@@ -105,11 +106,9 @@
 .stats-container {
 	background: rgba(236, 232, 238, 0.678);
 	padding-bottom: 7rem;
+	position: relative;
+	padding-top: 1rem;
 
-	.url-form-container {
-		width: 85%;
-		margin: 0 auto;
-	}
 	.statistics {
 		width: 85%;
 		margin: 0 auto;
