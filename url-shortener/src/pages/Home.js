@@ -3,10 +3,7 @@ import IllustrationWorking from "../images/illustration-working.svg";
 
 import UrlForm from "../components/UrlForm";
 // import ShortenedUrl from "../components/ShortenedUrl";
-// import IconFacebook from "../images/icon-facebook.svg";
-// import IconInsta from "../images/icon-instagram.svg";
-// import IconTwitter from "../images/icon-twitter.svg";
-// import IconPinterest from "../images/icon-pinterest.svg";
+
 import IconBrand from "../images/icon-brand-recognition.svg";
 import IconRecords from "../images/icon-detailed-records.svg";
 import IconCustomizable from "../images/icon-fully-customizable.svg";
@@ -16,9 +13,7 @@ const Home = () => {
 		<main>
 			<section className="hero">
 				<div className="hero-left">
-					<h1 className="title">
-						More than just <br /> shorter links
-					</h1>
+					<h1 className="title">More than just shorter links</h1>
 					<div className="subtitle">
 						Build your brand's recognition and get detailed insights on how your links are performing
 					</div>

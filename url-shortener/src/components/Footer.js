@@ -1,5 +1,11 @@
 import React from "react";
-import Logo from "../images/logo.svg";
+import IconFacebook from "../images/icon-facebook.svg";
+import IconInsta from "../images/icon-instagram.svg";
+import IconTwitter from "../images/icon-twitter.svg";
+import IconPinterest from "../images/icon-pinterest.svg";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookSquare, faTwitter, faPinterest, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
 	return (
@@ -48,7 +54,12 @@ const Footer = () => {
 						<a href="/">Contact</a>
 					</li>
 				</ul>
-				<div className="socials-container"></div>
+				<div className="socials-container">
+					<FontAwesomeIcon icon={faFacebookSquare} />
+					<FontAwesomeIcon icon={faTwitter} />
+					<FontAwesomeIcon icon={faPinterest} />
+					<FontAwesomeIcon icon={faInstagram} />
+				</div>
 			</div>
 		</footer>
 	);

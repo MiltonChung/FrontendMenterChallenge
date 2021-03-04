@@ -5,14 +5,75 @@ footer.footer-container {
 	.footer {
 		width: 85%;
 		margin: 0 auto;
-		padding: 2rem 0;
+		padding: 4rem 0;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
 		justify-content: space-between;
+		row-gap: 2rem;
 
-		h2,
+		.features,
+		.resources,
+		.company {
+			padding: 0rem 0.4rem;
+		}
+		h2 {
+			color: white;
+			font-size: 37px;
+			margin-right: 0.8rem;
+		}
 		p {
 			color: white;
+			font-weight: $font-bold;
+			margin-bottom: 1rem;
+			font-size: 19px;
+		}
+		a {
+			color: $Gray;
+			text-decoration: none;
+			font-size: 17px;
+			line-height: 18px;
+			display: block;
+			margin-bottom: 0.7rem;
+		}
+		a:hover {
+			color: $Cyan;
+		}
+
+		.socials-container {
+			display: flex;
+			margin-top: 0.15rem;
+			svg {
+				width: 27px;
+				height: 27px;
+				cursor: pointer;
+				color: white;
+			}
+			svg.fa-twitter {
+				margin: 0 0.8rem 0 1.6rem;
+			}
+			svg.fa-pinterest {
+				margin: 0 1.6rem 0 0.8rem;
+			}
+			svg:hover {
+				color: $Cyan;
+			}
+		}
+
+		@media (max-width: 790px) {
+			.empty {
+				display: none;
+			}
+		}
+		@media (max-width: 500px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: 0.5fr, repeat(4, 1fr);
+			justify-content: center;
+			align-content: center;
+			text-align: center;
+
+			.socials-container {
+				justify-content: center;
+			}
 		}
 	}
 }
