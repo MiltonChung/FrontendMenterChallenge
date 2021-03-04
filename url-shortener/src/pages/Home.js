@@ -77,9 +77,11 @@ const Home = () => {
 				</section>
 			</section>
 
-			<section className="boost">
-				<h2>Boost your links today</h2>
-				<a href="/">Get Started</a>
+			<section className="boost-container">
+				<div className="boost">
+					<h2>Boost your links today</h2>
+					<a href="/">Get Started</a>
+				</div>
 			</section>
 		</main>
 	);

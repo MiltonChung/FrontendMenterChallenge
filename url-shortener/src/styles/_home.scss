@@ -130,3 +130,39 @@
 		}
 	}
 }
+
+.boost-container {
+	width: 100%;
+	background-image: url("../images/bg-boost-desktop.svg"), linear-gradient($DarkViolet, $DarkViolet);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4.5rem;
+
+	.boost {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		h2 {
+			color: white;
+			font-size: 35px;
+			font-weight: $font-bold;
+		}
+		a {
+			text-decoration: none;
+			color: white;
+			background: $Cyan;
+			padding: 0.6rem 1.5rem;
+			border-radius: 29px;
+			font-size: 22px;
+			margin-top: 1.2rem;
+		}
+		a:hover {
+			background: hsl(180, 67%, 66%);
+		}
+	}
+}
