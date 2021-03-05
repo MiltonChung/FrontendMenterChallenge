@@ -71,3 +71,51 @@
 		}
 	}
 }
+
+.shortened-url-list {
+	width: 85%;
+	margin: 0 auto;
+
+	.url-item {
+		background: white;
+		margin: 1rem 0;
+		padding: 1rem 1.4rem;
+		display: flex;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.right {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			a {
+				color: $Cyan;
+				text-decoration: none;
+				&:hover {
+					color: black;
+				}
+			}
+
+			button {
+				margin-left: 1.5rem;
+				padding: 0.6rem 1.4rem;
+				outline: none;
+				border: none;
+				border-radius: 5px;
+				font-size: 18px;
+				font-weight: $font-bold;
+				cursor: pointer;
+				color: white;
+			}
+			button.copy {
+				background: $Cyan;
+			}
+			button.copied {
+				background: $DarkViolet;
+				cursor: not-allowed;
+			}
+		}
+	}
+}

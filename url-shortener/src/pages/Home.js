@@ -1,9 +1,6 @@
 import React from "react";
 import IllustrationWorking from "../images/illustration-working.svg";
-
 import UrlForm from "../components/UrlForm";
-// import ShortenedUrl from "../components/ShortenedUrl";
-
 import IconBrand from "../images/icon-brand-recognition.svg";
 import IconRecords from "../images/icon-detailed-records.svg";
 import IconCustomizable from "../images/icon-fully-customizable.svg";

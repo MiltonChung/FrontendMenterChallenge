@@ -1,9 +1,4 @@
 import React from "react";
-import IconFacebook from "../images/icon-facebook.svg";
-import IconInsta from "../images/icon-instagram.svg";
-import IconTwitter from "../images/icon-twitter.svg";
-import IconPinterest from "../images/icon-pinterest.svg";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookSquare, faTwitter, faPinterest, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
