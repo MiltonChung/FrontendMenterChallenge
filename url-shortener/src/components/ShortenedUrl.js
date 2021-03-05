@@ -35,6 +35,7 @@ const ShortenedUrl = ({ allUrls }) => {
 							</a>
 							<button
 								className={copy[index] ? "copied" : "copy"}
+								disabled={copy[index] ? "disabled" : ""}
 								onClick={() => CopyText(item.result.full_short_link, index)}>
 								{copy[index] ? <>Copied!</> : <>Copy</>}
 							</button>
