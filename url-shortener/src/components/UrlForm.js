@@ -30,7 +30,8 @@ const UrlForm = () => {
 					setError(`${data.error}`);
 					setLoading(false);
 				}
-			});
+			})
+			.catch(err => console.log(err));
 	}
 
 	return (

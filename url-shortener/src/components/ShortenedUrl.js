@@ -8,7 +8,6 @@ const ShortenedUrl = ({ allUrls }) => {
 			copy[property] = false;
 		}
 		setCopy({ ...copy, [i]: true });
-		console.log(url);
 		navigator.clipboard.writeText(url);
 	}
 
@@ -17,7 +16,7 @@ const ShortenedUrl = ({ allUrls }) => {
 			copy[allUrls.length - 1] = false;
 			setCopy(copy);
 		}
-	}, [allUrls]);
+	}, [allUrls, copy]);
 
 	return (
 		<div className="shortened-url-list">
