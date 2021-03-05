@@ -3,7 +3,6 @@ import { BASE_URL } from "../api";
 import ShortenedUrl from "./ShortenedUrl";
 
 const UrlForm = () => {
-	const [apiRes, setApiRes] = useState({});
 	const [allUrls, setAllUrls] = useState([]);
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
@@ -15,13 +14,12 @@ const UrlForm = () => {
 			.then(res => res.json())
 			.then(data => {
 				if (data.ok) {
-					setApiRes(data);
 					setAllUrls([...allUrls, data]);
 					setLoading(false);
 					setError("");
 					e.target.url.value = "";
 				} else {
-					setError(`Error Code ${data.error_code}: ${error}`);
+					setError(`Error Code ${data.error_code}: ${data.error}`);
 					setLoading(false);
 				}
 			});

@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
 
 const ShortenedUrl = ({ allUrls }) => {
-	const [copy, setCopy] = useState([]);
+	const [copy, setCopy] = useState({});
 
 	function CopyText(url, i) {
-		copy[i] = true;
-		console.log(copy, i);
-		setCopy(copy);
+		for (const property in copy) {
+			copy[property] = false;
+		}
+		setCopy({ ...copy, [i]: true });
 		console.log(url);
+		navigator.clipboard.writeText(url);
 	}
 
 	useEffect(() => {
-		let copyArr = [];
-		allUrls.forEach(() => {
-			copyArr.push(false);
-		});
-		setCopy(copyArr);
+		if (allUrls.length !== 0) {
+			copy[allUrls.length - 1] = false;
+			setCopy(copy);
+		}
 	}, [allUrls]);
 
 	return (
@@ -33,9 +34,9 @@ const ShortenedUrl = ({ allUrls }) => {
 								{item.result.full_short_link}
 							</a>
 							<button
-								className={copy ? "copied" : "copy"}
+								className={copy[index] ? "copied" : "copy"}
 								onClick={() => CopyText(item.result.full_short_link, index)}>
-								{copy ? <>Copied!</> : <>Copy</>}
+								{copy[index] ? <>Copied!</> : <>Copy</>}
 							</button>
 						</div>
 					</div>
