@@ -6,7 +6,6 @@
 body {
 	font-family: "Lato", sans-serif;
 	background-image: linear-gradient(to right, rgb(84, 84, 192), rgb(167, 89, 167));
-	/* background-image: linear-gradient(to right, #3490de, #6639a6); */
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
