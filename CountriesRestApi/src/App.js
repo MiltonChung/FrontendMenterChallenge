@@ -1,6 +1,5 @@
 import NavBar from "./components/Navbar.js";
-import Filter from "./components/Filter.js";
-import Main from "./components/Main.js";
+import Conutries from "./components/Conutries.js";
 import DetailedPage from "./components/DetailedPage.js";
 import { Switch, Route } from "react-router-dom";
 
@@ -9,8 +8,8 @@ function App() {
 		<div className="App">
 			<NavBar />
 			<Switch>
-				<Route path="/" component={Main} exact />
-				<Route path="/:country" component={DetailedPage} />
+				<Route path="/" component={Conutries} exact />
+				<Route path="/country/:country" component={DetailedPage} />
 			</Switch>
 		</div>
 	);

@@ -20,4 +20,8 @@ $white: hsl(0, 0%, 100%); //Dark Mode Text & Light Mode Elements
 body {
 	font-family: $nunito-sans;
 	font-size: $homepage-items-font-size;
+	min-height: 100vh;
 }
+
+@import "navbar.scss";
+@import "countries.scss";
