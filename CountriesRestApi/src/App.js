@@ -1,7 +1,17 @@
+import NavBar from "./components/Navbar.js";
+import Filter from "./components/Filter.js";
+import Main from "./components/Main.js";
+import DetailedPage from "./components/DetailedPage.js";
+import { Switch, Route } from "react-router-dom";
+
 function App() {
 	return (
 		<div className="App">
-			<h2>hi</h2>
+			<NavBar />
+			<Switch>
+				<Route path="/" component={Main} exact />
+				<Route path="/:country" component={DetailedPage} />
+			</Switch>
 		</div>
 	);
 }
