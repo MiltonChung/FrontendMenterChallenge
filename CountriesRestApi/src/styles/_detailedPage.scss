@@ -1,0 +1,31 @@
+.back-button {
+	margin: 3rem 0;
+	a {
+		box-shadow: 0 0 5px rgba(87, 87, 87, 0.493);
+		width: fit-content;
+		padding: 7px 25px;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		background: white;
+		color: $very-dark-blue-text;
+		border-radius: 5px;
+
+		svg {
+			width: 15px;
+			height: 10px;
+			margin-left: 2px;
+			margin-right: 10px;
+		}
+	}
+}
+
+.country-detail {
+	.bold {
+		font-weight: 600;
+	}
+
+	&-content {
+		font-size: $detail-page-font-size;
+	}
+}

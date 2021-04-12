@@ -1,18 +1,9 @@
-main {
-	min-height: 100vh;
-	background: $very-light-gray;
-
-	.main-container {
-		margin: auto;
-		width: 85%;
-	}
-}
-
 form.filter-form {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 2.5rem 0;
+	padding: 2.5rem 0;
+	font-family: $nunito-sans;
 
 	.search-country {
 		background: white;
@@ -34,6 +25,9 @@ form.filter-form {
 		input {
 			border: none;
 			outline: none;
+			font-family: $nunito-sans;
+			width: 95%;
+
 			&::placeholder {
 				color: $dark-gray;
 			}
@@ -42,17 +36,82 @@ form.filter-form {
 
 	.filter-dropdown-button {
 		background: white;
-		padding: 14px;
+		padding: 14px 16px;
 		display: flex;
 		align-items: center;
 		box-shadow: 0 0 5px rgba(58, 58, 58, 0.288);
 		border-radius: 5px;
+		cursor: pointer;
+		position: relative;
 
 		button {
+			cursor: pointer;
 			border: none;
 			outline: none;
 			background: unset;
+			font-family: $nunito-sans;
 			color: $very-dark-blue-text;
+			font-weight: 600;
+		}
+
+		svg {
+			width: 10px;
+			height: 10px;
+			margin-left: 1.9rem;
+		}
+
+		ul.region-dropdown-menu {
+			position: absolute;
+			top: 106%;
+			right: 0;
+			width: 100%;
+			list-style-type: none;
+			padding: 15px;
+			background: white;
+			box-shadow: 0 0 5px rgba(58, 58, 58, 0.288);
+			border-radius: 5px;
+			li {
+				margin-bottom: 10px;
+				button:hover {
+					color: $dark-blue;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+.countries-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	column-gap: 2rem;
+	row-gap: 2rem;
+
+	.country {
+		background: white;
+		box-shadow: 0 0 5px rgba(58, 58, 58, 0.288);
+		border-radius: 5px;
+		color: $very-dark-blue-text;
+		text-decoration: none;
+
+		img {
+			width: 100%;
+			height: 160px;
+			object-fit: cover;
+			border-radius: 5px 5px 0 0;
+		}
+
+		&-details {
+			padding: 1.1rem 0.8rem 2rem 1.1rem;
+			.country-title {
+				margin-bottom: 0.75rem;
+			}
+			p {
+				margin-bottom: 0.1rem;
+				span {
+					font-weight: 600;
+				}
+			}
 		}
 	}
 }

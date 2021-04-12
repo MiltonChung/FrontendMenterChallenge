@@ -23,5 +23,17 @@ body {
 	min-height: 100vh;
 }
 
+main.main-container {
+	min-height: 100vh;
+	background: $very-light-gray;
+
+	.content-container {
+		margin: auto;
+		width: 85%;
+		margin-bottom: 2rem;
+	}
+}
+
 @import "navbar.scss";
 @import "countries.scss";
+@import "detailedPage.scss";

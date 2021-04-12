@@ -32,19 +32,29 @@ const Filter = () => {
 				<input type="text" placeholder="Search for country..." id="search" name="search" />
 			</label>
 
-			<div className="filter-dropdown-button">
-				<button onClick={handleShowMenu}>
-					Filter by region
+			<div className="filter-dropdown-button" onClick={handleShowMenu}>
+				<button>
+					Filter by Region
 					<FontAwesomeIcon icon={faChevronDown} />
 				</button>
 				{showMenu ? (
-					<div className="region-dropdown-menu">
-						<button>Africa</button>
-						<button>America</button>
-						<button>Asia</button>
-						<button>Europe</button>
-						<button>Oceania</button>
-					</div>
+					<ul className="region-dropdown-menu">
+						<li>
+							<button>Africa</button>
+						</li>
+						<li>
+							<button>America</button>
+						</li>
+						<li>
+							<button>Asia</button>
+						</li>
+						<li>
+							<button>Europe</button>
+						</li>
+						<li>
+							<button>Oceania</button>
+						</li>
+					</ul>
 				) : (
 					""
 				)}
