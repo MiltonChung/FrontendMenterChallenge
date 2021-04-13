@@ -10,10 +10,18 @@ const BorderingCountries = ({ country }) => {
 	useEffect(() => {
 		fetch(`${COUNTRY_CODE_URL}/${country}`)
 			.then(res => res.json())
-			.then(data => setBorder(data));
-	}, []);
+			.then(data => {
+				setBorder(data);
+			});
+	}, [country]);
 
-	return <Link to={`/country/${border.name}`}>{border.name}</Link>;
+	return (
+		<div className="border-button-container">
+			<Link to={`/country/${border.name}`} className="border-country-button">
+				{border.name}
+			</Link>
+		</div>
+	);
 };
 
 const DetailedPage = props => {
@@ -87,13 +95,12 @@ const DetailedPage = props => {
 						</div>
 
 						<div className="country-detail-borders">
-							<p>
-								<span className="bold">Border Countries:</span>
+							<div className="bold border">Border Countries:</div>
+							<div className="border-container">
 								{countryDetails[0]?.borders.map(item => {
-									console.log(item);
-									return <BorderingCountries country={item} />;
+									return <BorderingCountries country={item} key={Math.random()} />;
 								})}
-							</p>
+							</div>
 						</div>
 					</div>
 				</div>
