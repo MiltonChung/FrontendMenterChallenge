@@ -21,11 +21,40 @@
 }
 
 .country-detail {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-gap: 1rem 2rem;
+
 	.bold {
 		font-weight: 600;
 	}
 
+	img {
+		width: 92%;
+		height: auto;
+		max-height: 420px;
+		object-fit: cover;
+	}
+
 	&-content {
 		font-size: $detail-page-font-size;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-around;
+		margin: 2rem 0;
+
+		h2 {
+			font-size: 28px;
+		}
+		.country-detail-stats {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+
+			p {
+				margin-bottom: 5px;
+			}
+		}
 	}
 }

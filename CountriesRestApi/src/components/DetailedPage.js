@@ -1,8 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { NAME_URL } from "../base_url.js";
+import { NAME_URL, COUNTRY_CODE_URL } from "../base_url.js";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
+const BorderingCountries = ({ country }) => {
+	const [border, setBorder] = useState("");
+
+	useEffect(() => {
+		fetch(`${COUNTRY_CODE_URL}/${country}`)
+			.then(res => res.json())
+			.then(data => setBorder(data));
+	}, []);
+
+	return <Link to={`/country/${border.name}`}>{border.name}</Link>;
+};
 
 const DetailedPage = props => {
 	const [countryDetails, setCountryDetails] = useState([]);
@@ -36,7 +48,7 @@ const DetailedPage = props => {
 								</p>
 								<p>
 									<span className="bold">Population: </span>
-									{countryDetails[0]?.population}
+									{countryDetails[0]?.population.toLocaleString("en-US")}
 								</p>
 								<p>
 									<span className="bold">Region: </span>
@@ -63,7 +75,13 @@ const DetailedPage = props => {
 								</p>
 								<p>
 									<span className="bold">Languages: </span>
-									{countryDetails[0]?.languages.map(item => item.name)}
+									{countryDetails[0]?.languages.map((item, i, arr) => {
+										if (arr.length - 1 === i) {
+											return item.name;
+										} else {
+											return `${item.name}, `;
+										}
+									})}
 								</p>
 							</div>
 						</div>
@@ -71,6 +89,10 @@ const DetailedPage = props => {
 						<div className="country-detail-borders">
 							<p>
 								<span className="bold">Border Countries:</span>
+								{countryDetails[0]?.borders.map(item => {
+									console.log(item);
+									return <BorderingCountries country={item} />;
+								})}
 							</p>
 						</div>
 					</div>

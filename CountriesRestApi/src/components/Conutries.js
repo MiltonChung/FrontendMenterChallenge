@@ -26,7 +26,7 @@ const Conutries = () => {
 								<div className="country-details">
 									<h3 className="country-title">{item.name}</h3>
 									<p>
-										<span>Population:</span> {item.population}
+										<span>Population:</span> {item.population.toLocaleString("en-US")}
 									</p>
 									<p>
 										<span>Region:</span> {item.region}
