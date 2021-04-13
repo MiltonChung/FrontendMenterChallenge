@@ -16,6 +16,13 @@ nav {
 		width: 85%;
 		margin: 0 auto;
 		list-style-type: none;
+
+		a {
+			color: $very-dark-blue-text;
+			text-decoration: none;
+			cursor: pointer;
+			font-size: 25px;
+		}
 	}
 
 	.dark-mode {

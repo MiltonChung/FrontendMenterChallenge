@@ -72,6 +72,10 @@ form.filter-form {
 			border-radius: 5px;
 			li {
 				margin-bottom: 10px;
+				button {
+					width: 100%;
+					text-align: left;
+				}
 				button:hover {
 					color: $dark-blue;
 					font-weight: bold;

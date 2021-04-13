@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Filter from "./Filter.js";
-import { ALL_URL } from "../base_url.js";
+import { ALL_URL } from "../base_url.js.js";
 import { Link } from "react-router-dom";
 
-const Conutries = () => {
+const Countries = () => {
 	const [countries, setCountries] = useState([]);
 
 	useEffect(() => {
@@ -17,7 +17,7 @@ const Conutries = () => {
 	return (
 		<main className="main-container">
 			<div className="content-container">
-				<Filter />
+				<Filter setCountries={setCountries} />
 				<div className="countries-container">
 					{countries.map(item => {
 						return (
@@ -44,4 +44,4 @@ const Conutries = () => {
 	);
 };
 
-export default Conutries;
+export default Countries;
