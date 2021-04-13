@@ -97,9 +97,14 @@ const DetailedPage = props => {
 						<div className="country-detail-borders">
 							<div className="bold border">Border Countries:</div>
 							<div className="border-container">
-								{countryDetails[0]?.borders.map(item => {
-									return <BorderingCountries country={item} key={Math.random()} />;
-								})}
+								{console.log(countryDetails[0]?.borders)}
+								{countryDetails[0]?.borders.length === 0 ? (
+									<p>None</p>
+								) : (
+									countryDetails[0]?.borders.map(item => {
+										return <BorderingCountries country={item} key={Math.random()} />;
+									})
+								)}
 							</div>
 						</div>
 					</div>
