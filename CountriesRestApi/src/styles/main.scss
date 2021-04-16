@@ -35,6 +35,61 @@ main.main-container {
 	}
 }
 
+// Dark mode
+.dark-mode {
+	nav {
+		background: $dark-blue;
+		box-shadow: 0 5px 5px rgba(44, 44, 44, 0.418);
+		a,
+		button {
+			color: $white;
+		}
+	}
+
+	main.main-container {
+		background: $very-dark-blue;
+	}
+
+	form.filter-form {
+		.search-country {
+			background: $dark-blue;
+			box-shadow: 0 0 5px rgba(44, 44, 44, 0.418);
+
+			svg {
+				path {
+					fill: $white;
+				}
+			}
+
+			input {
+				background: $dark-blue;
+				&::placeholder {
+					color: $white;
+				}
+			}
+		}
+
+		.filter-dropdown-button {
+			background: $dark-blue;
+			box-shadow: 0 0 5px rgba(44, 44, 44, 0.418);
+			button {
+				color: $white;
+			}
+
+			ul.region-dropdown-menu {
+				background: $dark-blue;
+				box-shadow: 0 0 5px rgba(44, 44, 44, 0.418);
+
+				li {
+					button:hover {
+						color: $dark-gray;
+					}
+				}
+			}
+		}
+	}
+}
+
 @import "navbar.scss";
 @import "countries.scss";
 @import "detailedPage.scss";

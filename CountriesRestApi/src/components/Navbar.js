@@ -4,7 +4,11 @@ import { faMoon as farMoon } from "@fortawesome/free-solid-svg-icons";
 import { faMoon as fasMoon } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
+	const DarkModeToggle = () => {
+		setDarkMode(!darkMode);
+	};
+
 	return (
 		<nav>
 			<ul>
@@ -12,8 +16,8 @@ const Navbar = () => {
 					<Link to="/">Where in the world?</Link>
 				</li>
 				<li>
-					<button className="dark-mode">
-						<FontAwesomeIcon icon={fasMoon} />
+					<button className="dark-mode" onClick={DarkModeToggle}>
+						{darkMode ? <FontAwesomeIcon icon={farMoon} /> : <FontAwesomeIcon icon={fasMoon} />}
 						Dark Mode
 					</button>
 				</li>

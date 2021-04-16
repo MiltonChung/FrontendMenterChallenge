@@ -36,8 +36,13 @@ const Filter = ({ setCountries }) => {
 		fetch(`${NAME_URL}/${e.target.search.value}`)
 			.then(res => res.json())
 			.then(data => {
-				setCountries(data);
-			});
+				if (data.status === 404) {
+					alert("No Countries Found!");
+				} else {
+					setCountries(data);
+				}
+			})
+			.catch(err => console.log(err));
 	};
 
 	const handleRegion = (reg, e) => {

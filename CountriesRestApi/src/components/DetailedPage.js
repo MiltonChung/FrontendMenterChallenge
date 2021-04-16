@@ -97,7 +97,6 @@ const DetailedPage = props => {
 						<div className="country-detail-borders">
 							<div className="bold border">Border Countries:</div>
 							<div className="border-container">
-								{console.log(countryDetails[0]?.borders)}
 								{countryDetails[0]?.borders.length === 0 ? (
 									<p>None</p>
 								) : (
