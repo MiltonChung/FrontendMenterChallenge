@@ -2,7 +2,7 @@
 
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
 
-## Welcome! 👋
+Check out my solution: https://countries-rest-api-solution.netlify.app/
 
 Thanks for checking out this front-end coding challenge.
 
