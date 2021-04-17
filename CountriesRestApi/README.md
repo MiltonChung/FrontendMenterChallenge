@@ -12,10 +12,12 @@ API Link: https://restcountries.eu/
 
 ## Challenges:
 
--
+-  Making the flag images fit in a certain height and width. All the flag images from the API were mostly different sizes.
 
 ## What I learned:
 
+-  Using React Router URL parameters to dynamically set the URL to the flag the user clicked on.
+-  '''object-fit: cover''' is nice
 -
 
-## Time to Complete: ~ hours
+## Time to Complete: ~ 5 hours

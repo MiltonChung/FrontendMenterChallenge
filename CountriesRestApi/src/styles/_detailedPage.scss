@@ -1,5 +1,5 @@
 .back-button {
-	margin: 3rem 0;
+	padding: 3rem 0;
 	a {
 		box-shadow: 0 0 5px rgba(87, 87, 87, 0.493);
 		width: fit-content;
@@ -23,7 +23,12 @@
 .country-detail {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	justify-items: flex-start;
 	grid-gap: 1rem 2rem;
+
+	@media (max-width: 620px) {
+		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+	}
 
 	.bold {
 		font-weight: 600;
@@ -35,6 +40,10 @@
 		max-height: 420px;
 		object-fit: cover;
 		box-shadow: 0 0 7px rgba(73, 73, 73, 0.411);
+
+		@media (max-width: 768px) {
+			width: 100%;
+		}
 	}
 
 	&-content {
@@ -44,9 +53,11 @@
 		align-items: flex-start;
 		justify-content: space-around;
 		margin: 2rem 0;
+		width: 100%;
 
 		h2 {
 			font-size: 28px;
+			margin-bottom: 1.5rem;
 		}
 
 		.country-detail-stats {
@@ -54,14 +65,28 @@
 			justify-content: space-between;
 			width: 100%;
 
+			@media (max-width: 620px) {
+				flex-direction: column;
+
+				&-left {
+					margin-bottom: 1.5rem;
+				}
+			}
+
 			p {
-				margin-bottom: 5px;
+				margin-bottom: 8px;
 			}
 		}
 
 		.country-detail-borders {
 			display: inline-flex;
 			align-items: center;
+
+			@media (max-width: 620px) {
+				flex-direction: column;
+				align-items: flex-start;
+				margin-top: 1.5rem;
+			}
 
 			.border {
 				min-width: 127px;
@@ -72,12 +97,17 @@
 				flex-wrap: wrap;
 				margin-left: 1rem;
 
+				@media (max-width: 620px) {
+					margin: 0.5rem 0;
+				}
+
 				.border-button-container {
 					padding: 0.4rem 0.8rem;
 					margin: 0.4rem;
 					box-shadow: 0 0 3px rgba(73, 73, 73, 0.411);
 					text-align: center;
 					height: fit-content;
+					border-radius: 5px;
 
 					a {
 						color: $very-dark-blue-text;

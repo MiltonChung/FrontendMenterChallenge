@@ -83,11 +83,23 @@ form.filter-form {
 			}
 		}
 	}
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+		align-items: flex-start;
+
+		.search-country {
+			max-width: unset;
+			width: 100%;
+			margin-bottom: 1.5rem;
+		}
+	}
 }
 
 .countries-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	justify-items: center;
 	column-gap: 2rem;
 	row-gap: 2rem;
 
@@ -97,7 +109,7 @@ form.filter-form {
 		border-radius: 5px;
 		color: $very-dark-blue-text;
 		text-decoration: none;
-		max-width: 400px;
+		max-width: 410px;
 
 		img {
 			width: 100%;

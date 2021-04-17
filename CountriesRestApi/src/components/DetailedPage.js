@@ -3,6 +3,7 @@ import { NAME_URL, COUNTRY_CODE_URL } from "../base_url.js";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import ScrollTop from "./ScrollTop.js";
 
 const BorderingCountries = ({ country }) => {
 	const [border, setBorder] = useState("");
@@ -37,6 +38,7 @@ const DetailedPage = props => {
 
 	return (
 		<main className="main-container">
+			<ScrollTop />
 			<div className="content-container">
 				<div className="back-button">
 					<Link to="/">
